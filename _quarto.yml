@@ -9,6 +9,7 @@ project:
 
 website:
   title: "Jackson Pond"
+  site-url: "https://jackdpond.github.io/jackpond-site/"
   navbar:
     left:
       - href: index.qmd
