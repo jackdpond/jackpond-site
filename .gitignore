@@ -2,3 +2,11 @@
 /.quarto/
 **/*.quarto_ipynb
 /.vscode/
+
+# LaTeX build artifacts
+**/*.aux
+**/*.log
+**/*.fls
+**/*.fdb_latexmk
+**/*.synctex.gz
+**/*.out

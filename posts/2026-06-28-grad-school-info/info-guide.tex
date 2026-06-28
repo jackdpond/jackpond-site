@@ -1,0 +1,364 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{lmodern}
+\usepackage{microtype}
+
+\usepackage{hyperref}
+\usepackage{amsmath, amssymb}
+
+\usepackage{longtable}
+\usepackage{array}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+
+\begin{document}
+
+\section*{Preface}
+This manual is designed to be a reference guide and a starting point for a BYU ACME student’s exploration into graduate work in ACME-ish fields. The purpose of this manual is to help BYU ACME students be more aware of what preparation is required for applied math graduate programs. The manual is designed to be a reference guide for specific questions regarding graduate work but can also be read straight through for an overview of graduate work. There are three primary sections: deciding on the suitability of graduate school for individual students, preparing for graduate work, and applying for graduate school.
+
+The structure of this document was taken from a graduate school guide created by BYU Statistics student Sam Wells, who based his document on a graduate school guide created by the BYU Economics Department. We thought it would be helpful to provide something similar for undergraduate students studying ACME.
+
+\newpage
+
+\section{Is Grad School for Me?}
+\subsection{Background Information}
+An ACME student has many options for graduate work. This document focuses on preparing for the programs that are nearest to extending the topics covered in ACME but which may be known by different names, such as Applied/Computational Math, Computational Science and/or Engineering, or Scientific Computing. However, many of the suggestions apply generally to preparing for a PhD (such as in the field of your concentration), as well as for thesis-based master's in math, such as the one offered by BYU.  
+
+A PhD program typically takes five years: two years of coursework followed by a research dissertation. Most PhD students are funded by a teaching or research fellowship, and work as either a teaching assistant or a research assistant throughout their PhD. In addition to a strong coursework component, as already mentioned, the overwhelming emphasis of graduate work is on research. Although teaching may be a component of graduate work, success in a PhD is largely determined by the quality of the candidate's independent research in applied math topics.\footnote{The purpose of a research field is to extend the bounds of human knowledge. See \href{https://matt.might.net/articles/phd-school-in-pictures/}{this blog post} for an illustrated guide.}
+
+\subsection{A Word of Caution: Reasons Why Graduate Work May Not Be For You}
+Graduate work in applied mathematics is a very challenging endeavor, and entry into graduate programs is becoming increasingly competitive. Although getting a PhD in applied is a very noteworthy achievement, it is not for everyone. There are many factors to consider while deciding whether or not to attend graduate school. This section will begin by telling you all the reasons you might not want to do graduate work in applied. If you haven’t been scared off by the end of this next section, then that may be a good sign that you would be a good candidate for graduate work.
+
+Another purpose of this section is perhaps to shock you into truly considering your options. Many students glide from undergraduate studies to graduate work as the most natural step forward, or because they have difficulty imagining life without school. Stockholm syndrome is bad for both the captive and the captor. Whether or not to pursue graduate studies is a major life decision that should be approached with care and with open eyes.
+
+\subsubsection*{INCREASED COMPETITION}
+The current federal administration has significantly cut funding to both the NIH and the NSF, which provide much of the funding that supports PhD students. Some universities have announced that they will not be accepting any new applied math PhD students, while others have greatly decreased admissions. In addition, because of the tough economy and scarcity of entry-level jobs for graduates, more new graduates are applying to graduate school. Thus, demand is higher and supply is lower, driving up competition in an already selective admissions process. Even excellent applicants may not be accepted to a program they find compelling.
+
+\subsubsection*{SCHOOL}
+Students who go on to graduate school are guaranteed at least another five years of academic studies. If you’re interested in graduate school, you should enjoy learning and be good enough at academic work to be willing to go to school for a minimum of five more years. Again, not everyone wants to be in school until their late 20s or early 30s. If you’re tired of school and are thinking graduate school will be any different, think again. If you go to graduate school, the coursework will only get increasingly challenging as you go along.
+
+\subsubsection*{RESEARCH}
+Another significant part of graduate studies in any field is research. Earning a graduate degree revolves around conducting research. However, being a successful researcher requires a slightly different skill set than being a successful student. These skills include curiosity, creativity, and self-motivation. If you do not have a self-driven desire to ask and answer interesting questions, then pursuing a PhD may not be the right path for you.
+
+Most careers that PhD graduates pursue are heavily research-based, if not exclusively so. Additionally, strong programming skills are essential for applied math research, as much of today’s work is conducted using languages such as Julia and Python. If you’re not doing applied research, you’re likely engaging in theoretical research. If you are uncomfortable working on a computer for long hours, evaluating models, or writing code, you may want to reconsider your post-graduation plans. A rare exception might be if you excel in analysis or number theory, where the nature of work can be different.
+
+\subsubsection*{INCOME}
+If your primary motivation for pursuing a PhD in applied math is a high salary, you may want to reconsider. While applied math PhD graduates do have strong earning potential—especially in tech, finance, and national security—many lucrative industry roles do not require a PhD. A master’s degree in math, data science, or a related field can often lead to well-paying positions with significantly less time in school. That said, a PhD can be a valuable investment if you are passionate about research and advancing the field. The time and effort required are best justified by a deep intellectual curiosity, not just financial incentives.
+
+In the words of Dr. Matt Might, a computer science professor and blogger (who will continue to be referenced), ``There are few good reasons to get a PhD... So, if you're going to do PhD school at all, do it right, for your own sake.''\textsuperscript{2}
+
+\subsubsection*{CAREER FLEXIBILITY}
+While many students pursue a PhD in hopes of becoming a tenure-track professor, most graduates end up in different roles. The job market in academia is known to be very competitive, and those who choose that path often complete a postdoc to give themselves the best chance. You are most likely to be happy pursuing an applied math PhD if you are flexible in what kind of research-oriented job you have and if you are flexible in where you live. If you are pursuing a PhD to become a professor at your favorite university in your favorite city, know that your odds of making that happen are low even if you attend a top program.
+
+\subsection{Good Indicators: Signs That You Might Be Well Suited For Graduate Studies}
+Having considered reasons why you might stay away from graduate school as well as incorrect motivations to go, here are some good indicators that you will both like and succeed in graduate work.
+
+\subsubsection*{CURIOSITY}
+You should love to learn and have a strong curiosity about the world around you. You should enjoy reading and learning in different forms and genuinely desire to understand why and how the world works. If you are drawn to the idea of uncovering hidden patterns, using algorithms and simulations to help solve practical problems, or making sense of messy, real-world systems through the language of mathematics, then you might enjoy graduate studies in applied math.
+
+\subsubsection*{PERSEVERANCE, TENACITY, COGENCY}
+This section is based on a \href{https://matt.might.net/articles/successful-phd-students/}{blog post} written by Matt Might, and each quoted portion is from the same post.
+
+It is a common misconception (even among PhD students) that a PhD must be smart. ``This can't be true. A smart person would know better than to get a PhD.'' Being smart is likely helpful, depending on what it means to be smart, but there are different qualities that drive success in a PhD.
+
+As a PhD student, you must arrive at the boundary of human knowledge (by taking classes, reading papers, and so on), and then you must extend the boundary. Many PhD students become discouraged at this point, as it is a new experience and fraught with failure. A successful PhD student must persevere and push through a depressing period of failing hard and often. ``If you persevere to the end of this phase, your mind will intuit solutions to problems in ways that it didn't and couldn't before.'' Even as you begin to find success in your research, you will likely continue to face rejection from publishers. In order to be a successful PhD student, you must be \emph{perseverant}.
+
+One discovery or advance is not sufficient. A successful PhD student must continue to solve interesting problems, and publish each solution. ``You will also need to actively, even aggressively, forge relationships with scholars in your field. Researchers in your field need to know who you are and what you're doing. They need to be interested in what you're doing too.'' To be a successful PhD student, you must be \emph{tenacious}.
+
+Finally, it is unlikely that the importance or impact of your work will be immediately obvious to other mathematicians or scientists in your chosen domain. You must have the ability to communicate your ideas and solutions with clarity, and to persuade other researchers that you have made a contribution. This is an aspect of research that undergraduates often overlook: Your ability to communicate clearly and compellingly will all but define your success in any research field. ``Science is as much an act of persuasion as it is an act of discovery.'' To be a successful PhD student, you must be \emph{cogent}.
+
+If you already prize these traits in yourself or are excited to develop them, a PhD may be a good fit for you. If reading these sections makes you wonder why anybody chooses to willingly pursue graduate studies, a PhD may not be a good fit for you.
+
+\subsection{How Can I Know?}
+If you wonder what a PhD is like and if you would like it, it is a good idea to talk to people who have completed a PhD and to people who are currently pursuing a PhD. However, the best way to counter uncertainty about pursuing graduate studies is to gain experiences that approximate graduate studies, and then reflect.
+
+Participate in research. BYU provides undergraduates with more opportunities for mentored research in math to undergraduates than almost any other university. If you haven't yet joined a research lab, approach a faculty member you like and ask what research they are doing, and what research their colleagues are doing. Attend the meetings of labs you are interested in, get hired, and get to work. Endeavor to engage in each step of the research process—learn how to apply for grants, contribute to discovery, and assist with writing and reviewing papers. This is the best way to evaluate whether a PhD is for you.
+
+Take graduate-level classes. Most, if not all, math undergraduates at BYU have the chance to take at least one 500- or 600-level class while still an undergraduate. These classes match the difficulty of the courses that will make up your whole schedule as a PhD.
+
+If you don't like the research or the courses, then it is likely that a graduate degree is not for you.
+
+This \href{https://karpathy.github.io/2016/09/07/phd/}{blog post} by Andrej Karpathy also describes some of the pros and cons of a PhD (he completed his in CS but there is plenty of transfer) and provides insight to the PhD experience. Lots of similar firsthand accounts exist and may be helpful to you as you decide.
+
+\subsection{Alternatives to an Applied Math PhD}
+Besides preparing you well for a wide variety of careers right out of your undergrad, ACME can be good preparation for many research-oriented PhD/Graduate programs outside of applied math. Some similar fields require similar preparation. If you are interested in research but are interested in a field outside of applied math or are looking for a less technically demanding program, you may be interested in an alternative program. This list is incomplete and does not account for your ACME concentration.
+\begin{itemize}
+\item Master’s in Business or Data Analytics
+\item Master’s / PhD in Computational/Quantitative/Systems Biology
+\item Master’s / PhD in Computer Science
+\item Master’s / PhD in Data Science
+\item Master’s / PhD in Electrical Engineering
+\item Master’s / PhD in Operations Research
+\item Master’s / PhD in Statistics
+\end{itemize}
+
+As you make decisions about future schooling, take time to talk to your professors and get ideas as to what programs there are out there and what might be the best fit for your interests.
+
+\newpage
+
+\section{Preparing for Graduate School in Applied Math}
+
+\subsection{Overview}
+Once you’ve decided on graduate work, there is quite a bit of preparation to be completed. Even if you’re not sold on going to graduate school, much of the preparation will be to your advantage for other post-undergraduate options, so it is wise to start as early as possible. This section is outlined such that the preparation that must be started the earliest is listed first and the preparation that can be started latest is listed last.
+
+We have decided to forego discussion of how to \emph{seem} like a great grad school applicant in favor of discussing how to \emph{be} a great grad school applicant. The key features graduate schools look for are \textbf{1)} mathematical ability and \textbf{2)} research potential. It is the opinion of the authors that neither of these characteristics is innate, but rather that their development is a key objective of your undergraduate education. This section will give you ideas for how to best go about that development.
+
+\subsection{Academic Coursework}
+Many other disciplines (such as statistics, economics, and social sciences) require supplementary math classes in addition to their major requirements to apply to grad school. For ACME-ish grad school, there are no course requirements for application outside of the ACME core classes. However, there are classes that are worth considering to make you a more qualified applicant.
+
+Beyond the few classes listed here as generally recommended to applied math graduate school applicants, we strongly recommend taking classes in your specific area of interest, such as deep learning, transformers, cybersecurity, statistics, mathematical biology, or network theory. It may be prudent to take graduate level classes in your area of interest.
+
+Which classes you take and your final grade in them will matter to some extent for your graduate school application, though not as much as many students believe. More important though less tangible is that you \emph{learn} math, and learn how to learn math. 
+
+On the subject of grades, they are much less important to applications then most students expect, and beyond a "good enough" bar, better grades don't help much. That "good enough" bar will vary from program to program, but as a rule of thumb a GPA of 3.5 is probably fine. Rather than optimize for perfect grades, you may instead want to spend more time doing research or completing personal projects. Perhaps more reasonably, you may instead want to spend more time with friends and family or wholesome recreational activities.
+
+\subsubsection*{\emph{Learning} Math}
+In order to be a great applied math graduate school applicant, you should be great at math. In order to be a great applied math graduate student, you should be great at learning math. 
+
+More than memorizing facts or computation steps, learning math is about assembling relationships between many different objects and ideas. To do so well is a non-trivial skill that many undergraduate math students never learn. It is straightforward to earn a good grade in a math class without really doing the work required to ponder and connect the relevant ideas in your head. On the other hand, it is difficult to do the work required to ponder and connect relevant ideas without earning a good grade. To be a great applicant and a great student, you should dedicate the brainpower to truly \emph{learn} the math. It doesn't necessarily take more time. Consider Terry Pratchett's "boot theory" of economics \footnote{Pratchett, Terry (1993). \textit{Men at Arms}. London: Gollancz. p. 32}:
+
+\begin{quote}
+The reason that the rich were so rich, Vimes reasoned, was because they managed to spend less money. Take boots, for example. ... A really good pair of leather boots cost fifty dollars. But an affordable pair of boots, which were sort of OK for a season or two and then leaked like hell when the cardboard gave out, cost about ten dollars. ... But the thing was that good boots lasted for years and years. A man who could afford fifty dollars had a pair of boots that'd still be keeping his feet dry in ten years' time, while a poor man who could only afford cheap boots would have spent a hundred dollars on boots in the same time and \textit{would still have wet feet}.   
+
+This was the Captain Samuel Vimes 'Boots' theory of socio-economic unfairness.
+\end{quote}
+
+Spend the time up front to "buy the nice pair of boots" when you study. Being able to efficiently and effectively learn math is a boon during rigorous graduate studies. Perhaps the two most important ways to do this are to
+\begin{enumerate}
+\item Summarize individual readings and chapters for yourself and in your own words.
+\item Read and work to understand readings and attempt homework problems \emph{before} the corresponding lecture.
+\end{enumerate}
+
+Don't shortchange yourself by shirking thinking deeply about what you are learning in your math classes.
+
+For a fantastic deeper dive on this subject, see Tyler Jarvis' article \href{https://mathdept.byu.edu/~jarvis/AdviceForStudents/HowToReadAMathBook.pdf}{How To Read A Math Book}.
+
+\subsubsection*{Classes}
+The ACME core covers the rudiments of most of what you will see in graduate school. If you have time you should consider taking these courses.
+
+\textbf{Math 352 Intro to Complex Analysis} (3 credits) This course covers complex analysis much more rigorously and thoroughly than Volume 1 coverage, if at a more leisurely pace.
+
+\textbf{Math 540 Linear Analysis} (3 credits) This course is an introduction to modern functional analysis, covering the structure of normed and inner-product spaces, the behavior of bounded linear operators and their duals, and the major foundational theorems of Banach space theory.
+
+\textbf{Math 541 Real Analysis} This course is an introduction to modern measure theory and integration on $\mathbb{R}^n$, covering Lebesgue measure, the Lebesgue integral, Fubini’s theorem, $L^p$ spaces, and the Fourier transform on $\mathbb{R}^n$.
+
+\textbf{PDE classes? Numerical Linear Algebra?}
+
+\textbf{IT\&C 530 Scientific Computing?}
+
+Both Math 540 and Math 541 are grad-level treatments of ideas introduced in Volume 1 of the ACME core. As grad-level courses they will approximate (and thus be great preparation for) classes you take during graduate studies.
+
+\subsubsection*{Timing}
+Many students struggle to both finish ACME graduation requirements in four years and have reasonable semester loads. The workload of an ACME undergraduate degree is significant, and careful and early scheduling can help finish in a reasonable time frame and with a positive experience.
+
+If you are an underclassman, the EMC2 cohort is recommended as a way to streamline ACME core prerequisites while acclimating to the pace and collaborative-cohort atmosphere of the program. EMC2 fulfills in two semesters all ACME prerequisites except for Math 334 which may be taken during Junior core. Once in the core, most students find that taking one concentration class and one GE class per semester in addition to the core classes is difficult but doable. 
+
+Be kind to yourself and don't overload your schedule. A few extra classes will not change your application appeal very much. You may find yourself taking three math lecture courses at once during a few semesters. More than that is not recommended. Spring and Summer terms may help, either with major classes (many prerequisites are offered during these terms) or with GE requirements.
+
+Remember, not only is it important to complete these classes, but it is also important to do well in them. For example, admitted students at top programs typically have a major GPA of 3.8 or higher. Don’t be discouraged if your freshman year was a disaster and your overall GPA is not perfect. Admissions committees look a lot at how you did in ACME prerequisites and core classes--so do well in those classes.
+
+\subsection{Getting to Know the Faculty}
+Faculty serve two key roles for helping you get into grad school and succeed once there. Firstly, they help you become a great applicant, mainly through mentored research. Secondly, they help potential grad schools identify you as an excellent applicant, through a letter of recommendation. Neither of these are possible without good relationships with the faculty. If your professors don't know who you are, they will be less likely to hire you and less likely to write you good letters of recommendation. 
+
+Your relationship with faculty needn't be mercenary. As mentioned previously, your relationship with faculty members at BYU may grow into important and precious mentoring relationships that last decades. Many faculty members sought jobs at BYU because of the opportunity to mentor and teach undergraduates is greater here than at most universities. They want to help you. Gaining trusted, experienced mentors is an incredibly important part of your education and formation as a person, not just as an academic.
+
+The following are some ideas for nurturing sincere relationships with faculty.
+
+\subsubsection*{Be interested in learning}
+The first place to start in getting to know the faculty is the classroom. It goes without saying that you should be working hard and excelling in your classes. This alone will often get you recognized to some degree, but students who go above and beyond the minimum expectations for an A will leave even more favorable impressions on the faculty. Again, the best way to seem like you are genuinely interested in learning is to be genuinely interested in learning. It is difficult to fake well. That being said, it is also important that your professor \emph{knows} that you are interested in more than a grade.
+
+\begin{itemize}
+\item In class, don’t fall asleep, talk incessantly with your neighbors, or do homework for other classes. 
+\item Prepare thoughtfully for class, which will equip you to participate in class discussions, answer questions, and ask good questions to help you understand the material. If you are interested in a doctoral degree, you should invest heavily in class time.
+\item Beyond the time spent in class, make an effort to visit professors during their office hours to ask further insightful questions related to the material in class. 
+\item Ask for advice regarding your plans for after graduation. Let that professor know by your actions that you are interested in really learning, not just the grade. 
+\item Be curious and genuine. Desire to learn and form authentic relationships with your professors. 
+\end{itemize}
+
+\subsubsection*{Attend Department Events}
+Anyone serious about their studies in applied math should make an effort to get involved with the department. The Math Department often sponsors various opportunities for students to learn more about faculty and various fields in applied math. This includes alumni socials, question answer panels, SIAM socials, and others. Ensure you are on the Math Monday Memo newsletter mailing list in order to not miss these chances. Faithful attendance of colloquia, for example, will both be mathematically edifying and earn recognition as "the student I always see at these things."
+
+\subsubsection*{Experience}
+Once you’ve started in your coursework and gotten to know the faculty some, you will be better qualified to apply for jobs within the department doing teaching and research. These jobs are not about the financial incentives, but more about the invaluable experience gained and the relationships developed with professors. The following sections detail the value of these opportunities and how to find them.
+
+\subsubsection*{Teaching Assistant}
+
+\textbf{BENEFITS} As mentioned before, those who work as teaching assistants usually aren’t doing it for the money. There are two primary benefits that come from being a TA. 
+
+\begin{enumerate}
+\item Those who teach a subject have to know the subject. This may seem fairly obvious, but there’s a good chance that you have taken a class or two where you did well enough to get a good grade, but you still haven’t mastered the material. Being a TA for any math class will help solidify your understanding of that subject. You’ll find that when you’re the one holding the review sessions and answering all the questions, the material will become that much clearer to you. 
+\item Working as a TA will help you to develop even better relationships with the faculty, which will be very important when you go asking for letters of recommendation. Aside from these two reasons, there is little other value to being a TA if you want to go to graduate school. If you are forced to choose between being a TA and an RA, choose the RA job. TA experience is not essential for preparing for graduate work. 
+\end{enumerate}
+
+\subsubsection*{Research Assistant}
+
+\textbf{BENEFITS} While TA experience is not needed in preparing for graduate school, research experience is essential. There are many benefits to being an RA. Some of these benefits are: 
+
+\begin{enumerate}
+\item Additional opportunities to better get to know the faculty 
+\item Instruction and experience in the overall research process 
+\item Increased computer programming skills 
+\item Better understanding of mathematical theory and its application in research 
+\item Increased ability to comprehend math literature 
+\item Flexible schedule—you often set your own hours 
+\item Opportunities to publish or co-author a paper with your professor
+\end{enumerate}
+
+Because so much of the emphasis in graduate work is on research, getting firsthand experience as a research assistant is excellent preparation for the work you will do in graduate school. It also serves as another opportunity to evaluate if graduate school is really what you want to do. If you are serious about pursuing a PhD in applied math, you should consider working as a full-time RA over the summer in place of other summer jobs or internships.
+
+If you have a job at a research lab at BYU, you may seek opportunities to research at other labs outside of BYU over the summer, such as an REU program. These are wonderful opportunities. It is fun and often beneficial to be part of a new lab and see how other researchers work. Acceptance into an REU program also demonstrates your competence. However, it is often more productive to spend the summer at your own lab and dedicate the extra time and focus without classes or other jobs. Undergraduate summers dedicated to the lab you are familiar with will be your best approximation of graduate school research during your undergraduate years.
+
+\textbf{GETTING HIRED} What does it take to get a research job? Unlike TA jobs, there is no standard application for RA positions. If you are interested in being a research assistant, you’ll need to get out and talk to professors. The best way to find research opportunities is to talk to the professor of a math class you are doing well in. If he or she can champion your cause and confidently recommend you to other professors, then you’re well on your way to finding that research job. Other students can also be a good resource for discovering research groups you might want to join. The earlier you can start work as a research assistant, the better. The college dedicates a lot of funding to undergraduate research and makes it a priority to hire undergraduate students in research roles. If you are persistent and willing to climb steep learning curves, you will have good chances of finding a research assistant job. 
+
+You will find that many labs across many disciplines are willing to take on ACME students, but math, computer science, and physics are particularly good. Professors are also interested in students with a strong programming background. Cold emailing a professor is a last-ditch approach to finding a research job. Start talking to professors early about your interest in research, and then see what opens up. If nothing is available at first, be a TA for a semester and try again.
+
+\newpage
+
+\section{The Process of Application}
+
+After working very hard to be an excellent applicant to grad school, it is time to work to present yourself as one. Clear communication of the good work you have done will always be a foundational part of your research career. The objective of every graduate school application is to persuade an admissions committee that among a large pool of applicants, you are one of the few that belong at the given university as a contributing and paid researcher. Your case should be clear and compelling.
+
+There will be many other applicants to every school to which you apply, many of whom will have similar credentials to you. Work to stand out by highlighting the very best you have done. Likewise, eliminate all glaring mistakes from your application, as many admissions committees will try to shrink the pool of candidates by looking for excuses to deny your application.
+
+Many applicants are not mindful of deadlines and end up rushing their applications, hurting their admission chances. Be mindful of timing and don't rush. The following chart provides a baseline schedule for different steps in the process of application. You may decide you need more or less time for some parts.
+
+\begin{center}
+\begin{tabular}{|p{0.65\textwidth}|p{0.25\textwidth}|}
+\hline
+\textbf{Action} & \textbf{Timing} \\
+\hline
+Make preliminary decisions on which schools you plan to apply to & Spring/Summer before your final year at BYU \\
+\hline
+Reach out to potential research advisors to express interest in their research and in collaborating with them & August before your final year at BYU \\
+\hline
+Take the GRE & August before your final year at BYU \\
+\hline
+Look at applications for all the schools you are applying to and take note of the necessary parts of the application & Start of Fall semester of your final year at BYU \\
+\hline
+Ask for letters of recommendation & October of your final year at BYU \\
+\hline
+Write Statement of Purpose & Summer or Fall of your final year at BYU \\
+\hline
+Complete Applications & November/December of your final year at BYU \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Choosing Schools}
+Begin looking into potential graduate schools the spring or summer before your final year of undergraduate studies.
+
+\subsubsection*{How many schools should I apply to?}
+Generally, students are encouraged to apply to 6-12 programs. You should also diversify the types of schools to which you apply. Schools broadly fall into three categories: long shots, realistic placements, and safety schools. Spread applications evenly between these categories. The more diverse your school selection, and the greater number of schools to which you apply, the greater your chances of being accepted somewhere you want to attend.
+
+Bear in mind that application costs add up quickly. Schools may charge \$75-\$100 per application, and it costs money to send transcripts (\$6.15) and extra GRE score reports (\$40). Students with financial hardship are often eligible for fee waivers. Campus visits, which are not common but can be helpful, further increase the cost. A reasonable, conservative (high) estimate of one application is \$140. Thus, 10 applications would cost about \$1400, without any fee waivers. Ultimately, the number of schools you apply to depends on how much risk you’re willing to take and how much money you’re willing to spend. The money might feel consequential now. However the returns of attending the best possible program for you are likely to be enormous.
+
+\subsubsection*{Understanding Different Programs}
+In considering which schools you would be interested in, you should first gather some general information about the school by visiting its website, particularly the faculty pages and recent PhD student placements. As you look at different schools, you should start to ask yourself, “Would I really go there if I was accepted?” and “Would I be happy with the types of jobs students are getting out of this program?” Family considerations will also factor in heavily. 
+
+Once you have some general information, go and talk to faculty members who know you and ask them what schools would be a good fit. Faculty can also help you to have more updated information about the details and academic cultures of specific programs.
+
+On this front, nothing will be more valuable than a conversation with a current graduate student at the program you want to learn about. Reddit or similar sites can approximate this, if you can find helpful comments, but better is to find a current graduate student on LinkedIn and reach out to ask a few questions, perhaps by email or by call. Be courteous by being prepared. First, talk to faculty members and your spouse and look within to decide which aspects matter most for your fit. Ask the current graduate student about those aspects and ask open ended questions in order to make the most of your conversation.
+
+\subsubsection*{Deciding on Schools}
+Try your best to sincerely assess your fit with each program you consider. Look for schools where there are a good number of faculty whose interests align with your own, and seem like good advisors. Improve your odds of admission to a great fit by letting excellent applicants cull themselves as they chase rank and prestige. Don't let rank cloud your own judgement. Recall that diversity of programs is your friend, and the world will not end if you do not get into a top 20 program. You can get great training in applied math in programs that fall well outside the top 20. 
+
+The success you have during your PhD will have a lot more to do with the work you do and your advisor's mentorship. Of course, the nature of a PhD outside the top 20 is that academic research placements of graduates can be a bit more difficult. However, demand for PhD mathematicians in government, private industry, and teaching-oriented institutions is strong and offers varied and interesting careers in which to use your PhD training. Furthermore, if your research is strong, academic research possibilities often open up, even if your degree is from a lower-ranked institution.
+
+\subsection{Funding}
+It is worth mentioning somewhere the rough transaction between university and PhD student. The PhD student is a quasi-employee of the university. They usually work as the university's most competent teaching assistants and research assistants, and contribute to the university's teaching/research machine. In return, the university usually provides funding for the PhD student, which typically includes tuition, health insurance, and a living stipend. Living stipends can vary significantly, starting around \$20,000 per year up to \$50,000.
+
+In some cases, however, students are offered admission to a PhD program without funding. Some have argued that even if you don’t get funding your first year, you can get it in later years, but this is the rare exception—usually you get what you’re offered upfront.
+
+\subsubsection*{Additional sources of funding}
+The primary reason you should apply for external funding (from outside your university) prior to applying to graduate school is to improve your probability of getting into a better program. The NSF Fellowship falls under this category and warrants special mention.
+
+The NSF Fellowship is a grant from the National Science Foundation, which has historically funded much of university research. The Fellowship, unlike standard research grants, does not fund a specific research proposal so much as a specific researcher. The fellowship includes funding for three years and is meant to support graduate students with outstanding research potential. An NSF Fellowship makes a graduate student more attractive to a university because 1) it signals high potential and value, and 2) it makes the student cheaper to fund and gives faculty flexibility. Additionally, since the student provides their own funding, it allows them to choose their advisor more freely without worrying about RAship or TAship.
+
+However, the timeline is important. Since the NSF Fellowship is for graduate students, the earliest you apply is about the same time you begin applications to graduate schools. The deadline for applications to the NSF grant is in October, before graduate school application deadlines, and the NSF awards are announced in late March or early April, after the majority of PhD decisions. Thus, for your first cycle of graduate school applications, admissions committees will only see whether you \emph{applied} for the Fellowship, not whether you were awarded the Fellowship. Many applications will ask what outside funding you have applied for, and application for a prestigious NSF Fellowship indicates initiative and potential qualification.
+
+The application for the NSF Fellowship will require you to focus and clarify your research interests, and will likely spark hard thinking and good conversations with faculty members, which will all make your graduate school applications sharper and better. Also, there are several fellowships, including the NSF, for which you can apply as a graduate student, so the experience of applying can be valuable moving forward.
+
+That being said, the award of the NSF Fellowship \emph{is} valuable for admission chances as well. One notable BYU graduate was awarded a fellowship but was not accepted into any graduate programs she found compelling. She simply deferred her fellowship for one year and re-applied to graduate schools the next cycle. Because she had guaranteed NSF funding she was a more attractive candidate and was accepted into several great programs.
+
+Other similar fellowships worth looking into and applying to are 
+\begin{enumerate}
+    \item NDSEG Graduate Fellowship
+    \item Hertz Fellowship
+    \item National Physical Science Consortium (NPSC)
+    \item DOE Computational Science Graduate Fellowship (DOE CSGF)
+    \item DOE NNSA Laboratory Residency Graduate Fellowship (DOE LRGF)
+\end{enumerate}
+
+\subsection{GRE Math Test}
+The GRE math test used to be a common requirement for applications, but is rarely required post-2020, and is sometimes not even reviewed. Because it is almost always optional, it is most valuable to students with an uneven GPA or who are switching fields late. It signals mastery of core undergraduate math, but is at most a supplement to your application, not a pillar. Because the math GRE emphasizes identities, tricks, and topics like abstract algebra, applied math committees focused on modeling and computation may be underwhelmed by a great score. However, ACME students are required to take the GRE math subject test to graduate, so your question is not whether to take it but rather whether to try to get a good score.
+
+If the departments you are applying to are theory/pure-math heavy, or your letters are solid but not glowing, or your GPA is spotty, a great score on the math GRE could improve your admission chances. Otherwise your time is likely better spent focusing on the real pillars of your application, such as writing a sharper research statement, deepening projects, getting a strong letter of recommendation, or submitting for an NSF Fellowship.
+
+For those interested, \href{https://www.ets.org/gre/test-takers/subject-tests/about.html}{here is the official site}, and \href{https://www.gregmat.com}{here is an attested study resource}.
+
+\subsection{Letters of Recommendation}
+However important you think letters of recommendation are for your admission odds, they are likely more important. Your letters, along with your statement of purpose, are the parts of your application that do most of the standing out, because they are farthest from copy-paste of qualified students everywhere. Furthermore, the members of the admissions committee almost certainly have never heard of you, but they may recognize the authors of your recommendation letters, which lends those letters more weight.
+
+You will typically need three letters of recommendation for your program application and four for a fellowship application , so it is important to connect with multiple faculty. In requesting faculty to write letters of recommendation on your behalf, you should give them adequate time to write the letter. In general, the more time they have, the better their letter will be.
+
+Remember, the admissions committee will try to ascertain whether or not you have the potential to be a capable researcher. Your letters of recommendation, ideally, will reflect your potential for research--words like \textit{self-motivated}, \textit{initiative}, \textit{independent} will go a long way. If available, pick mentors who can attest to these traits in you over a professor that can give a testimonial to your grades.
+
+While deciding which faculty members to ask to write letters for you, consider the following points:
+\begin{itemize}
+\item Try to ask for letters of recommendation from professors who have an active research agenda in your area of interest or with connections to institutions you are most interested in attending. The recognition factor of your letter writer by members of the admissions committee can be an advantage. 
+\item Because Applied Math adjacent programs may well have admissions committee members with backgrounds in computer science, physics, statistics, or engineering, you have lots of latitude for the background of your letter writers. It depends on which programs you are interested in. Applied math professors will be the safest bet in general.
+\item Don’t pressure anyone into writing a letter for you. Before asking a professor to write a letter for you, ask, “Would you feel comfortable writing a strong letter of recommendation for me for graduate school?” Bad letters can hurt your application, so make sure that the faculty members you ask will write you a good letter.
+\item You need letters that make it sound like you can walk on water. Try to get these letters from faculty whom you have worked for before, or in whose classes you have noticeably excelled.
+\item Letter writers can only do so much for you. They can't change your grades or the work you've done. Good letters have a lot to do with the preparation you have already done.
+\item Help letter writers write good letters by providing them a CV/resume, your statement of purpose, a summary of each research project / technical report you have worked on and with whom, a list of  math classes you have taken with names of professors and grades, a list of extracurriculars or awards, a letter or form indicating which schools you will be applying to along with deadlines (earlier than the actual deadline), and any other information or accomplishments you would like them to know.
+\end{itemize}
+
+At the end of the day, choose the professors who know you best. The best letter writers will be people who can confidently vouch for you because they know you on a personal level. This approach will serve you better than soliciting a letter from a professor with status or connections who hardly knows you.
+
+\subsection{Statement of Purpose}
+The statement of purpose is one of the more vague requirements for the application. While it may not be the determining factor for getting you in, it can very easily keep you out if it is poorly written. 
+
+The statement of purpose is essentially your pitch to the university that they should accept you into their program, perhaps because of academic prowess or research aptitude. A statement of purpose is not a \emph{personal} essay, and it would be a mistake to start with "I've been fascinated with i.i.d. random variables since I was a child". Rather, a statement of purpose is an \emph{academic} statement that gives the admissions committee a rough shape of you as a potential academic. You may include accomplishments, academic goals, research questions that interest you, why you are pursuing graduate studies, or why your values align with a particular institute. 
+
+The admissions committee, for their part, read your statement of purpose to learn three things. 1) Are you a good fit for their program? Do your strengths and interests align with the strengths and interests of the program? 2) Why are you applying to this specific program, beyond wanting to go to grad school generally? 3) Do you have strong potential to handle the unique rigors and difficulties of academic life, and be a successful PhD student? Perhaps implicitly, do you know what you are getting into?
+
+When drafting your statement of purpose, consider the following tips:
+\begin{itemize}
+\item Get feedback from professors and mentors, and revise your statement many times
+\item Write a well thought out statement that is tailored to each specific program. This does not mean you need to draft an entirely new statement for each school, but you ought to change certain aspects of your document to cater to each one.
+\item Most schools will ask you regarding your research interests, why you wish to do graduate work, your professional goals, and how that school will help you accomplish these goals. Be realistic in writing these—the admissions committees will not be swayed by moving descriptions of one’s passion for statistics.
+\item Try to be specific in describing your research experience as well as your proficiency in upper-level mathematics. Greater specifics indicate greater competency.
+\item Get feedback from professors and mentors, and revise your statement many times
+\item Describe your research interests as best as you can, but don’t talk too much about research interests if you don’t have any or if you don’t know what you really want to do. The admissions committees do not expect you to have your dissertation topic picked out, so don’t feel the need to force anything.
+\item References to specific faculty members or papers written by faculty members can be beneficial if done properly. When you do this, it should be clear that you have done your due diligence on them. You don’t want it to seem like you are name-dropping. Shoot for Harry Potter rather than Draco Malfoy.
+\item Get feedback from professors and mentors, and revise your statement many times
+\item Be clear and concise, and avoid flowery oratory or storytelling.
+\item As in any presentation, a "but... therefore..." connection is better than a "and..." connection.
+\end{itemize}
+
+\href{https://www.study-abroad.org/blog/statement-of-purpose-guide/}{This guide} is an excellent place to start. It provides specific pointers and a basic schedule for the different steps of writing.
+
+\href{https://www.collegeessayguy.com/blog/statement-of-purpose-examples}{This site} gives a general description of statements of purpose along with examples.
+
+\subsection{Completing the Application}
+The above portions are the bulk of the application. After you have completed them, finishing your application consists of filling out paperwork and sending transcripts and/or scores to different schools. Early application can save you money, as some schools waive fees if the application is in by a certain deadline.
+
+Perhaps the most tortuous part of the application process is waiting for the response that will let you know what your life will look like for the next 5 years. Do your best to put it out of your mind and relax. You may find yourself in a position where you have been accepted to a program and have a decision deadline, but have yet to hear from a preferred program. In this case it is appropriate to contact your preferred program and inform them of your deadline and your preferences. Do not think you can simply accept admission to a lesser-preferred program, subject to the later decision of another preferred program. Reneging on your acceptance is very bad form and reflects poorly on yourself and BYU as an institution.
+
+\newpage
+
+\section*{Conclusion}
+Preparing yourself for graduate school in applied math is long, hard work. Preparing your applications to graduate school is more hard work. Admission to excellent programs is competitive. If you think graduate school is the path for you, begin to prepare as soon as possible (now if not earlier) in order to make your application the best it can be. That preparation is primarily of yourself and then of your application materials.
+
+Attend events, take challenging classes, visit with professors often, and get involved in research. These should become habitual to you as you continue your studies. 
+
+Ultimately, the admissions process is both variable and subjective. We hope this document will be an informative and helpful introduction to your journey. 
+
+We wish you the best of luck.
+
+\end{document}

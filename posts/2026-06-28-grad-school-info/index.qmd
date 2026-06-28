@@ -1,0 +1,15 @@
+---
+title: "Grad School Application Guide [In Progress]"
+date: 2025-06-15
+description: "An informative guide meant to be a good starting point."
+categories: [math]
+---
+
+I made a guide for undergraduate students who want to go to grad school. This guide is specifically for BYU ACME students, though it is applicable for any math undergrad, and many of the principles apply for any major and any program. I made it because my own process of learning how to prepare for graduate school and about the application process has been scattered and haphazard. This document aims to centralize good advice I have received and links to other good resources. Good luck to all!
+
+This manual is a work in progress and I will continue to update this link to point to the most recent version.
+
+[grad school application guide](info-guide.pdf){target="_blank"}
+
+
+**Disclaimer**: I am an undergraduate myself and have not gotten into grad school. This could be very embarrassing if I don't get in anywhere. I am working with a few BYU professors in order to correct any misinformation or fill in any gaps in this guide. None of the suggestions are firsthand anyway.

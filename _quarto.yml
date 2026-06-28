@@ -31,4 +31,5 @@ format:
     toc: true
     toc-depth: 3
     citations-hover: true
+    footnotes-hover: true
     link-external-newwindow: true
