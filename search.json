@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "writing.html",
+    "href": "writing.html",
+    "title": "Writing",
+    "section": "",
+    "text": "Some Math\n\n\n\nmath\n\n\n\nOne sentence shown in the listing and in link previews.\n\n\n\n\n\nJun 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMy First Essay\n\n\n\nessay\n\n\n\nOne sentence shown in the listing and in link previews.\n\n\n\n\n\nJun 1, 2025\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2025-06-15-some-math/index.html",
+    "href": "posts/2025-06-15-some-math/index.html",
+    "title": "Some Math",
+    "section": "",
+    "text": "This is a placeholder post demonstrating LaTeX support, which works out of the box in Quarto.\nInline math: \\(x^2 + y^2 = z^2\\)\nDisplay math:\n\\[\n\\int_0^\\infty e^{-x^2} \\, dx = \\frac{\\sqrt{\\pi}}{2}\n\\]"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Jackson Pond",
+    "section": "",
+    "text": "Hi, I’m Jackson — [one or two sentences about who you are and what you do]. I write about [topics] and build [kind of projects].\n\n\n\n[Current project or focus #1]\n[Current project or focus #2]\n[Current project or focus #3]\n\nRead my writing →   |   See my projects →"
+  },
+  {
+    "objectID": "index.html#what-im-working-on-now",
+    "href": "index.html#what-im-working-on-now",
+    "title": "Jackson Pond",
+    "section": "",
+    "text": "[Current project or focus #1]\n[Current project or focus #2]\n[Current project or focus #3]\n\nRead my writing →   |   See my projects →"
+  },
+  {
+    "objectID": "posts/2025-06-01-my-first-essay/index.html",
+    "href": "posts/2025-06-01-my-first-essay/index.html",
+    "title": "My First Essay",
+    "section": "",
+    "text": "This is a placeholder post. Replace this text with your actual essay."
+  },
+  {
+    "objectID": "posts/2025-06-01-my-first-essay/index.html#section-heading",
+    "href": "posts/2025-06-01-my-first-essay/index.html#section-heading",
+    "title": "My First Essay",
+    "section": "Section heading",
+    "text": "Section heading\nWrite your content here in Markdown. You can include:\n\nLists\nBold and italic text\nLinks\n\n\nBlockquotes for pull quotes or citations."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Project One\n[placeholder description of what this project does and why you built it.]\nStack: Python, PyTorch\n\n\nProject Two\n[placeholder description of what this project does and why you built it.]\nStack: TypeScript, React\n\n\nProject Three\n[placeholder description of what this project does and why you built it.]\nStack: Rust"
+  }
+]
