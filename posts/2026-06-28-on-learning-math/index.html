@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-06-28">
+<meta name="description" content="Some thoughts on good habits for learning math well.">
+
+<title>On Learning Math – Jackson Pond</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6140f5cb4c2f36f337af84d246f9696a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Jackson Pond</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../writing.html"> 
+<span class="menu-text">Writing</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#a-new-approach-to-learning-math" id="toc-a-new-approach-to-learning-math" class="nav-link active" data-scroll-target="#a-new-approach-to-learning-math">A new approach to learning math</a></li>
+  <li><a href="#i.-think-hard" id="toc-i.-think-hard" class="nav-link" data-scroll-target="#i.-think-hard">I. Think hard</a>
+  <ul class="collapse">
+  <li><a href="#studying-in-a-way-that-promotes-thinking-hard" id="toc-studying-in-a-way-that-promotes-thinking-hard" class="nav-link" data-scroll-target="#studying-in-a-way-that-promotes-thinking-hard">1. Studying in a way that promotes thinking hard</a></li>
+  <li><a href="#plan-out-a-schedule-to-implement-these" id="toc-plan-out-a-schedule-to-implement-these" class="nav-link" data-scroll-target="#plan-out-a-schedule-to-implement-these">3. Plan out a schedule to implement these</a></li>
+  </ul></li>
+  <li><a href="#iii-limit-time-spent-doing-math" id="toc-iii-limit-time-spent-doing-math" class="nav-link" data-scroll-target="#iii-limit-time-spent-doing-math">III Limit time spent doing math</a>
+  <ul class="collapse">
+  <li><a href="#the-80-rule" id="toc-the-80-rule" class="nav-link" data-scroll-target="#the-80-rule">2. The 80% rule</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">On Learning Math</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">math</div>
+    <div class="quarto-category">education</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Some thoughts on good habits for learning math well.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 28, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>For Final Version</strong> - Originally for my brother who wanted advice on spending less time doing math homework. This is a guide for ACME students who are wondering how people do ACME and enjoy life. I wrote it as someone who really floundered (lifestyle-wise) in the pre-reqs and during junior core, but who found my stride during Senior year. I don’t do homework after 6pm and rarely on weekends. - Aims to teach general but practical principles. Will be useful for any class. - Nod to deep work. - This lays out good <em>habits</em>. All about consistency, little things each day. Important to not get in your own way–don’t tell yourself “But I’m not a good student”. Success in ACME is not about being a gifted or smart mathematician. It’s about being consistent and diligent. So tell yourself not that you are smart but that you are dedicated and consistent, and then give yourself evidence that that is true.</p>
+<p>I originally wrote this for my brother Logan who followed me into the applied math major at BYU a few years after I started. He quickly felt bogged down by the workload and asked advice on spending less time doing math homework. I ended up trying to distill everything I had learned and observed about how to do BYU’s ACME program <em>and</em> enjoy life. I wrote it as someone who really floundered (lifestyle-wise) during the pre-reqs and during the first year of the program, but who found my stride during Senior year. I never did homework after 6pm and rarely on weekends, and did better than ever in class and on tests.</p>
+<p>I aim to communicate general but practical principles. They will likely be useful for any class.</p>
+<p>This guide advises good <em>habits</em>–practices that require consistency, little efforts each day. I also think it is important to not get in your own way–don’t tell yourself “But I’m not a good student”. Success in math (or anywhere) is not about being a gifted or smart mathematician. It’s about being consistent and diligent. So tell yourself not that you are smart but that you are dedicated and consistent, and then give yourself evidence that that is true.</p>
+<hr>
+<p>I know you asked specifically about spending less time, but as I wrote this I realized I was also talking about effectively learning math.</p>
+<p>The best way to spend less time on math homework is to not do it. While that’s quite straightforward, it’s not very satisfactory. The real goal is to spend the least amount of time possible on math homework while still clearing some minimum standard of math understanding and, of course, a minimum grade. I imagine your standard for minimum grade is pretty high and your standard for math understanding should be pretty high too. So, then, you only want to engage in activities that efficiently get you to homework completion and math understanding in as little time as possible.</p>
+<p>Remember that you may spend a bit of frustrating, seemingly inefficient time on the way to deep, satisfying insight. There are good ways to decrease frustrated time but I don’t think there is a way to deep insight without any at all.</p>
+<p>Here goes.</p>
+<section id="a-new-approach-to-learning-math" class="level1">
+<h1>A new approach to learning math</h1>
+<p>You may have already made this switch–I just know it took me longer than it should have. I know we have already talked about it too, but I want to hit it again. There was a big shift for me, in between high school and university, away from learning a formulaic approach to math to learning a relational one. Let me explain in terms of being bad at directions.</p>
+<p>For much of my life, I haven’t been great at directions. I wasn’t interested in getting a feel for the city I grew up in, I just wanted to get from point A to point B, and 90% of the time A and B where our house, North High School, church, a few friends’ houses, or Culver’s. I was able to learn directions as a linear series of turns: “Turn right on Superior Ave, left at the first intersection, right by the Sport’s Core sign” or “Left onto Superior, left at the big intersection, right on North, left on before the cemetery”. This worked just fine for me, especially when I could use google maps easily when I didn’t know how to get to <em>that</em> Culver’s or to a house I hadn’t visited before.</p>
+<p>My series to get to the Sheboygan Youth Sailing Center is “Left on Superior, keep going, keep going, right on third”, even though I knew it wasn’t the best way to get there. When I was in Sheboygan a few months ago, I decided to take Erie. I knew how to get to Erie–“right at the round about, right on after the movie theater, left onto the ramp”–but once I was on it I had no idea when to turn. I didn’t know where I was and I didn’t know where other places were, because I had left one of my linear series of turns. My brother Truman had to guide me step by step. Funny enough, he messed up and had me turn earlier than he usually does, but he was unfazed because he still knew where he was and got me to the sailing center easily.</p>
+<p>Truman (and Jack Allen and maybe you) doesn’t think of Sheboygan like a subway line, with discrete tracks in between places of interest. It’s a bunch of places that are all related to each other by direction and distance. If he knows where he is, he knows where everything else is. Rather than thinking about directions like formulas, he thinks about the map.</p>
+<p>It is lazier, less useful, and less sticky to learn directions linearly rather than becoming familiar with the city itself. Similarly, learning math by memorizing formulas or the wording of theorems is lazy, hard to apply, and hard to remember. Many people don’t know there is another way, so they unavoidably hate math.</p>
+<p>It is drudgery to memorize the eleven properties of a full-rank matrix. It would take a lot of flashcard reps to recall that “full rank square matrix”is equivalent to - Column space spans the whole vector space - Row space spans the whole vector space - Invertible - Diagonalizable - Determinant <span class="math inline">\(\neq\)</span> 0 - Nonzero eigenvalues … And the list goes on! The Jackson of math nonetheless trudges forward and works to drill into his head that these all go together. The Trumans think about it in terms of relationships and ask <em>why</em> a determinant of zero should mean a matrix isn’t invertible. Grant Sanderson does a great job making this clear.</p>
+<blockquote class="blockquote">
+<p>Since a determinant is the factor by which the area of shape changes under the matrix transformation, a determinant of zero would mean the space gets squashed into a lower dimension, which necessarily means lots of points get mapped to the same point under the transformation–so starting with a transformed point, you can’t go backwards. Makes sense.</p>
+</blockquote>
+<p>When that is in place and makes sense, the explanation of eigenvalues as “magical values such that <span class="math inline">\(A\vec{x} = \lambda \vec{x}\)</span>” won’t be enough. You’ll dig and ask why until you arrive somewhere like,</p>
+<blockquote class="blockquote">
+<p>The transformation denoted by matrix <span class="math inline">\(A\)</span> can be decomposed into eigenvectors with associated eigenvalues–and if an eigenvalue is 0, that means there is squashing in the direction of that eigenvector. So it’s the squashing thing again.</p>
+</blockquote>
+<p>You will see that “<span class="math inline">\(A\)</span> is invertible” isn’t just a package deal with “<span class="math inline">\(det(A) \neq 0\)</span>”, they are just two different ways to say the same thing–that <span class="math inline">\(A\)</span> doesn’t squash dimensions down, so you can work backwards. Proofs will change from complex recipes to windows into the fundamental nature of things. Good proofs teach you more about the objects that show up in the proof.</p>
+<p>Then on homework and exams, you won’t get lost after a few unexpected turns. And when you find yourself in uncharted territory, you’ll have the skills to make a map. You’ll be a mathematician. So be a Truman.</p>
+<p>The rest of this is more or less ways to learn math in this way, and common pitfalls to avoid.</p>
+</section>
+<section id="i.-think-hard" class="level1">
+<h1>I. Think hard</h1>
+<blockquote class="blockquote">
+<p>Memory is the residue of thought. ~Daniel Willingham</p>
+</blockquote>
+<p>Learning, in any discipline, is the result of actively engaging with the material to be learned. Thinking hard is what digs the grooves through which thought can flow. An apt analogy is that of lifting weights. Looking at weights or reading about lifting weights or enlisting a friend or robot to lift weights for you can’t make you stronger. You need to do the heavy lifting! Likewise, in order to learn math (or anything), you need to think about it hard.</p>
+<p>Some practical examples–which we will go over in more detail–are exercises like working through examples on your own, summarizing or explaining sections and proofs, and giving homework sets real concentrated effort.</p>
+<p><strong>This section is relevant always, but especially during test season.</strong></p>
+<section id="studying-in-a-way-that-promotes-thinking-hard" class="level3">
+<h3 class="anchored" data-anchor-id="studying-in-a-way-that-promotes-thinking-hard">1. Studying in a way that promotes thinking hard</h3>
+<p>Flashcards are fine. It is the most minimal way to spend time thinking about the content. There is a strong recall aspect to math, most obviously for things like definitions and formulas. However, flashcards can sell you short. Thinking about “Why is this definition useful? Why would we want to set aside something with these properties?” or “What is this formula really saying and why is it set up that way?” is much better than rote memorization. Flashcards that prompt you to think about the connections and motivations of the content you are reviewing will be best.</p>
+<blockquote class="blockquote">
+<p><em>Practice</em>: On definition cards, ask yourself, “What is the benefit of this definition and what role do the parts of definition play in theorems?” Include examples and tricky unexamples of the definition.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><em>Practice</em>: For theorems, drill the statement, but also ask “What is this really saying and how is it used? What situations does it simplify?” Likewise, know examples of when it can be applied and tricky unexamples. See if you can’t talk through a hand-wavey proof that amounts to “What is this really saying and why is true?”</p>
+</blockquote>
+<p>Better than flashcards is to create a thread of reasoning through entire chapters, creating the logical succession of topics yourself. “Why do we care about this concept, what questions does it answer, when is it useful, why should I care, how does the proof work?” Explaining things in your own words is hard work, and excellent for learning.</p>
+<p>Proofs in particular are an important way to engage deeply with math. Good proofs teach the student something fundamental about the mathematical objects involved. When studying proofs, ask “What fundamental truths does this proof teach me?” In some classes (Math 290 and Math 341), your teacher will have you memorize a certain few proofs. Again, I find it is good to have a hand-wavey explanation for almost every proof. You should have some intuition for nearly every one. The exception is when the book skips it because it’s too technical or when your teacher says, “This is a pointless, uninstructive proof,” as will sometimes happen.</p>
+<p>This intuition snowballs quickly. A willingness to put in the work to understand proofs today will make it much easier to learn proofs that build on the foundation in the future. On the other hand, it requires a lot of time to just barely re-learn the proofs again and again, remedially–it’s a kind of debt that becomes difficult to pay off. ## 2. Review often It is best to spread the hard thinking out. Inevitably, you will have upticks in the days before midterms and finals. The best case is if you can spread it thin so you are spending just 10-15 minutes a day reviewing past material, and hours less during exam weeks. This will give you a surprisingly big edge in class and on homework, where you will start piecing things earlier than if you cram. Things will seem easier. Homework will go faster.</p>
+<p>In the past, my major insights and connections came to me during exam weeks, because that was when I spent the time going over all the material. It’s when I set myself up to make connections. If you review earlier, in small bites, you’ll make those connections throughout the semester and be faster throughout.</p>
+<p>Go at it with the idea of “I will review more per day but the area under the curve will be the same”, but in practice I think the total time spent studying and doing homework will decrease substantially.</p>
+<p>Again, great further reading in Tyler Jarvis’ <a href="https://mathdept.byu.edu/~jarvis/AdviceForStudents/HowNotToStudy.pdf">How Not To Study</a>–what not to do. ## II. Prepare for class Nearly every teacher advises students to prepare well for class, and nearly every student skimps on it. It’s easy to bounce between the next thing due for other classes and either skip the reading or blasting through it to take a reading quiz. Don’t fall for this. Consider Terry Pratchett’s “boot theory” of economics:</p>
+<blockquote class="blockquote">
+<p>The reason that the rich were so rich, Vimes reasoned, was because they managed to spend less money. Take boots, for example. … A really good pair of leather boots cost fifty dollars. But an affordable pair of boots, which were sort of OK for a season or two and then leaked like hell when the cardboard gave out, cost about ten dollars. … But the thing was that good boots lasted for years and years. A man who could afford fifty dollars had a pair of boots that’d still be keeping his feet dry in ten years’ time, while a poor man who could only afford cheap boots would have spent a hundred dollars on boots in the same time and&nbsp;<em>would still have wet feet</em>.</p>
+<p>This was the Captain Samuel Vimes ‘Boots’ theory of socio-economic unfairness.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</blockquote>
+<p>When you rush and always complete everything right before it is due, you are buying a cheap set of boots. This only requires you to spend more time later to understand how to do the associated homework and read and re-read the textbook, or spend time with a TA or your professor. Buy the nice pair of boots by taking time to really do the reading and work to understand it. This will mean you spend less time later–and less time overall–to achieve understanding, complete homework efficiently, and perform well on tests. ### 1. Do the reading before class</p>
+<blockquote class="blockquote">
+<p><em>Practice</em>: Read the textbook with your notes out. Don’t copy down the template of the section, but write down what seems important. I write the most explaining the things I understand the least and it is <em>magic</em> the way the pieces fit together as I do so. I often start a sentence not knowing how I’ll finish it, only to have it all click together before I finish. And then I get it! Working to explain the tricky stuff is an <em>incredible</em> exercise for your brain.</p>
+</blockquote>
+<p>Working hard to understand the reading will equip you to make the most of the corresponding lecture. You will ask the relevant questions because you will know where you got stuck, and which parts you know you actually don’t get–the things that you would have thought, “yeah I could figure that out” had you merely glanced through the reading. The lecture will solidify your learning rather than introduce it.</p>
+<p>A fantastic deeper resource on this point is from Tyler Jarvis, <a href="https://mathdept.byu.edu/~jarvis/AdviceForStudents/HowToReadAMathBook.pdf">How To Read A Math Book</a> ### 2. Give the homework a first pass This is the practice that has made the most surprising difference for me. Giving the homework an earnest, focused first pass locks in the content from the reading through practice, and exposes weak spots in understanding.</p>
+<p>The first pass has its own set of rules. Just go for each problem until you know exactly how to solve the rest (maybe leave yourself a note), or until you’re stuck. If you get stuck, it’s a good idea to note exactly what is stopping you. Don’t give up too easily. The time you spend checking with the section for how to proceed is vital. Don’t push forward too hard either, it’s just a first pass. For sure don’t spend more than ten minutes or so a problem.</p>
+</section>
+<section id="plan-out-a-schedule-to-implement-these" class="level3">
+<h3 class="anchored" data-anchor-id="plan-out-a-schedule-to-implement-these">3. Plan out a schedule to implement these</h3>
+<p>These two key preparations changed the game. Not only am I perpetually “ahead” in class and never worried about the due-dates, but I get so much more out of class time. Things make more sense so it’s easier to pay attention, and I ask the questions I need to. Furthermore I have done <em>much</em> better on exams. And I have spent less time while enjoying myself more!</p>
+<p>This may require that you spend a weekend or a few evenings working extra to get ahead of where you are now. It is a million times worth it.</p>
+</section>
+</section>
+<section id="iii-limit-time-spent-doing-math" class="level1">
+<h1>III Limit time spent doing math</h1>
+<p>There is a universal law of life that every math student must learn.</p>
+<blockquote class="blockquote">
+<p>[Math homework] will fill the amount of time you make available to it.</p>
+</blockquote>
+<p>When you sit down and day, “Well I have until [time] to finish this”, be it an encouraging amount of time or a discouraging amount of time, you will take that amount of time to finish it. Almost always. I’m not certain why this is–maybe because we go slower because we know we can, or put an extra finish on each problem if there’s time, or urgency makes our brain work better.</p>
+<p>I just know that even if I hustle, it will take me right to the edge of my available time slot to finish what I am working on.</p>
+<p>The solution to this is to 1) give yourself less time and 2) have lower standards for what is good enough. ## 1. Non-negotiable schedule The most important way to constrain the time you spend doing math is by blocking off non-negotiable events.</p>
+<p>Set a stop-time later than which you will not do homework. I recommend that it be much earlier than your bedtime. I stop at 6pm. Whether you’re done or not doesn’t matter, no homework past stop-time.</p>
+<p>Schedule consistent times to exercise. Exercise at midday is better than exercise in the morning is better than exercise at night, is what I have found. Fun exercise is always the best.</p>
+<p>This is hard to do initially but it <em>rewires</em> your brain. You will likely be surprised that you continue to get just as many things done in less time. You will also have more time to do the things you want to do, like spend time with friends/family or on your own hobbies. Not least is the fact that sleeping enough, exercising, and getting good social connection time is another way to buy the nice pair of boots and keep the saw sharp. These three things are part of being a healthy and happy person, and certainly don’t hurt your math education.</p>
+<section id="the-80-rule" class="level2">
+<h2 class="anchored" data-anchor-id="the-80-rule">2. The 80% rule</h2>
+<p>The 80% is as follows:</p>
+<blockquote class="blockquote">
+<p>You should always be willing to stop at 80%.</p>
+</blockquote>
+<p>80% is enough–if you have given your best effort, worked to understand, talked to a TA, and it still isn’t coming along, don’t finish it. Leave it be. This is <em>by problem</em>, not by problem set. Doing just 80% of five problems each is a valiant effort and suffices. 100% of four out of five problems does not.</p>
+<p>This also isn’t a <em>reason</em> to stop at 80%. You should always shoot for 100%. However, if you are already spinning your wheels, have checked in with helpful resources, or just don’t have time, 80% is a reasonable minimum standard.</p>
+<p>This is partly the law of diminishing returns–a continued effort just isn’t worth the time and distress it causes for the understanding or points gained. In my experience, 80% of the problem generally earns more than 80% of the points anyway.</p>
+<blockquote class="blockquote">
+<p><em>Practice</em>: The 80% rule pairs well with the first pass. I will often do the first pass, and leave some problems undone, awaiting office hours, TA hours, or to ask other students. I will usually work on my homework for up to an hour total after the first pass–and turn in whatever is done at that point. The time gained is extra time for the more important things in my life, and for review.</p>
+</blockquote>
+<p>Leaving things undone on purpose like this can be difficult, especially when you’re leaving it undone in order to spend time with friends or to get to bed early. It is very worth it, and if it isn’t too difficult to leave homework 20% undone, then your priorities are in the right place.</p>
+<p>An extra note–this is for problem sets assigned for homework. The same is not true when reviewing, studying for exams, or taking exams. Give 100% there. ## 3. Using resources: TAs and office hours You would be silly not to use all of the resources available to help you learn math. The challenge is to spend time efficiently with these resources, which means maximizing understanding gained per minute.</p>
+<p>The number one best way to make the most of these resources on your way to math understanding is to give each problem your best shot before phoning a friend. Firstly, this will prevent these helps from becoming a crutch or a shortcut that hinder your full understanding. Secondly, it will make your time spent in office hours or with friends targeted more exactly on the source of your question or problem, rather than spending your time and a TA’s time working through something you could do on your own, and missing out on your own discovery. It is hard to overestimate the power of precisely identifying the thing you don’t understand. What step of the proof? What point in the computation? Very often, a careful formulation of the question is all it takes to figure out the solution.</p>
+<p>The following are just a few additional tips for each resource, but the main principle is the above paragraph.</p>
+<p><strong>TAs</strong> Math TAs, in my experience, are cheerful, helpful, and patient. However, like anybody, they can sometimes get impatient and just sketch out each step of the problem at hand. They may think that’s what you want and that they are doing you a favor. It isn’t and they’re not. It pays to frame your request carefully: “Could you point me in the right direction…”, “I’m having trouble getting started. Is there a trick or a theorem in the book I’m supposed to be using?” and similar requests can get you the help you need without short-changing your learning. It may also pay to identify some TAs you like, that explain concepts in a way that jive with you, and stick to them.</p>
+<p><strong>Office hours</strong> Go to office hours. Some professors really can address more foundational understanding and often give bigger perspectives than TAs. Some don’t. It’s worth figuring out.</p>
+<p>Giving the problem your best shot and formulating your precise question is likely most important here, not just so you don’t waste a professor’s time, but also so they like you more. This is important for letters of recommendation when applying for internships, jobs, or grad school. Creating a genuine relationship with professors is also a way to become friends with kind, interesting, knowledgeable people that can be important mentors to you for your entire life.</p>
+<p><strong>Study groups</strong> Study groups are tricky. The overarching principle still applies, but a little differently. Presumably, the members of your study group don’t know the answers like your professor or your TA. Give the problem some thought on your own, whether that’s while you’re with the group or before, and then brainstorm together on how to continue. If you figure it out first, be careful to not be a bad TA–people don’t always like it when you lay out your solution unsolicited. Likewise, don’t let another group member become a crutch for you.</p>
+<blockquote class="blockquote">
+<p><em>Practice</em>: Personally, I prefer to have sketched out each problem as far as I can before starting to work with others. Then I can check the problems I finished to see if others did them the same, or I can ask, “How did you approach this step?” And by then I have thought enough about the problem to be able to talk about it.</p>
+</blockquote>
+<p>It’s a challenge to work effectively with a group, but it is worth learning! A key part of your undergraduate education should be how to collaborate on math problems.</p>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Pratchett, Terry (1993).&nbsp;<em>Men at Arms</em>. London: Gollancz. p.&nbsp;32.&nbsp;ISBN&nbsp;0-575-05503-0.&nbsp;OCLC&nbsp;29470107<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/jackpond\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2026 Jackson Pond</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

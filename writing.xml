@@ -10,55 +10,269 @@
 <atom:link href="https://jackpond.com/writing.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.9.38</generator>
-<lastBuildDate>Sun, 15 Jun 2025 06:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 28 Jun 2026 06:00:00 GMT</lastBuildDate>
 <item>
-  <title>Some Math</title>
-  <link>https://jackpond.com/posts/2025-06-15-some-math/</link>
+  <title>Imaginary numbers… rotate??</title>
+  <link>https://jackpond.com/posts/2026-06-28-imaginary-numbers-rotate/</link>
   <description><![CDATA[ 
 
 
 
 
-<p>This is a placeholder post demonstrating LaTeX support, which works out of the box in Quarto.</p>
-<p>Inline math: <img src="https://latex.codecogs.com/png.latex?x%5E2%20+%20y%5E2%20=%20z%5E2"></p>
-<p>Display math:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_0%5E%5Cinfty%20e%5E%7B-x%5E2%7D%20%5C,%20dx%20=%20%5Cfrac%7B%5Csqrt%7B%5Cpi%7D%7D%7B2%7D%0A"></p>
+<p>I wrote this a few years ago when I was first thinking about <em>writing</em> about math as a way of learning it. I really had wondered about why multiplying by <img src="https://latex.codecogs.com/png.latex?i"> caused rotations and why <img src="https://latex.codecogs.com/png.latex?e%5E%7Bi%5Cpi%7D%20=%201">, and decided this would be a good first foray for me. Much credit to <a href="https://betterexplained.com/articles/a-visual-intuitive-guide-to-imaginary-numbers/">BetterExplained</a> which was very helpful for me.</p>
+<hr>
+<section id="introduction-to-the-question" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-the-question">Introduction to the question</h2>
+<p>Both teachers and students tend to give up on ‘having a feel’ for imaginary numbers pretty quickly. Imaginary numbers are chalked up as a book-keeping tool or algebraic gymnastics rather than ‘real-life’ numbers like counting numbers, fractions, or negative numbers. The name, meant to be derogatory, doesn’t help, of course. I personally learned imaginary numbers this way, as a construct of convenience that shouldn’t be thought about too hard, and made it several years into college math with that attitude–I knew the rules, how imaginary and complex numbers behaved and everything. All without ‘having a feel’. However, every once in a while, a teacher would make an offhand comment belying a real intuitive understanding of imaginary numbers, often having something to do with rotation. I would glance around flabbergasted only to see several classmates nodding knowingly. After revisiting imaginary numbers, I’d like to share a more intuitive explanation of what imaginary numbers are and how they add to our system of numbers.</p>
+</section>
+<section id="an-analogy-with-negative-numbers" class="level2">
+<h2 class="anchored" data-anchor-id="an-analogy-with-negative-numbers">An analogy with negative numbers</h2>
+<p>Now, I will not make the case the imaginary numbers are anything more than a sophisticated book-keeping device or just a convenient construct. I will make the case that all numbers are that way, including negative numbers and fractions, only most people are more familiar with some of them.<sup>1</sup></p>
+<p>Negative numbers were also considered absurd and made-up once. It isn’t so difficult to understand why. How can Jimmy have 4 cookies and give away seven? How can anybody have less than nothing of anything? However, negative numbers fill a gap in the number system and simplify, if not outright facilitate, many mathematical problems. Furthermore, they were more accepted when represented with an elegant geometry that fit cleanly with the geometry of positive numbers.</p>
+<p>Consider that <img src="https://latex.codecogs.com/png.latex?7%20-%204%20=%203">. Very simple and straightforward. I might think of this problem as asking “What number x, if added to four, makes seven?” and you would say, “Why, three of course.” Now, anyone could rearrange this question to ask, “What number y, if added to seven, makes four?”. Without negative numbers, even if you know the difference between four and seven, you can’t express this difference in direction. You would need to say, “That doesn’t make any sense, but three added to four is seven.” There is a gap here.</p>
+<p>So, we invented a convenient book-keeping device that makes this simpler. Even before negative numbers were considered legitimate, and before mathematicians imagined them on a number line, they were used in algebra. As an example: Suppose you want to find two numbers whose sum is 10 and whose product is 21. You can set that up like so.<img src="https://latex.codecogs.com/png.latex?x(10%20-%20x)=21%20%5Crightarrow%20x%5E2%20-10x%20+%2021%20=%200%20">This problem can be solved quite simply by completing the square, but only with an “intermediate debt”, or with a book-keeping negative number that disappears by the end of the problem. <img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0Ax%5E2-10x+21&amp;=0%20%5C%5C%0Ax%5E2-10x&amp;=-21%20%5C%5C%0Ax%5E2-10x+25&amp;=4%20%5C%5C%0A(x-5)%5E2&amp;=4%20%5C%5C%0Ax-5%20=%202%20%5Cquad%20%5Ctext%7Band%7D%20%5Cquad%20x-5%20&amp;=%20-2%20%5C%5C%0A%5Ctext%7BSo%7D%20%5Cquad%20x=7%20%5Cquad%20%5Ctext%7Band%7D%20%5Cquad%20x%20&amp;=%203%0A%5Cend%7Baligned%7D%0A"></p>
+<p>Voilà! We used some negatives for “keeping track” but they disappeared in the solution. This is how many mathematicians, even Euler, often thought of negative numbers.</p>
+<p>Additionally, with negative numbers, it is very easy to say “negative three is the number that added to seven makes four”, and I can simply write <img src="https://latex.codecogs.com/png.latex?4%20-%207%20=%20-3">. Nowadays, first graders are supposed to understand what centuries of mathematicians were skeptical of–and the intuitive device that has made all the difference is the number line. <img src="https://jackpond.com/posts/2026-06-28-imaginary-numbers-rotate/number-line.jpg" class="img-fluid" alt="Number line"> We can see very clearly here that all numbers exist on a line, with positive numbers extending from the center (0) to the right, and negative numbers to the left. Let’s consider how some operations with each work on this number line. - <strong>Magnitude</strong>: Magnitude asks <em>“How far is this number from zero?”</em>–and this distance is always positive. Under the hood, it is calculated like so. - <img src="https://latex.codecogs.com/png.latex?%20%7Cx%7C%20=%20%5Csqrt%7Bx%5E2%7D%7C"><br>
+- <strong>Addition</strong>: Addition <em>translates</em> on the number line. Positive numbers translate in the positive direction (to the right), and negative numbers translate in the negative direction (to the left).<br>
+- <strong>Multiplication</strong>: Multiplication by a number <em>scales</em> by its magnitude. <img src="https://latex.codecogs.com/png.latex?4%20%5Ccdot%2012%20=%2048"> is to say that the magnitude of <img src="https://latex.codecogs.com/png.latex?48"> is <img src="https://latex.codecogs.com/png.latex?12"> <img src="https://latex.codecogs.com/png.latex?4%5Ctext%7Bs%7D">. Multiplying by a positive number will scale a number in whatever direction it is already facing. Multiplying by a negative number will scale in the opposite direction the number is facing–or it <em>reflects</em>, then scales.</p>
+<p>A helpful way to think about multiplication is to think of an extra 1 in front. For example, <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20%5Cbegin%7Baligned%7D%0A%20%20%20%203%20%5Ccdot%207%20&amp;=%201%20%5Ccdot%203%20%5Ccdot%207%20%5C%5C%0A%20%20%20%20&amp;=%2021%0A%20%20%20%20%5Cend%7Baligned%7D%0A%20%20%20%20"></p>
+<p>Adding the one in front reminds us to think of all numbers as being scaled from the identity, one. Positive numbers in the positive direction, negative numbers in the negative direction.</p>
+<p>This is why Gauss suggested we call negative numbers <em>inverse</em> numbers.<sup>2</sup> <img src="https://latex.codecogs.com/png.latex?-3"> and <img src="https://latex.codecogs.com/png.latex?3"> have the same magnitude, they just “face” different directions. In addition, they add the same amount just in different directions. Likewise, when multiplied, they scale a number by the same amount, just in different directions. Thinking about these numbers and these operations on the number line makes negative numbers intuitive and real.</p>
+</section>
+<section id="enter-imaginary-numbers" class="level2">
+<h2 class="anchored" data-anchor-id="enter-imaginary-numbers">Enter imaginary numbers</h2>
+<p>Now let’s consider a different elementary issue of algebra. The equation <img src="https://latex.codecogs.com/png.latex?x%5E2%20=%204">is simple to solve. Both <img src="https://latex.codecogs.com/png.latex?2"> and <img src="https://latex.codecogs.com/png.latex?-2"> squared are equal to <img src="https://latex.codecogs.com/png.latex?4">, so we have our roots. Now what would happen if I were to tweak this just a little bit? <img src="https://latex.codecogs.com/png.latex?x%5E2%20=%20-4">Well now I’m in trouble (without imaginary numbers). Squaring either a negative or a positive number results in a positive number, so there is no way to square something and arrive at <img src="https://latex.codecogs.com/png.latex?-4">. To fill this gap in the number system, a theoretical, convenient number was invented: <img src="https://latex.codecogs.com/png.latex?i">. The special thing about <img src="https://latex.codecogs.com/png.latex?i"> is that <img src="https://latex.codecogs.com/png.latex?i%5E2=-1">. <img src="https://latex.codecogs.com/png.latex?i"> allows me to solve this problem with <img src="https://latex.codecogs.com/png.latex?2i"> and <img src="https://latex.codecogs.com/png.latex?-2i">.</p>
+<p>This is the same process with negative numbers–an invention to fill a gap and allow a solution to be written. This invention has proved to be as useful and as elegant as negative numbers, and has a beautiful geometric representation. Just as the diagram of the negative numbers extending the number line has helped mathematicians and students understand negative numbers more intuitively, so will a geometric explanation (conceived of after imaginary numbers had proven their mettle) make imaginary numbers more intuitive.</p>
+</section>
+<section id="a-geometric-interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="a-geometric-interpretation">A geometric interpretation</h2>
+<p>Consider that the equation <img src="https://latex.codecogs.com/png.latex?x%5E2%20=%20-1">may be equivalently written<img src="https://latex.codecogs.com/png.latex?1%20*%20x%20*%20x%20=%20-1">So the question posed by this equation can be written, “What transformation, when applied twice, turns <img src="https://latex.codecogs.com/png.latex?1"> into <img src="https://latex.codecogs.com/png.latex?-1">?”</p>
+<p>If we try <img src="https://latex.codecogs.com/png.latex?x=1">, then <img src="https://latex.codecogs.com/png.latex?1%20%5Crightarrow%201%20%5Crightarrow%201">. If <img src="https://latex.codecogs.com/png.latex?x=-1">, <img src="https://latex.codecogs.com/png.latex?1%20%5Crightarrow%20-1%20%5Crightarrow%201">.</p>
+<p>The problem with integers, as we saw earlier, is that scaling by any integer twice gets us a positive number. Scaling by a positive number keeps 1 on the same side throughout, and scaling by a negative number twice reflects to the negative side of the number line, then reflects back. So no number on the integer number line can scale 1 twice and make it to the negative side of the number line.</p>
+<p>Imaginary numbers offer a whole new kind of transformation–a rotation! Imagine that multiplying by <img src="https://latex.codecogs.com/png.latex?i"> <em>rotates</em> <img src="https://latex.codecogs.com/png.latex?90"> degrees counterclockwise, so it is “halfway” to the negatives on the number line. Then, multiplying by <img src="https://latex.codecogs.com/png.latex?i"> again applies the same transformation and rotates the rest of the way to <img src="https://latex.codecogs.com/png.latex?-1">. We’re there!</p>
+<p>Similarly, we can multiply <img src="https://latex.codecogs.com/png.latex?1"> by <img src="https://latex.codecogs.com/png.latex?-i"> to rotate <img src="https://latex.codecogs.com/png.latex?90"> degrees clockwise, then multiply by <img src="https://latex.codecogs.com/png.latex?-i"> again to get to <img src="https://latex.codecogs.com/png.latex?-1">.</p>
+<p>Note that counterclockwise being the positive orientation is purely a human convention, and could just as easily have been reversed.</p>
+<p>Since <img src="https://latex.codecogs.com/png.latex?1%20%5Ccdot%20i%20=%20i"> is a <img src="https://latex.codecogs.com/png.latex?90"> degree rotation of the number <img src="https://latex.codecogs.com/png.latex?1">, <img src="https://latex.codecogs.com/png.latex?i"> is outside of the number line as we used to think of it. Just as we added the arrow pointing off into infinity on the left of zero to make the negative numbers, imaginary numbers add a <em>whole new axis</em> to the number line. There are the positive imaginary numbers <img src="https://latex.codecogs.com/png.latex?(i,%202i,%203i,%20...)"> off to infinity pointing <em>up</em> from zero, and negative imaginary numbers <img src="https://latex.codecogs.com/png.latex?(-i,%20-2i,%20-3i,%20...)"> off to infinity down from zero. <img src="https://latex.codecogs.com/png.latex?i"> is a whole new ‘imaginary’ dimension to measure a number with.</p>
+<p>So we asked, essentially, “How can we transform <img src="https://latex.codecogs.com/png.latex?1"> to <img src="https://latex.codecogs.com/png.latex?-1"> in two identical steps,” and arrived at “rotate <img src="https://latex.codecogs.com/png.latex?90"> degrees twice.” This proves to be extremely useful.</p>
+<p><em>Note to add somewhere</em> When I learned about complex numbers, I was used to graphing <img src="https://latex.codecogs.com/png.latex?y%20%5Ctext%7B%20vs%20%7D%20x"> on two real axes. Until fairly recently, I thought of the complex plane as a way to graph complex numbers the same way, without being something inherent to complex numbers. It was mysterious to me because the coordinate system worked by adding. So <img src="https://latex.codecogs.com/png.latex?3%20+%202i"> is the coordinate at <img src="https://latex.codecogs.com/png.latex?(3,%202)">. I always thought it was an odd way to run a coordinate system. What I was missing is that the complex plane is just the new way to represent the number-line. When imaginary numbers are used, numbers now have two components: the real part and the complex part. Numbers are two dimensional now.</p>
+</section>
+<section id="cyclical-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="cyclical-patterns">Cyclical patterns</h2>
+<p>When multiplying by -1, a pattern emerges: <img src="https://latex.codecogs.com/png.latex?1,%20-1,%201,%20-1,%201,%20-1,%20..."></p>
+<p>Multiplying by <img src="https://latex.codecogs.com/png.latex?-1"> just flips the sign. In fact, since imaginary multiplication introduced the idea of rotation, we can think of multiplication by <img src="https://latex.codecogs.com/png.latex?-1"> as a rotation of <img src="https://latex.codecogs.com/png.latex?180"> degrees (and a multiplication by <img src="https://latex.codecogs.com/png.latex?1"> as a rotation of <img src="https://latex.codecogs.com/png.latex?0"> degrees), which brings us to this pearl of mathematical intuition presented by some online chat.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://jackpond.com/posts/2026-06-28-imaginary-numbers-rotate/wise-anon.jpg" class="img-fluid figure-img"></p>
+<figcaption>Tao of reddit</figcaption>
+</figure>
+</div>
+<p>Now let’s piece out what the sequence of multiplying <img src="https://latex.codecogs.com/png.latex?i"> will be.</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?1">, just where we start.</li>
+<li><img src="https://latex.codecogs.com/png.latex?1%20%5Ccdot%20i%20=%20i"></li>
+<li><img src="https://latex.codecogs.com/png.latex?i%20%5Ccdot%20i%20=%20-1">, remember that two <img src="https://latex.codecogs.com/png.latex?90"> degree turns is <img src="https://latex.codecogs.com/png.latex?180"> degrees.</li>
+<li><img src="https://latex.codecogs.com/png.latex?-1%20%5Ccdot%20i%20=%20-i"></li>
+<li><img src="https://latex.codecogs.com/png.latex?-i%20%5Ccdot%20i%20=%201">, which is the same as <img src="https://latex.codecogs.com/png.latex?-1%20%5Ccdot%20i%20%5Ccdot%20i">. Alternatively, you could think of this as starting at <img src="https://latex.codecogs.com/png.latex?1">, rotating <img src="https://latex.codecogs.com/png.latex?-90"> degrees, then rotating <img src="https://latex.codecogs.com/png.latex?90"> degrees to end up back at <img src="https://latex.codecogs.com/png.latex?1">.</li>
+</ul>
+<p>Geometrically, we are taking 90 degree steps around the unit circle in the complex plane, repeating every four terms. This makes imaginary numbers great for modeling things that cycle in two dimensions, or circular relationships.</p>
+</section>
+<section id="understanding-complex-numbers" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-complex-numbers">Understanding complex numbers</h2>
+<p>Up to this point we have only talked about numbers on the <em>real axis</em> (where the imaginary part is zero) and the <em>imaginary axis</em> (where the real part is zero), but the new number system exists at all points in between–and there is a lot of new real estate.</p>
+<p>Consider the number <img src="https://latex.codecogs.com/png.latex?1%20+%20i">. It has a nonzero real part (<img src="https://latex.codecogs.com/png.latex?1">) and a nonzero imaginary part (<img src="https://latex.codecogs.com/png.latex?i">). Graphed, it is located here on the extended number line.</p>
+<p>Rather than rotating a full <img src="https://latex.codecogs.com/png.latex?90"> degrees to the imaginary axis, we are at a <img src="https://latex.codecogs.com/png.latex?45"> degree rotation.</p>
+<p>You’ll notice that adding imaginary numbers <em>translates</em> just like adding real numbers, just in new directions perpendicular to the real number line.</p>
+<p>For an complex number <img src="https://latex.codecogs.com/png.latex?a+bi">, we can find the point on this complex number plane (the new name for our new extended number line) and imagine a vector starting at zero and ending at our coordinate to represent the complex number–it’s like a triangle with the hypotenuse representing the number, and the sides representing the real and imaginary parts. This may feel new, but even with the old number line with just positive and negative numbers in one dimension, numbers were represented with a vector starting at zero and going a certain direction with a certain magnitude. We are only expanding the allowed directions to any direction in two dimensions!</p>
+<p>“Complex number” is the name usually reserved for numbers with a nonzero real part and a nonzero imaginary part, but remember, imaginary numbers have just expanded the whole playing field for all numbers, so “complex numbers” just refers to “The new system of numbers as they are now constituted, including the innovation of imaginary numbers and numbers with both nonzero real and imaginary parts”. But “Real numbers”, numbers on the real axis with zero imaginary part, are <em>still</em> complex numbers, because they are a part of the new number system too. So complex numbers aren’t a different animal or a different species of numbers, they’re just from a part of the number map that doesn’t always show up.</p>
+<p>As for thinking about the size or the magnitude of these complex numbers, they work the same as real numbers–distance from zero. Since we’re talking about two dimensions, we use the pythagorean theorem. <img src="https://latex.codecogs.com/png.latex?%7Ca+bi%7C%20=%20%5Csqrt%7Ba%5E2%20+%20b%5E2%7D"> For instance, if I want to find the magnitude of the number <img src="https://latex.codecogs.com/png.latex?1%20+%20i">, or <img src="https://latex.codecogs.com/png.latex?1%20+%201%20%5Ccdot%20i">, I can plug it into the formula. <img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%7C1%20+%201%20%5Ccdot%20i%7C%0A%20%20%20&amp;=%20%5Csqrt%7B1%5E2%20+%201%5E2%7D%20%5C%5C%0A%20%20%20&amp;=%20%5Csqrt%7B2%7D%0A%5Cend%7Baligned%7D%0A"></p>
+<p>Part of why this is really slick is because it extends very nicely how we used to do magnitude for real numbers, or what we call absolute value. Absolute value measures a number’s distance from zero, so <img src="https://latex.codecogs.com/png.latex?%20%7C-3%7C%20=%20%7C3%7C%20=%203">However, the way we compute this under the hood is the square root of the square, since the square of real numbers is always positive. <img src="https://latex.codecogs.com/png.latex?%7C-3%7C%20=%20%5Csqrt%7B(-3)%5E2%7D%20=%203%20=%20%5Csqrt%7B3%5E2%7D%20=%20%7C3%7C"> When we added in imaginary numbers and the complex plane, we can say “Actually we were just doing the pythagorean theorem with a zero imaginary part”, because <img src="https://latex.codecogs.com/png.latex?%7C-3%7C%20=%20%7C-3%20+%200%20%5Ccdot%20i%7C=%5Csqrt%7B(-3)%5E2%20+%200%5E2%7D%20=%203%20=%20%5Csqrt%7B3%5E2%20+%200%5E2%7D%20=%20%7C3%20+%200%20%5Ccdot%20i%7C%20=%20%7C3%7C"></p>
+<p>So not only does this extension of the number line work very cleanly, but the extension of magnitude is also very clean and seamless.</p>
+</section>
+<section id="complex-multiplication" class="level2">
+<h2 class="anchored" data-anchor-id="complex-multiplication">Complex multiplication</h2>
+<p>The great thing about complex numbers, and the first quality they were imbued with, is that <em>multiplying by a complex number rotates by its angle</em>. Recall that the number <img src="https://latex.codecogs.com/png.latex?i"> is at a <img src="https://latex.codecogs.com/png.latex?90"> degree angle to the real number line (where <img src="https://latex.codecogs.com/png.latex?0"> degrees is the ray pointing in the direction of the positive numbers and positive rotation is counterclockwise), and that multiplying a number by <img src="https://latex.codecogs.com/png.latex?i"> rotates it <img src="https://latex.codecogs.com/png.latex?90"> degrees. The same is true for <img src="https://latex.codecogs.com/png.latex?-i"> and <img src="https://latex.codecogs.com/png.latex?-90"> degrees.</p>
+<p>Just like magnitude, this is a concept that applies cleanly to the plain old real number line. As we discussed earlier, multiplying by a positive real number applies <img src="https://latex.codecogs.com/png.latex?0"> degrees of rotation, and multiplying by a negative real number applies <img src="https://latex.codecogs.com/png.latex?180"> degrees of rotation, which matches their respective angles in the complex number system. So rather than thinking of multiplying by negative numbers as applying a <img src="https://latex.codecogs.com/png.latex?reflection"> then scaling, we think of all multiplication as applying a <img src="https://latex.codecogs.com/png.latex?rotation"> then scaling</p>
+<p>This rule–that <em>multiplying by a complex number rotates by its angle</em>–is true for all complex numbers. Let’s look at an example.</p>
+<section id="application-a-ships-heading" class="level3">
+<h3 class="anchored" data-anchor-id="application-a-ships-heading">Application: A ship’s heading</h3>
+<p>The canonical example of why this is useful is the calculation of a ship’s new heading.</p>
+<p>Let’s say you are the captain of a ship that is on a heading such that you travel three miles north for every mile east–so you are traveling north of northeast. You receive orders to change your direction by <img src="https://latex.codecogs.com/png.latex?45"> degrees.</p>
+<p>What do you do?</p>
+<p>The old, tired way to solve this problem is to sketch out some triangles, use pythagorean theorem and use inverse sine. It would be a great exercise to work it out right now! It’ll also make a great comparison for how slick complex multiplication is.</p>
+<p>Let our heading be the number given by <img src="https://latex.codecogs.com/png.latex?1%20+%203i">, or our heading mapped onto the complex plane. Since we want to rotate by <img src="https://latex.codecogs.com/png.latex?45"> degrees, we can just multiply by the number <img src="https://latex.codecogs.com/png.latex?1%20+%20i">, which has an angle of 45 degrees. We can foil out this product, and the only rule we need to remember is the most elementary property of all–that <img src="https://latex.codecogs.com/png.latex?i%5E2%20=%20-1">. <img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A(1%20+%203i)%20%5Ccdot%20(1%20+%20i)%0A%20%20%20&amp;=%20(1%20%5Ccdot%201)%20+%20(1%20%5Ccdot%20i)%20+%20(3i%20%5Ccdot%201)%20+%20(3i%20%5Ccdot%20i)%20%5C%5C%0A%20%20%20&amp;=%201%20+%20i%20+%203i%20+%203i%5E2%20%5C%5C%0A%20%20%20&amp;=%201%20+%204i%20%20%20+%203(-1)%20%5C%5C%0A%20%20%20&amp;=%20-2%20+%204i%0A%5Cend%7Baligned%7D%0A"></p>
+<p>Converting the resulting complex number as our new heading, we will go <img src="https://latex.codecogs.com/png.latex?4"> miles north for every <img src="https://latex.codecogs.com/png.latex?2"> miles west–or <img src="https://latex.codecogs.com/png.latex?2"> miles north for every mile west. And we did the calculation in like 10 seconds, no sine or cosine or calculator necessary! We didn’t get the new angle, but we didn’t start with one either. With our new number system, rotation is just <em>baked in</em> to multiplication.</p>
+<p>You may notice the <em>magnitude</em> of our vector was also transformed. Just like with real numbers, a number is scaled by the number it is multiplied by–in this case, by <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B2%7D">, since that is the magnitude of <img src="https://latex.codecogs.com/png.latex?1%20+%20i">. If we are concerned with preserving the magnitude of our original heading, then we can multiply it by <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%20+%20%5Cfrac%7Bi%7D%7B%5Csqrt%7B2%7D%7D">, dividing by <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B2%7D"> to normalize the magnitude of our transformation.</p>
+</section>
+</section>
+<section id="in-conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="in-conclusion">In conclusion</h2>
+<p>I hope to have established a jumping off point for complex numbers by establishing a solid, geometrically based intuition for what imaginary numbers are and why they are great and quite reasonable.</p>
+<p>Hopefully, coming soon are the deep waters <em>worth diving into</em>, beginning with applying this intuition to complex arithmetic, and working towards understanding Euler’s formula and Fourier transforms!</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>A very important and valuable thing mathematicians do is invent mathematical objects or improve existing ones in order to think more clearly or describe ideas more elegantly. All of numbers are examples of this.↩︎</p></li>
+<li id="fn2"><p>Gauss also entertained calling <img src="https://latex.codecogs.com/png.latex?i"> a “lateral” unit rather than “imaginary,” precisely to strip away the connotation that it was somehow less real than negative numbers — a naming battle the “imaginary” camp ultimately won.↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>math</category>
+  <guid>https://jackpond.com/posts/2026-06-28-imaginary-numbers-rotate/</guid>
+  <pubDate>Sun, 28 Jun 2026 06:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>On Learning Math</title>
+  <link>https://jackpond.com/posts/2026-06-28-on-learning-math/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><strong>For Final Version</strong> - Originally for my brother who wanted advice on spending less time doing math homework. This is a guide for ACME students who are wondering how people do ACME and enjoy life. I wrote it as someone who really floundered (lifestyle-wise) in the pre-reqs and during junior core, but who found my stride during Senior year. I don’t do homework after 6pm and rarely on weekends. - Aims to teach general but practical principles. Will be useful for any class. - Nod to deep work. - This lays out good <em>habits</em>. All about consistency, little things each day. Important to not get in your own way–don’t tell yourself “But I’m not a good student”. Success in ACME is not about being a gifted or smart mathematician. It’s about being consistent and diligent. So tell yourself not that you are smart but that you are dedicated and consistent, and then give yourself evidence that that is true.</p>
+<p>I originally wrote this for my brother Logan who followed me into the applied math major at BYU a few years after I started. He quickly felt bogged down by the workload and asked advice on spending less time doing math homework. I ended up trying to distill everything I had learned and observed about how to do BYU’s ACME program <em>and</em> enjoy life. I wrote it as someone who really floundered (lifestyle-wise) during the pre-reqs and during the first year of the program, but who found my stride during Senior year. I never did homework after 6pm and rarely on weekends, and did better than ever in class and on tests.</p>
+<p>I aim to communicate general but practical principles. They will likely be useful for any class.</p>
+<p>This guide advises good <em>habits</em>–practices that require consistency, little efforts each day. I also think it is important to not get in your own way–don’t tell yourself “But I’m not a good student”. Success in math (or anywhere) is not about being a gifted or smart mathematician. It’s about being consistent and diligent. So tell yourself not that you are smart but that you are dedicated and consistent, and then give yourself evidence that that is true.</p>
+<hr>
+<p>I know you asked specifically about spending less time, but as I wrote this I realized I was also talking about effectively learning math.</p>
+<p>The best way to spend less time on math homework is to not do it. While that’s quite straightforward, it’s not very satisfactory. The real goal is to spend the least amount of time possible on math homework while still clearing some minimum standard of math understanding and, of course, a minimum grade. I imagine your standard for minimum grade is pretty high and your standard for math understanding should be pretty high too. So, then, you only want to engage in activities that efficiently get you to homework completion and math understanding in as little time as possible.</p>
+<p>Remember that you may spend a bit of frustrating, seemingly inefficient time on the way to deep, satisfying insight. There are good ways to decrease frustrated time but I don’t think there is a way to deep insight without any at all.</p>
+<p>Here goes.</p>
+<section id="a-new-approach-to-learning-math" class="level1">
+<h1>A new approach to learning math</h1>
+<p>You may have already made this switch–I just know it took me longer than it should have. I know we have already talked about it too, but I want to hit it again. There was a big shift for me, in between high school and university, away from learning a formulaic approach to math to learning a relational one. Let me explain in terms of being bad at directions.</p>
+<p>For much of my life, I haven’t been great at directions. I wasn’t interested in getting a feel for the city I grew up in, I just wanted to get from point A to point B, and 90% of the time A and B where our house, North High School, church, a few friends’ houses, or Culver’s. I was able to learn directions as a linear series of turns: “Turn right on Superior Ave, left at the first intersection, right by the Sport’s Core sign” or “Left onto Superior, left at the big intersection, right on North, left on before the cemetery”. This worked just fine for me, especially when I could use google maps easily when I didn’t know how to get to <em>that</em> Culver’s or to a house I hadn’t visited before.</p>
+<p>My series to get to the Sheboygan Youth Sailing Center is “Left on Superior, keep going, keep going, right on third”, even though I knew it wasn’t the best way to get there. When I was in Sheboygan a few months ago, I decided to take Erie. I knew how to get to Erie–“right at the round about, right on after the movie theater, left onto the ramp”–but once I was on it I had no idea when to turn. I didn’t know where I was and I didn’t know where other places were, because I had left one of my linear series of turns. My brother Truman had to guide me step by step. Funny enough, he messed up and had me turn earlier than he usually does, but he was unfazed because he still knew where he was and got me to the sailing center easily.</p>
+<p>Truman (and Jack Allen and maybe you) doesn’t think of Sheboygan like a subway line, with discrete tracks in between places of interest. It’s a bunch of places that are all related to each other by direction and distance. If he knows where he is, he knows where everything else is. Rather than thinking about directions like formulas, he thinks about the map.</p>
+<p>It is lazier, less useful, and less sticky to learn directions linearly rather than becoming familiar with the city itself. Similarly, learning math by memorizing formulas or the wording of theorems is lazy, hard to apply, and hard to remember. Many people don’t know there is another way, so they unavoidably hate math.</p>
+<p>It is drudgery to memorize the eleven properties of a full-rank matrix. It would take a lot of flashcard reps to recall that “full rank square matrix”is equivalent to - Column space spans the whole vector space - Row space spans the whole vector space - Invertible - Diagonalizable - Determinant <img src="https://latex.codecogs.com/png.latex?%5Cneq"> 0 - Nonzero eigenvalues … And the list goes on! The Jackson of math nonetheless trudges forward and works to drill into his head that these all go together. The Trumans think about it in terms of relationships and ask <em>why</em> a determinant of zero should mean a matrix isn’t invertible. Grant Sanderson does a great job making this clear.</p>
+<blockquote class="blockquote">
+<p>Since a determinant is the factor by which the area of shape changes under the matrix transformation, a determinant of zero would mean the space gets squashed into a lower dimension, which necessarily means lots of points get mapped to the same point under the transformation–so starting with a transformed point, you can’t go backwards. Makes sense.</p>
+</blockquote>
+<p>When that is in place and makes sense, the explanation of eigenvalues as “magical values such that <img src="https://latex.codecogs.com/png.latex?A%5Cvec%7Bx%7D%20=%20%5Clambda%20%5Cvec%7Bx%7D">” won’t be enough. You’ll dig and ask why until you arrive somewhere like,</p>
+<blockquote class="blockquote">
+<p>The transformation denoted by matrix <img src="https://latex.codecogs.com/png.latex?A"> can be decomposed into eigenvectors with associated eigenvalues–and if an eigenvalue is 0, that means there is squashing in the direction of that eigenvector. So it’s the squashing thing again.</p>
+</blockquote>
+<p>You will see that “<img src="https://latex.codecogs.com/png.latex?A"> is invertible” isn’t just a package deal with “<img src="https://latex.codecogs.com/png.latex?det(A)%20%5Cneq%200">”, they are just two different ways to say the same thing–that <img src="https://latex.codecogs.com/png.latex?A"> doesn’t squash dimensions down, so you can work backwards. Proofs will change from complex recipes to windows into the fundamental nature of things. Good proofs teach you more about the objects that show up in the proof.</p>
+<p>Then on homework and exams, you won’t get lost after a few unexpected turns. And when you find yourself in uncharted territory, you’ll have the skills to make a map. You’ll be a mathematician. So be a Truman.</p>
+<p>The rest of this is more or less ways to learn math in this way, and common pitfalls to avoid.</p>
+</section>
+<section id="i.-think-hard" class="level1">
+<h1>I. Think hard</h1>
+<blockquote class="blockquote">
+<p>Memory is the residue of thought. ~Daniel Willingham</p>
+</blockquote>
+<p>Learning, in any discipline, is the result of actively engaging with the material to be learned. Thinking hard is what digs the grooves through which thought can flow. An apt analogy is that of lifting weights. Looking at weights or reading about lifting weights or enlisting a friend or robot to lift weights for you can’t make you stronger. You need to do the heavy lifting! Likewise, in order to learn math (or anything), you need to think about it hard.</p>
+<p>Some practical examples–which we will go over in more detail–are exercises like working through examples on your own, summarizing or explaining sections and proofs, and giving homework sets real concentrated effort.</p>
+<p><strong>This section is relevant always, but especially during test season.</strong></p>
+<section id="studying-in-a-way-that-promotes-thinking-hard" class="level3">
+<h3 class="anchored" data-anchor-id="studying-in-a-way-that-promotes-thinking-hard">1. Studying in a way that promotes thinking hard</h3>
+<p>Flashcards are fine. It is the most minimal way to spend time thinking about the content. There is a strong recall aspect to math, most obviously for things like definitions and formulas. However, flashcards can sell you short. Thinking about “Why is this definition useful? Why would we want to set aside something with these properties?” or “What is this formula really saying and why is it set up that way?” is much better than rote memorization. Flashcards that prompt you to think about the connections and motivations of the content you are reviewing will be best.</p>
+<blockquote class="blockquote">
+<p><em>Practice</em>: On definition cards, ask yourself, “What is the benefit of this definition and what role do the parts of definition play in theorems?” Include examples and tricky unexamples of the definition.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><em>Practice</em>: For theorems, drill the statement, but also ask “What is this really saying and how is it used? What situations does it simplify?” Likewise, know examples of when it can be applied and tricky unexamples. See if you can’t talk through a hand-wavey proof that amounts to “What is this really saying and why is true?”</p>
+</blockquote>
+<p>Better than flashcards is to create a thread of reasoning through entire chapters, creating the logical succession of topics yourself. “Why do we care about this concept, what questions does it answer, when is it useful, why should I care, how does the proof work?” Explaining things in your own words is hard work, and excellent for learning.</p>
+<p>Proofs in particular are an important way to engage deeply with math. Good proofs teach the student something fundamental about the mathematical objects involved. When studying proofs, ask “What fundamental truths does this proof teach me?” In some classes (Math 290 and Math 341), your teacher will have you memorize a certain few proofs. Again, I find it is good to have a hand-wavey explanation for almost every proof. You should have some intuition for nearly every one. The exception is when the book skips it because it’s too technical or when your teacher says, “This is a pointless, uninstructive proof,” as will sometimes happen.</p>
+<p>This intuition snowballs quickly. A willingness to put in the work to understand proofs today will make it much easier to learn proofs that build on the foundation in the future. On the other hand, it requires a lot of time to just barely re-learn the proofs again and again, remedially–it’s a kind of debt that becomes difficult to pay off. ## 2. Review often It is best to spread the hard thinking out. Inevitably, you will have upticks in the days before midterms and finals. The best case is if you can spread it thin so you are spending just 10-15 minutes a day reviewing past material, and hours less during exam weeks. This will give you a surprisingly big edge in class and on homework, where you will start piecing things earlier than if you cram. Things will seem easier. Homework will go faster.</p>
+<p>In the past, my major insights and connections came to me during exam weeks, because that was when I spent the time going over all the material. It’s when I set myself up to make connections. If you review earlier, in small bites, you’ll make those connections throughout the semester and be faster throughout.</p>
+<p>Go at it with the idea of “I will review more per day but the area under the curve will be the same”, but in practice I think the total time spent studying and doing homework will decrease substantially.</p>
+<p>Again, great further reading in Tyler Jarvis’ <a href="https://mathdept.byu.edu/~jarvis/AdviceForStudents/HowNotToStudy.pdf">How Not To Study</a>–what not to do. ## II. Prepare for class Nearly every teacher advises students to prepare well for class, and nearly every student skimps on it. It’s easy to bounce between the next thing due for other classes and either skip the reading or blasting through it to take a reading quiz. Don’t fall for this. Consider Terry Pratchett’s “boot theory” of economics:</p>
+<blockquote class="blockquote">
+<p>The reason that the rich were so rich, Vimes reasoned, was because they managed to spend less money. Take boots, for example. … A really good pair of leather boots cost fifty dollars. But an affordable pair of boots, which were sort of OK for a season or two and then leaked like hell when the cardboard gave out, cost about ten dollars. … But the thing was that good boots lasted for years and years. A man who could afford fifty dollars had a pair of boots that’d still be keeping his feet dry in ten years’ time, while a poor man who could only afford cheap boots would have spent a hundred dollars on boots in the same time and&nbsp;<em>would still have wet feet</em>.</p>
+<p>This was the Captain Samuel Vimes ‘Boots’ theory of socio-economic unfairness.<sup>1</sup></p>
+</blockquote>
+<p>When you rush and always complete everything right before it is due, you are buying a cheap set of boots. This only requires you to spend more time later to understand how to do the associated homework and read and re-read the textbook, or spend time with a TA or your professor. Buy the nice pair of boots by taking time to really do the reading and work to understand it. This will mean you spend less time later–and less time overall–to achieve understanding, complete homework efficiently, and perform well on tests. ### 1. Do the reading before class</p>
+<blockquote class="blockquote">
+<p><em>Practice</em>: Read the textbook with your notes out. Don’t copy down the template of the section, but write down what seems important. I write the most explaining the things I understand the least and it is <em>magic</em> the way the pieces fit together as I do so. I often start a sentence not knowing how I’ll finish it, only to have it all click together before I finish. And then I get it! Working to explain the tricky stuff is an <em>incredible</em> exercise for your brain.</p>
+</blockquote>
+<p>Working hard to understand the reading will equip you to make the most of the corresponding lecture. You will ask the relevant questions because you will know where you got stuck, and which parts you know you actually don’t get–the things that you would have thought, “yeah I could figure that out” had you merely glanced through the reading. The lecture will solidify your learning rather than introduce it.</p>
+<p>A fantastic deeper resource on this point is from Tyler Jarvis, <a href="https://mathdept.byu.edu/~jarvis/AdviceForStudents/HowToReadAMathBook.pdf">How To Read A Math Book</a> ### 2. Give the homework a first pass This is the practice that has made the most surprising difference for me. Giving the homework an earnest, focused first pass locks in the content from the reading through practice, and exposes weak spots in understanding.</p>
+<p>The first pass has its own set of rules. Just go for each problem until you know exactly how to solve the rest (maybe leave yourself a note), or until you’re stuck. If you get stuck, it’s a good idea to note exactly what is stopping you. Don’t give up too easily. The time you spend checking with the section for how to proceed is vital. Don’t push forward too hard either, it’s just a first pass. For sure don’t spend more than ten minutes or so a problem.</p>
+</section>
+<section id="plan-out-a-schedule-to-implement-these" class="level3">
+<h3 class="anchored" data-anchor-id="plan-out-a-schedule-to-implement-these">3. Plan out a schedule to implement these</h3>
+<p>These two key preparations changed the game. Not only am I perpetually “ahead” in class and never worried about the due-dates, but I get so much more out of class time. Things make more sense so it’s easier to pay attention, and I ask the questions I need to. Furthermore I have done <em>much</em> better on exams. And I have spent less time while enjoying myself more!</p>
+<p>This may require that you spend a weekend or a few evenings working extra to get ahead of where you are now. It is a million times worth it.</p>
+</section>
+</section>
+<section id="iii-limit-time-spent-doing-math" class="level1">
+<h1>III Limit time spent doing math</h1>
+<p>There is a universal law of life that every math student must learn.</p>
+<blockquote class="blockquote">
+<p>[Math homework] will fill the amount of time you make available to it.</p>
+</blockquote>
+<p>When you sit down and day, “Well I have until [time] to finish this”, be it an encouraging amount of time or a discouraging amount of time, you will take that amount of time to finish it. Almost always. I’m not certain why this is–maybe because we go slower because we know we can, or put an extra finish on each problem if there’s time, or urgency makes our brain work better.</p>
+<p>I just know that even if I hustle, it will take me right to the edge of my available time slot to finish what I am working on.</p>
+<p>The solution to this is to 1) give yourself less time and 2) have lower standards for what is good enough. ## 1. Non-negotiable schedule The most important way to constrain the time you spend doing math is by blocking off non-negotiable events.</p>
+<p>Set a stop-time later than which you will not do homework. I recommend that it be much earlier than your bedtime. I stop at 6pm. Whether you’re done or not doesn’t matter, no homework past stop-time.</p>
+<p>Schedule consistent times to exercise. Exercise at midday is better than exercise in the morning is better than exercise at night, is what I have found. Fun exercise is always the best.</p>
+<p>This is hard to do initially but it <em>rewires</em> your brain. You will likely be surprised that you continue to get just as many things done in less time. You will also have more time to do the things you want to do, like spend time with friends/family or on your own hobbies. Not least is the fact that sleeping enough, exercising, and getting good social connection time is another way to buy the nice pair of boots and keep the saw sharp. These three things are part of being a healthy and happy person, and certainly don’t hurt your math education.</p>
+<section id="the-80-rule" class="level2">
+<h2 class="anchored" data-anchor-id="the-80-rule">2. The 80% rule</h2>
+<p>The 80% is as follows:</p>
+<blockquote class="blockquote">
+<p>You should always be willing to stop at 80%.</p>
+</blockquote>
+<p>80% is enough–if you have given your best effort, worked to understand, talked to a TA, and it still isn’t coming along, don’t finish it. Leave it be. This is <em>by problem</em>, not by problem set. Doing just 80% of five problems each is a valiant effort and suffices. 100% of four out of five problems does not.</p>
+<p>This also isn’t a <em>reason</em> to stop at 80%. You should always shoot for 100%. However, if you are already spinning your wheels, have checked in with helpful resources, or just don’t have time, 80% is a reasonable minimum standard.</p>
+<p>This is partly the law of diminishing returns–a continued effort just isn’t worth the time and distress it causes for the understanding or points gained. In my experience, 80% of the problem generally earns more than 80% of the points anyway.</p>
+<blockquote class="blockquote">
+<p><em>Practice</em>: The 80% rule pairs well with the first pass. I will often do the first pass, and leave some problems undone, awaiting office hours, TA hours, or to ask other students. I will usually work on my homework for up to an hour total after the first pass–and turn in whatever is done at that point. The time gained is extra time for the more important things in my life, and for review.</p>
+</blockquote>
+<p>Leaving things undone on purpose like this can be difficult, especially when you’re leaving it undone in order to spend time with friends or to get to bed early. It is very worth it, and if it isn’t too difficult to leave homework 20% undone, then your priorities are in the right place.</p>
+<p>An extra note–this is for problem sets assigned for homework. The same is not true when reviewing, studying for exams, or taking exams. Give 100% there. ## 3. Using resources: TAs and office hours You would be silly not to use all of the resources available to help you learn math. The challenge is to spend time efficiently with these resources, which means maximizing understanding gained per minute.</p>
+<p>The number one best way to make the most of these resources on your way to math understanding is to give each problem your best shot before phoning a friend. Firstly, this will prevent these helps from becoming a crutch or a shortcut that hinder your full understanding. Secondly, it will make your time spent in office hours or with friends targeted more exactly on the source of your question or problem, rather than spending your time and a TA’s time working through something you could do on your own, and missing out on your own discovery. It is hard to overestimate the power of precisely identifying the thing you don’t understand. What step of the proof? What point in the computation? Very often, a careful formulation of the question is all it takes to figure out the solution.</p>
+<p>The following are just a few additional tips for each resource, but the main principle is the above paragraph.</p>
+<p><strong>TAs</strong> Math TAs, in my experience, are cheerful, helpful, and patient. However, like anybody, they can sometimes get impatient and just sketch out each step of the problem at hand. They may think that’s what you want and that they are doing you a favor. It isn’t and they’re not. It pays to frame your request carefully: “Could you point me in the right direction…”, “I’m having trouble getting started. Is there a trick or a theorem in the book I’m supposed to be using?” and similar requests can get you the help you need without short-changing your learning. It may also pay to identify some TAs you like, that explain concepts in a way that jive with you, and stick to them.</p>
+<p><strong>Office hours</strong> Go to office hours. Some professors really can address more foundational understanding and often give bigger perspectives than TAs. Some don’t. It’s worth figuring out.</p>
+<p>Giving the problem your best shot and formulating your precise question is likely most important here, not just so you don’t waste a professor’s time, but also so they like you more. This is important for letters of recommendation when applying for internships, jobs, or grad school. Creating a genuine relationship with professors is also a way to become friends with kind, interesting, knowledgeable people that can be important mentors to you for your entire life.</p>
+<p><strong>Study groups</strong> Study groups are tricky. The overarching principle still applies, but a little differently. Presumably, the members of your study group don’t know the answers like your professor or your TA. Give the problem some thought on your own, whether that’s while you’re with the group or before, and then brainstorm together on how to continue. If you figure it out first, be careful to not be a bad TA–people don’t always like it when you lay out your solution unsolicited. Likewise, don’t let another group member become a crutch for you.</p>
+<blockquote class="blockquote">
+<p><em>Practice</em>: Personally, I prefer to have sketched out each problem as far as I can before starting to work with others. Then I can check the problems I finished to see if others did them the same, or I can ask, “How did you approach this step?” And by then I have thought enough about the problem to be able to talk about it.</p>
+</blockquote>
+<p>It’s a challenge to work effectively with a group, but it is worth learning! A key part of your undergraduate education should be how to collaborate on math problems.</p>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Pratchett, Terry (1993).&nbsp;<em>Men at Arms</em>. London: Gollancz. p.&nbsp;32.&nbsp;ISBN&nbsp;0-575-05503-0.&nbsp;OCLC&nbsp;29470107↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>math</category>
+  <category>education</category>
+  <guid>https://jackpond.com/posts/2026-06-28-on-learning-math/</guid>
+  <pubDate>Sun, 28 Jun 2026 06:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Grad School Application Guide [In Progress]</title>
+  <link>https://jackpond.com/posts/2026-06-28-grad-school-info/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I made a guide for undergraduate students who want to go to grad school. This guide is specifically for BYU ACME students, though it is applicable for any math undergrad, and many of the principles apply for any major and any program. I made it because my own process of learning how to prepare for graduate school and about the application process has been scattered and haphazard. This document aims to centralize good advice I have received and links to other good resources. Good luck to all!</p>
+<p>This manual is a work in progress and I will continue to update this link to point to the most recent version.</p>
+<p><a href="info-guide.pdf" target="_blank">grad school application guide</a></p>
+<p><strong>Disclaimer</strong>: I am an undergraduate myself and have not gotten into grad school. This could be very embarrassing if I don’t get in anywhere. I am working with a few BYU professors in order to correct any misinformation or fill in any gaps in this guide. None of the suggestions are firsthand anyway.</p>
 
 
 
  ]]></description>
   <category>math</category>
-  <guid>https://jackpond.com/posts/2025-06-15-some-math/</guid>
+  <guid>https://jackpond.com/posts/2026-06-28-grad-school-info/</guid>
   <pubDate>Sun, 15 Jun 2025 06:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>My First Essay</title>
-  <link>https://jackpond.com/posts/2025-06-01-my-first-essay/</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>This is a placeholder post. Replace this text with your actual essay.</p>
-<section id="section-heading" class="level2">
-<h2 class="anchored" data-anchor-id="section-heading">Section heading</h2>
-<p>Write your content here in Markdown. You can include:</p>
-<ul>
-<li>Lists</li>
-<li><strong>Bold</strong> and <em>italic</em> text</li>
-<li><a href="https://quarto.org">Links</a></li>
-</ul>
-<blockquote class="blockquote">
-<p>Blockquotes for pull quotes or citations.</p>
-</blockquote>
-
-
-</section>
-
- ]]></description>
-  <category>essay</category>
-  <guid>https://jackpond.com/posts/2025-06-01-my-first-essay/</guid>
-  <pubDate>Sun, 01 Jun 2025 06:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
