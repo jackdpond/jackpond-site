@@ -9,7 +9,7 @@ project:
   - CNAME
 
 website:
-  title: "Jackson Pond"
+  title: "Jack Pond"
   site-url: "https://jackpond.com"
   navbar:
     left:
@@ -20,7 +20,7 @@ website:
       - href: projects.qmd
         text: Projects
   page-footer:
-    center: "© 2026 Jackson Pond"
+    center: "© 2026 Jack Pond"
 
 format:
   html:
