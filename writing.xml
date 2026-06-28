@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Jackson Pond</title>
+<link>https://jackdpond.github.io/jackpond-site/writing.html</link>
+<atom:link href="https://jackdpond.github.io/jackpond-site/writing.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.9.38</generator>
+<lastBuildDate>Sun, 15 Jun 2025 06:00:00 GMT</lastBuildDate>
+<item>
+  <title>Some Math</title>
+  <link>https://jackdpond.github.io/jackpond-site/posts/2025-06-15-some-math/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>This is a placeholder post demonstrating LaTeX support, which works out of the box in Quarto.</p>
+<p>Inline math: <img src="https://latex.codecogs.com/png.latex?x%5E2%20+%20y%5E2%20=%20z%5E2"></p>
+<p>Display math:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_0%5E%5Cinfty%20e%5E%7B-x%5E2%7D%20%5C,%20dx%20=%20%5Cfrac%7B%5Csqrt%7B%5Cpi%7D%7D%7B2%7D%0A"></p>
+
+
+
+ ]]></description>
+  <category>math</category>
+  <guid>https://jackdpond.github.io/jackpond-site/posts/2025-06-15-some-math/</guid>
+  <pubDate>Sun, 15 Jun 2025 06:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>My First Essay</title>
+  <link>https://jackdpond.github.io/jackpond-site/posts/2025-06-01-my-first-essay/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>This is a placeholder post. Replace this text with your actual essay.</p>
+<section id="section-heading" class="level2">
+<h2 class="anchored" data-anchor-id="section-heading">Section heading</h2>
+<p>Write your content here in Markdown. You can include:</p>
+<ul>
+<li>Lists</li>
+<li><strong>Bold</strong> and <em>italic</em> text</li>
+<li><a href="https://quarto.org">Links</a></li>
+</ul>
+<blockquote class="blockquote">
+<p>Blockquotes for pull quotes or citations.</p>
+</blockquote>
+
+
+</section>
+
+ ]]></description>
+  <category>essay</category>
+  <guid>https://jackdpond.github.io/jackpond-site/posts/2025-06-01-my-first-essay/</guid>
+  <pubDate>Sun, 01 Jun 2025 06:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
