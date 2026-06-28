@@ -1,0 +1,29 @@
+/* Custom overrides — loaded after the base theme in _quarto.yml */
+
+/*-- scss:rules --*/
+
+.hero {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.25rem;
+}

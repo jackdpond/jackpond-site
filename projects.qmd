@@ -1,0 +1,28 @@
+---
+title: "Projects"
+---
+
+::: {.project-grid}
+
+::: {.project-card}
+### [Project One](https://github.com/your-username/project-one)
+[placeholder description of what this project does and why you built it.]
+
+**Stack:** Python, PyTorch
+:::
+
+::: {.project-card}
+### [Project Two](https://github.com/your-username/project-two)
+[placeholder description of what this project does and why you built it.]
+
+**Stack:** TypeScript, React
+:::
+
+::: {.project-card}
+### [Project Three](https://github.com/your-username/project-three)
+[placeholder description of what this project does and why you built it.]
+
+**Stack:** Rust
+:::
+
+:::

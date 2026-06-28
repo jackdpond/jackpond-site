@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "posts/**"
+  resources:
+  - .nojekyll   
+
+website:
+  title: "Jackson Pond"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: writing.qmd
+        text: Writing
+      - href: projects.qmd
+        text: Projects
+  page-footer:
+    center: "© 2026 Jackson Pond"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - assets/styles.css
+    code-copy: true
+    toc: true
+    toc-depth: 3
+    citations-hover: true
+    link-external-newwindow: true

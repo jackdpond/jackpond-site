@@ -1,0 +1,21 @@
+---
+title: ""
+page-layout: full
+---
+
+::: {.hero}
+![](images/profile.svg){.profile-photo}
+
+# Jackson Pond
+
+Hi, I'm Jackson — [one or two sentences about who you are and what you
+do]. I write about [topics] and build [kind of projects].
+
+## What I'm working on now
+
+- [Current project or focus #1]
+- [Current project or focus #2]
+- [Current project or focus #3]
+
+[Read my writing →](writing.qmd) &nbsp; | &nbsp; [See my projects →](projects.qmd)
+:::

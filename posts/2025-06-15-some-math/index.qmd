@@ -1,0 +1,17 @@
+---
+title: "Some Math"
+date: 2025-06-15
+description: "One sentence shown in the listing and in link previews."
+categories: [math]
+---
+
+This is a placeholder post demonstrating LaTeX support, which works
+out of the box in Quarto.
+
+Inline math: $x^2 + y^2 = z^2$
+
+Display math:
+
+$$
+\int_0^\infty e^{-x^2} \, dx = \frac{\sqrt{\pi}}{2}
+$$
