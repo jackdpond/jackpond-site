@@ -5,11 +5,12 @@ project:
     - "*.qmd"
     - "posts/**"
   resources:
-  - .nojekyll   
+  - .nojekyll
+  - CNAME
 
 website:
   title: "Jackson Pond"
-  site-url: "https://jackdpond.github.io/jackpond-site/"
+  site-url: "https://jackpond.com"
   navbar:
     left:
       - href: index.qmd
