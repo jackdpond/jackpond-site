@@ -6,14 +6,14 @@
       version="2.0">
 <channel>
 <title>Jackson Pond</title>
-<link>https://jackdpond.github.io/jackpond-site/writing.html</link>
-<atom:link href="https://jackdpond.github.io/jackpond-site/writing.xml" rel="self" type="application/rss+xml"/>
+<link>https://jackpond.com/writing.html</link>
+<atom:link href="https://jackpond.com/writing.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.9.38</generator>
 <lastBuildDate>Sun, 15 Jun 2025 06:00:00 GMT</lastBuildDate>
 <item>
   <title>Some Math</title>
-  <link>https://jackdpond.github.io/jackpond-site/posts/2025-06-15-some-math/</link>
+  <link>https://jackpond.com/posts/2025-06-15-some-math/</link>
   <description><![CDATA[ 
 
 
@@ -28,12 +28,12 @@
 
  ]]></description>
   <category>math</category>
-  <guid>https://jackdpond.github.io/jackpond-site/posts/2025-06-15-some-math/</guid>
+  <guid>https://jackpond.com/posts/2025-06-15-some-math/</guid>
   <pubDate>Sun, 15 Jun 2025 06:00:00 GMT</pubDate>
 </item>
 <item>
   <title>My First Essay</title>
-  <link>https://jackdpond.github.io/jackpond-site/posts/2025-06-01-my-first-essay/</link>
+  <link>https://jackpond.com/posts/2025-06-01-my-first-essay/</link>
   <description><![CDATA[ 
 
 
@@ -57,7 +57,7 @@
 
  ]]></description>
   <category>essay</category>
-  <guid>https://jackdpond.github.io/jackpond-site/posts/2025-06-01-my-first-essay/</guid>
+  <guid>https://jackpond.com/posts/2025-06-01-my-first-essay/</guid>
   <pubDate>Sun, 01 Jun 2025 06:00:00 GMT</pubDate>
 </item>
 </channel>

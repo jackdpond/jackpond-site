@@ -1,1 +1,1 @@
-Sitemap: https://jackdpond.github.io/jackpond-site/sitemap.xml
+Sitemap: https://jackpond.com/sitemap.xml
