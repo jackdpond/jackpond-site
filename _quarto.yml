@@ -4,6 +4,7 @@ project:
   render:
     - "*.qmd"
     - "posts/**"
+    - "projects/**"
   resources:
   - .nojekyll
   - CNAME
