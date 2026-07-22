@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-03-15">
+<meta name="description" content="Optimizing the racing route for the annual M&amp;M 100 miler sailing race (42 miles)">
+
+<title>Go With The Flow – Jack Pond</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6140f5cb4c2f36f337af84d246f9696a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Jack Pond</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../writing.html"> 
+<span class="menu-text">Writing</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#setting-up-the-problem" id="toc-setting-up-the-problem" class="nav-link active" data-scroll-target="#setting-up-the-problem">Setting Up the Problem</a></li>
+  <li><a href="#model-1-zermelo-navigation-the-warm-up" id="toc-model-1-zermelo-navigation-the-warm-up" class="nav-link" data-scroll-target="#model-1-zermelo-navigation-the-warm-up">Model 1: Zermelo Navigation (the warm-up)</a></li>
+  <li><a href="#model-2-square-sails" id="toc-model-2-square-sails" class="nav-link" data-scroll-target="#model-2-square-sails">Model 2: Square Sails</a></li>
+  <li><a href="#model-3-triangular-sails-and-discovering-tacking" id="toc-model-3-triangular-sails-and-discovering-tacking" class="nav-link" data-scroll-target="#model-3-triangular-sails-and-discovering-tacking">Model 3: Triangular Sails, and Discovering Tacking</a></li>
+  <li><a href="#model-4-acceleration-and-land-penalties" id="toc-model-4-acceleration-and-land-penalties" class="nav-link" data-scroll-target="#model-4-acceleration-and-land-penalties">Model 4: Acceleration and Land Penalties</a>
+  <ul class="collapse">
+  <li><a href="#land-penalties-and-kkt-conditions" id="toc-land-penalties-and-kkt-conditions" class="nav-link" data-scroll-target="#land-penalties-and-kkt-conditions">Land Penalties and KKT Conditions</a></li>
+  </ul></li>
+  <li><a href="#comparing-the-models" id="toc-comparing-the-models" class="nav-link" data-scroll-target="#comparing-the-models">Comparing the Models</a></li>
+  <li><a href="#what-real-sailors-do-differently" id="toc-what-real-sailors-do-differently" class="nav-link" data-scroll-target="#what-real-sailors-do-differently">What Real Sailors Do Differently</a></li>
+  <li><a href="#impact" id="toc-impact" class="nav-link" data-scroll-target="#impact">Impact</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Go With The Flow</h1>
+</div>
+
+<div>
+  <div class="description">
+    Optimizing the racing route for the annual M&amp;M 100 miler sailing race (42 miles)
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 15, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Every year the Menominee, Michigan Yacht Club hosts the (42 mile) “100 Miler” the weekend after the more intense Chicago to Mackinac race (older than the world series or the Indie 500) in Lake Michigan, and a few weeks after the Bayview to Mackinac race (the longest freshwater race in the world). THe 100 Miler is a smaller, lower-key event that many Great Lake sailors use as a fun follow-on race, nearby why they just finished. It’s billed as a family friendly race, not the marathon slog that the Mac races can be, and is genuinely a very fun community event. The marina is beautiful, and they don’t stop at hosting the race, but also host a few very midwestern shin-digs the same weekend, before and after the race.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="miler1.jpg" class="img-fluid figure-img"></p>
+<figcaption>From the M&amp;M Yacht Club’s 2019 <a href="https://mmyc.org/category/general/page/3/">website</a>, with the original caption “Sailors make their way back to Menominee after sailing around Green Island during the 2019 Joey Shepro Memorial Doublehanded Race (credit Val Ihde)”</figcaption>
+</figure>
+</div>
+<p>A lot of people don’t know there is excellent sailing in Wisconsin! People forget it’s not landlocked, and few people who haven’t seen the Great Lakes know that their conception of “Ocean” or “Sea” is a closer fit than their conception of “Lake.” One of the four original US sailing centers, used for Olympic training, is in my hometown, Sheboygan, Wisconsin. It’s a real destination. A very mathematical write-up of an optimization problem is my own way of marketing to a specific audience that likely hasn’t gotten the Lake Michigan sailing pitch yet.</p>
+<p>My brother is a Great Lakes racer, and I got to see him off on the 2025 100 Miler last year. When my friends Ethan and Connor and I were casting around for a well posed but challenging optimization problem, we quickly settled on the 100 Miler. The wind-sail locomotion is such an interesting dynamic, and we thought the short course would be more tractable than a longer race with more legs.</p>
+<p>The course itself is an 11-leg loop out of Menominee, around Green Island, up past Chambers and Adventure Island, out to a mark near Horseshoe Island, and back–with a few exclusion zones around the islands and shoals that a boat obviously can’t sail through.</p>
+<p>Here is a more official <a href="Paper.pdf">write-up</a>, and you can see the source code <a href="https://github.com/EthanPrimes/vol4-second-project">here</a>. Ethan and Connor and I also presented this project at a poster session, with this <a href="poster.pdf">poster</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="100miler_race.png" class="img-fluid figure-img"></p>
+<figcaption>The MMYC 100 Miler course. We treated each leg as its own optimal control problem, with islands and shoals as no-go zones.</figcaption>
+</figure>
+</div>
+<section id="setting-up-the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-the-problem">Setting Up the Problem</h2>
+<p>Every version of this problem is an optimal control problem: find the control (the boat’s heading, <span class="math inline">\(\theta(t)\)</span>) that steers the state (the boat’s position, or later, position and velocity) from a fixed start to a fixed end in the least time. In every model, the functional we’re minimizing is just total time, <span class="math display">\[ J[u] = \int_{t_0}^{t_f} 1 \, dt, \]</span></p>
+<p>subject to whatever dynamics <span class="math inline">\(\dot{\mathbf{s}} = f(\mathbf{s}, \theta, t)\)</span> we’re using for that model, plus fixed endpoints.</p>
+<p>Pontryagin’s Maximum Principle is the tool that turns “find the best function <span class="math inline">\(\theta(t)\)</span>” into a system of ODEs we can solve. The recipe is the same every time: build the Hamiltonian <span class="math inline">\(H = \boldsymbol\lambda(t)^\top f(\mathbf{s}, \theta, t) - 1\)</span> (the <span class="math inline">\(-1\)</span> is just the running cost of time itself), then the optimal trajectory has to satisfy <span class="math inline">\(\dot{\mathbf{s}} = \partial H/\partial \boldsymbol\lambda\)</span> (which just gives back our original dynamics), <span class="math inline">\(\dot{\boldsymbol\lambda} = -\partial H/\partial \mathbf{s}\)</span> (the costate equations), and <span class="math inline">\(\partial H/\partial \theta = 0\)</span> (the control has to be a critical point of the Hamiltonian at every instant). Since our final time is free and there’s no cost tacked onto arriving late or early, we also get <span class="math inline">\(H(t_f) = 0\)</span> as a boundary condition.</p>
+<p>The costates <span class="math inline">\(\boldsymbol\lambda(t)\)</span> are worth dwelling on, since they’re the least intuitive part of all this. Think of <span class="math inline">\(\lambda_1, \lambda_2\)</span> as a kind of compass needle riding along with the boat–they point in the direction that a tiny nudge in position would most increase your remaining “value” (here, negative time-to-finish). The stationarity condition <span class="math inline">\(\partial H/\partial \theta = 0\)</span> is just saying: steer so your velocity vector lines up as well as possible with that compass needle.</p>
+</section>
+<section id="model-1-zermelo-navigation-the-warm-up" class="level2">
+<h2 class="anchored" data-anchor-id="model-1-zermelo-navigation-the-warm-up">Model 1: Zermelo Navigation (the warm-up)</h2>
+<p>We started as simple as possible: a motorboat moving at a fixed speed <span class="math inline">\(v\)</span>, steered by heading <span class="math inline">\(\theta\)</span>, pushed around by a current <span class="math inline">\(\mathbf{w}(x,y)\)</span>. No wind, no sails, just a motor and water moving underneath you. This is the classical Zermelo Navigation Problem. The dynamics are <span class="math display">\[ \begin{bmatrix} \dot x \\ \dot y \end{bmatrix} = v\begin{bmatrix}\cos\theta \\ \sin\theta\end{bmatrix} + \begin{bmatrix} w_1(x,y) \\ w_2(x,y)\end{bmatrix}, \]</span></p>
+<p>so the Hamiltonian is <span class="math display">\[ H = \lambda_1\big(v\cos\theta + w_1\big) + \lambda_2\big(v\sin\theta + w_2\big) - 1. \]</span> Since <span class="math inline">\(v\)</span> is just a constant here, the costate equations only pick up current-gradient terms, <span class="math display">\[ \dot\lambda_1 = -\lambda_1 \frac{\partial w_1}{\partial x} - \lambda_2 \frac{\partial w_2}{\partial x}, \qquad \dot\lambda_2 = -\lambda_1 \frac{\partial w_1}{\partial y} - \lambda_2 \frac{\partial w_2}{\partial y}, \]</span> and stationarity works out cleanly to <span class="math inline">\(-\lambda_1 v \sin\theta + \lambda_2 v \cos\theta = 0\)</span>, i.e.&nbsp;<span class="math inline">\(\tan\theta = \lambda_2/\lambda_1\)</span>–the boat should always just point straight along its costate vector. We solved this (and the very similar Model 2, below) as a boundary value problem with <code>scipy.integrate.solve_bvp</code>, treating the unknown finish time as a parameter by rescaling the whole problem to run from <span class="math inline">\(t=0\)</span> to <span class="math inline">\(t=1\)</span>.</p>
+<p>This model is a warm-up rather than a real answer, and it shows: a motorboat that ignores wind entirely and just muscles across at constant speed finds a nearly straight-line path, only adjusting for a weak current, which is obviously not how sailing works. But it’s a useful sanity check on the machinery before we made the dynamics actually resemble a sailboat.</p>
+</section>
+<section id="model-2-square-sails" class="level2">
+<h2 class="anchored" data-anchor-id="model-2-square-sails">Model 2: Square Sails</h2>
+<p>We’re not actually sure how square-rigged ships work, but we assume that they just get pushed in the direction the sail is facing, at a speed proportional to how “exposed” the sail is to the wind. This would prevent the boat from traveling in a trajectory that has any component upwind. If <span class="math inline">\(\phi\)</span> is the wind’s heading, the boat’s velocity becomes <span class="math display">\[ \begin{bmatrix} u_1 \\ u_2 \end{bmatrix} = v\begin{bmatrix} \cos(\theta - \phi)\cos\theta \\ \cos(\theta-\phi)\sin\theta \end{bmatrix}, \]</span> where <span class="math inline">\(\cos(\theta - \phi)\)</span> is just the dot product between the boat’s heading and the wind direction–full push when running downwind, zero push at 90° to the wind, and <em>negative</em> push past that. The Hamiltonian has the exact same shape as Model 1’s, just with this new <span class="math inline">\(v(\theta, \phi)\)</span> baked in, which is why we implemented it as a generic velocity function from the start: Models 1 and 2 turned out to be almost the same code.</p>
+<p>The catch is that a square sail literally cannot generate force against the wind–there’s no mechanism here for the boat to make any upwind progress at all. So this model was never going to “discover” tacking, no matter how good our solver was. We needed a fundamentally different sail.</p>
+</section>
+<section id="model-3-triangular-sails-and-discovering-tacking" class="level2">
+<h2 class="anchored" data-anchor-id="model-3-triangular-sails-and-discovering-tacking">Model 3: Triangular Sails, and Discovering Tacking</h2>
+<p>Triangular sails don’t work by the wind “pushing” against their fabric. They act more like an airplane wing turned on its side: wind moves faster over the leeward face than the windward face, the pressure difference <em>pulls</em> the sail (and boat) forward, and this lets a boat sail up to about 40° or so off directly into the wind. Because the sail is asymmetric, though, there’s a second no-go zone directly downwind where the sail gets unstable. So real sailboats zig-zag around both no-go zones–tacking when zig-zaggin upwind, jibing when zig-zagging downwind.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="miler2.jpg" class="img-fluid figure-img"></p>
+<figcaption>Racers on Green Bay, sails hauled in tight, angled just outside the upwind no-go zone–exactly the maneuver Model 3 is trying to rediscover. This photo is also from M&amp;M Yacht Club’s 2019 <a href="https://mmyc.org/category/general/page/3/">website</a>, with the original caption “Jesse Peterson’s Sadie Hawkins and Rick Estebo’s Eagle XXX battle for second place during the final leg of the 2019 Joey Shepro Memorial Doublehanded Race (credit Val Ihde)”</figcaption>
+</figure>
+</div>
+<p>We captured this by keeping the exact same dynamical structure as before, <span class="math display">\[ \begin{bmatrix} \dot x \\ \dot y \end{bmatrix} = v\big(\theta(t), \phi(x,y)\big)\begin{bmatrix}\cos\theta \\ \sin\theta\end{bmatrix} + \begin{bmatrix} w_1(x,y) \\ w_2(x,y) \end{bmatrix}, \]</span> but swapping in a <span class="math inline">\(v(\theta, \phi)\)</span> fit to match real sailboat polar diagrams instead of a simple cosine–including the two no-go zones. The Hamiltonian and costate equations are structurally identical to Model 1’s, just carrying the extra <span class="math inline">\(\partial v/\partial \theta\)</span> term through stationarity: <span class="math display">\[ \frac{\partial H}{\partial \theta} = \lambda_1\left(\frac{\partial v}{\partial \theta}\cos\theta - v\sin\theta\right) + \lambda_2\left(\frac{\partial v}{\partial \theta}\sin\theta + v\cos\theta\right) = 0. \]</span></p>
+<p>The numerics here proved to be too much for our <code>scipy.integrate.solve_bvp</code> solver. The optimal path through a no-go zone isn’t smooth–it has a sharp corner where the boat instantly snaps from one tack angle to the other–and <code>solve_bvp</code> assumes smooth solutions, so it broke on these legs. We switched to treating the whole thing as a direct nonlinear program instead: discretize the path into <span class="math inline">\(N\)</span> points with a leapfrog Euler scheme, <span class="math display">\[ (N-1)(x_{i+1} - x_i) = T \cdot v(\theta_i, x_i, y_i)\cos\theta_i, \qquad (N-1)(y_{i+1}-y_i) = T\cdot v(\theta_i,x_i,y_i)\sin\theta_i, \]</span></p>
+<p>enforce those as equality constraints, and hand the whole thing to <code>IPOPT</code> via Julia’s <code>JuMP</code>, minimizing total time <span class="math inline">\(T\)</span> directly instead of solving the costate ODEs by hand. This sidesteps the smoothness assumption entirely, at the cost of being extremely sensitive to the initial guess–we ended up seeding most legs with a straight-line path and a single heading switch partway through (simulating one tack), which worked well except on the two legs that didn’t need a direction change at all, and one leg that broke the solver no matter what we tried.</p>
+<p>The upside: this formulation <em>did</em> rediscover tacking and jibing on its own, with no hints from us beyond the sail physics. The downside is that the raw solution rattles back and forth between headings extremely fast, which looks like a fuzzy straight line solution. We fixed this issue with a small penalty term on how fast <span class="math inline">\(\theta\)</span> is allowed to change, and then the solver settled into a “one direction change per leg” policy to minimize that penalty.</p>
+</section>
+<section id="model-4-acceleration-and-land-penalties" class="level2">
+<h2 class="anchored" data-anchor-id="model-4-acceleration-and-land-penalties">Model 4: Acceleration and Land Penalties</h2>
+<p>The last simplification we wanted to drop was treating wind and current as directly setting the boat’s <em>velocity</em>. Real boats have mass and accelerate into a new speed rather than jumping to it, so we added two more states, tracking velocity explicitly: <span class="math display">\[ \frac{d}{dt}\begin{bmatrix} x \\ y \\ \dot x \\ \dot y \end{bmatrix} = \begin{bmatrix} \dot x \\ \dot y \\ a(\theta,\phi)\cos\theta \\ a(\theta,\phi)\sin\theta \end{bmatrix} + \begin{bmatrix} 0 \\ 0 \\ \tilde w_1(x,y) \\ \tilde w_2(x,y) \end{bmatrix}, \]</span> with an acceleration function <span class="math inline">\(a\)</span> playing the role <span class="math inline">\(v\)</span> used to. Now we have four costates instead of two, and the Hamiltonian <span class="math display">\[ H = \lambda_1 \dot x + \lambda_2 \dot y + \lambda_3\big(a\cos\theta + \tilde w_1\big) + \lambda_4\big(a\sin\theta + \tilde w_2\big) - 1 \]</span> gives costate equations where the position costates feed directly into the velocity costates, <span class="math display">\[ \dot\lambda_3 = -\lambda_1, \qquad \dot\lambda_4 = -\lambda_2, \]</span> which has a nice mechanical flavor to it–position “value” accumulates into velocity “value” the same way momentum accumulates from force. The remaining two costate equations and the stationarity condition on <span class="math inline">\(\theta\)</span> carry the same <span class="math inline">\(\partial a/\partial \theta\)</span> structure Model 3’s did, just with <span class="math inline">\(a\)</span> in place of <span class="math inline">\(v\)</span>.</p>
+<p>One physical wrinkle: a boat’s acceleration depends on <em>apparent</em> wind (the wind it actually feels, net of its own motion), not the true wind–otherwise a boat on a fixed heading would accelerate forever. We estimated that a racing sailboat takes about 30 minutes to reach top speed on a given heading and built that time constant into <span class="math inline">\(a\)</span>.</p>
+<p>We discretized this the same way as Model 3 (leapfrog Euler across all four states, solved with <code>IPOPT</code>/<code>JuMP</code>), reusing the single-tack initial guess. This version was, somewhat surprisingly, much friendlier to the solver than the discontinuous velocity-based model–no special-casing needed, and it converged quickly on every leg. Adding the acceleration physics smooths the solution implicitly.</p>
+<section id="land-penalties-and-kkt-conditions" class="level3">
+<h3 class="anchored" data-anchor-id="land-penalties-and-kkt-conditions">Land Penalties and KKT Conditions</h3>
+<p>Because we’d already switched to a constrained nonlinear program, adding coastlines was easy: we traced coastline points off satellite images with WebPlotDigitizer, interpolated them into functions <span class="math inline">\(\text{north}(x)\)</span> and <span class="math inline">\(\text{south}(x)\)</span>, and added inequality constraints <span class="math inline">\(\text{south}(x_i) \le y_i \le \text{north}(x_i)\)</span> at every timestep.</p>
+<p>Adding inequality constraints to a Pontryagin-style problem means reaching for KKT conditions instead of plain stationarity. If <span class="math inline">\(\mathbf h(x,y) \preceq \mathbf 0\)</span> describes the excluded region around an island or coastline, the Lagrangian picks up a multiplier term, <span class="math display">\[ \mathscr{L} = H - \boldsymbol\mu(t)^\top \mathbf h(x,y), \]</span> and the position costates absorb an extra piece pushing the boat away from the boundary whenever the constraint is active: <span class="math display">\[ \dot\lambda_1 = -\frac{\partial H}{\partial x} + \boldsymbol\mu(t)^\top \frac{\partial \mathbf h}{\partial x}, \qquad \dot\lambda_2 = -\frac{\partial H}{\partial y} + \boldsymbol\mu(t)^\top \frac{\partial \mathbf h}{\partial y}. \]</span> The velocity costates are untouched, since land doesn’t care how fast you’re going, only where you are. Optimality now requires <span class="math inline">\(\partial \mathscr L/\partial \theta = 0\)</span> alongside the usual complementary-slackness trio, <span class="math inline">\(\mathbf h \preceq \mathbf 0\)</span>, <span class="math inline">\(\boldsymbol\mu \succeq \mathbf 0\)</span>, and <span class="math inline">\(\mu_j h_j = 0\)</span> for every constraint <span class="math inline">\(j\)</span>–the multiplier is only “switched on” while the boat is actually pressed against a boundary. We also experimented with soft penalty costs like <span class="math inline">\(1/d^n\)</span> (distance to the coastline) as an alternative to hard constraints, but these made an already touchy nonlinear program noticeably harder to solve, especially for the acceleration model.</p>
+</section>
+</section>
+<section id="comparing-the-models" class="level2">
+<h2 class="anchored" data-anchor-id="comparing-the-models">Comparing the Models</h2>
+<p>Lining up the routes side by side made the story of increasing realism pretty obvious.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="optimized_routes.png" class="img-fluid figure-img"></p>
+<figcaption>Left to right: the constant-speed motorboat (Model 1), the velocity-relation triangular sail (Model 3), and the acceleration-relation triangular sail (Model 4).</figcaption>
+</figure>
+</div>
+<p>The motorboat (left) crosses in about 17 minutes flat, in a nearly straight line. A motorboat would be cheating though. The velocity-relation sail model (middle) is the first one to rediscover tacking on its own, but the path is visibly jagged, snapping between headings, and one leg (11) broke the solver badly enough that we left it off the figure entirely. The acceleration-relation model (right) produces smooth, physically believable curves that still tack exactly once per upwind leg, though more smoothly, and finishes in just under 20 hours–in the right ballpark for real 100 Miler finishing times from the year we pulled wind and current data for.</p>
+<p>Only models 3 and 4 “discovered” tacking, since they both had no-go zones and were able to make progress upwind.</p>
+</section>
+<section id="what-real-sailors-do-differently" class="level2">
+<h2 class="anchored" data-anchor-id="what-real-sailors-do-differently">What Real Sailors Do Differently</h2>
+<p>Our models assume constant wind and a lone boat on the water, so a single tack per leg is genuinely optimal under those assumptions. Real racers tack far more often than that, for two reasons our models don’t capture: 1) wind constantly shifts in both speed and direction, so sailors switch tacks opportunistically to catch favorable shifts and hedge against unfavorable ones, and 2) right-of-way rules incentivize extra tacks, both to stay clear of other boats and to force competitors into worse positions. Waves, wind shadows behind land, and the presence of other racers were all things we chose not to model.</p>
+</section>
+<section id="impact" class="level2">
+<h2 class="anchored" data-anchor-id="impact">Impact</h2>
+<p>Beyond just family-friendly local sailing races, this kind of problem is increasingly showing up in emerging industries. Wind-powered cargo shipping harnesses wind power to directly power cargo ships. One company, Vela, already runs a fully wind-powered trimaran on an trans-Atlantic route, cutting costs and pollution. The problem of how to route a wind-powered vessel optimally, factoring in wind, current, and coastline constraints, is a real question for global supply chain efficiency and climate impact.</p>
+<p>And if you, dear reader, are convinced you have what it takes, come on down to Menominee this summer, we’d love to see you there.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/jackpond\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2026 Jack Pond</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

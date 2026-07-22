@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-12-15">
+<meta name="description" content="Training Random Forest and XGBoost models on a decade of MLB game logs to test whether wild card teams have a real postseason edge.">
 
-<title>Projects – Jack Pond</title>
+<title>Wild Card Weighting – Jack Pond</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,25 +28,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6140f5cb4c2f36f337af84d246f9696a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6140f5cb4c2f36f337af84d246f9696a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,65 +72,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description','listing-repo','listing-stack','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
-      
-      searchColumns: ["listing-project","listing-website","listing-format","listing-engines","listing-language","listing-title","listing-description","listing-repo","listing-stack","listing-date","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -141,7 +83,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Jack Pond</span>
     </a>
   </div>
@@ -152,15 +94,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./writing.html"> 
+    <a class="nav-link" href="../../writing.html"> 
 <span class="menu-text">Writing</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
@@ -174,22 +116,44 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#research-question" id="toc-research-question" class="nav-link active" data-scroll-target="#research-question">Research Question</a></li>
+  <li><a href="#data-set" id="toc-data-set" class="nav-link" data-scroll-target="#data-set">Data Set</a></li>
+  <li><a href="#data-cleaning-and-feature-engineering" id="toc-data-cleaning-and-feature-engineering" class="nav-link" data-scroll-target="#data-cleaning-and-feature-engineering">Data Cleaning and Feature Engineering</a></li>
+  <li><a href="#data-visualization-and-basic-analysis" id="toc-data-visualization-and-basic-analysis" class="nav-link" data-scroll-target="#data-visualization-and-basic-analysis">Data Visualization and Basic Analysis</a></li>
+  <li><a href="#modeling-and-results" id="toc-modeling-and-results" class="nav-link" data-scroll-target="#modeling-and-results">Modeling and Results</a></li>
+  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions">Conclusions</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projects</h1>
+<h1 class="title">Wild Card Weighting</h1>
 </div>
 
+<div>
+  <div class="description">
+    Training Random Forest and XGBoost models on a decade of MLB game logs to test whether wild card teams have a real postseason edge.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 15, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -199,44 +163,69 @@ window.Quarto = {
 </header>
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
-<div class="project-grid">
-
-  <div class="project-card">
-    <h3 class="anchored"><a href="./projects/2026-04-15-hmm-gene-model/index.html">Temporal Structure in the Yeast Transcriptome</a></h3>
-    <p>Uncovering genetic and temporal clusters in a time-series of RNA transcriptomic data generated by a yeast metabolic cycle.</p>
-    <p><strong>Stack:</strong> Python, scikit-learn, hmmlearn, UMAP</p>
-    <p><a href="https://github.com/jackdpond/hmm_gene_model" target="_blank">View repo</a></p>
-  </div>
-
-  <div class="project-card">
-    <h3 class="anchored"><a href="./projects/2026-03-15-go-with-the-flow/index.html">Go With The Flow</a></h3>
-    <p>Optimizing the racing route for the annual M&amp;M 100 miler sailing race (42 miles)</p>
-    <p><strong>Stack:</strong> Python, Julia (JuMP/IPOPT), SciPy</p>
-    <p><a href="https://github.com/your-username/project-three" target="_blank">View repo</a></p>
-  </div>
-
-  <div class="project-card">
-    <h3 class="anchored"><a href="./projects/2025-12-15-modeling-yeast-spread/index.html">Modeling Yeast Spread</a></h3>
-    <p>Modeling the microbiological world of bread yeast with compartmental models.</p>
-    <p><strong>Stack:</strong> Python, Jupyter Notebooks</p>
-    <p><a href="https://github.com/EthanPrimes/modeling_yeast_spread" target="_blank">View repo</a></p>
-  </div>
-
-  <div class="project-card">
-    <h3 class="anchored"><a href="./projects/2025-11-15-wildcard-weighting/index.html">Wild Card Weighting</a></h3>
-    <p>Training Random Forest and XGBoost models on a decade of MLB game logs to test whether wild card teams have a real postseason edge.</p>
-    <p><strong>Stack:</strong> Python, pandas, scikit-learn, XGBoost</p>
-    <p><a href="https://github.com/your-username/wildcard-weighting" target="_blank">View repo</a></p>
-  </div>
-
+<p>I’m not much of a baseball fan, but I love an underdog story as much as anybody. Just before the world series was set to start this year, my friend Jack (a diehard baseball fan) explained to me why he thought wildcard teams had an unexpected edge in baseball playoffs. For my part, I skeptically wondered if the showbiz of a wildcard win just made these cinderella moments more prominent in our memory, despite not happening as often as we perceive. We wanted an actual answer: is there something structural giving wild card teams an edge in the postseason, or is it just noise that people notice because upsets make better stories than expected results?</p>
+<p>Alright, you got me, I had also watched Moneyball recently and was fired up about sabermetrics. Completely understandable.</p>
+<p>You can find the full paper <a href="Paper.pdf">here</a>; this write-up walks through it, focusing mostly on how messy the data wrangling ended up being. The code behind the calculations and figures can be found in <a href="https://github.com/jackdpond/pitcher_post-season_effect/blob/main/notebooks/final_report.ipynb">this notebook</a>, along with extra validation and informative plots.</p>
+<section id="research-question" class="level2">
+<h2 class="anchored" data-anchor-id="research-question">Research Question</h2>
+<p>Regular season record is the obvious way to rank teams, but it’s not obviously the right way to predict postseason success–especially for a team that snuck into October as a wild card rather than winning its division outright. So we asked: how should being a wild card team factor into predicting postseason success, if at all? A few analysts (FanGraphs, mostly) had already poked at pieces of this–clustering bullpen matchups, correlating regular season stats with playoff wins–and mostly concluded that the playoffs are close to random. We wanted to go further and actually rank which features matter most, using models built for exactly that.</p>
+</section>
+<section id="data-set" class="level2">
+<h2 class="anchored" data-anchor-id="data-set">Data Set</h2>
+<p>We pulled two kinds of MLB data from 2014-2025: per-game pitcher logs from Baseball-Reference (FIP, innings, date, pitcher, team, win/loss) and team-level season stats from Baseball Savant (OAA, WOBA, whether the team made the playoffs as a wild card). Between the two we had enough to describe both the pitching and the team around it for every game across more than a decade of baseball.</p>
+<p>The postseason is a tiny sliver of this–317 games out of roughly 20,000 regular season games–so anything about being a wild card only actually matters in that sliver. That imbalance isn’t something to fix, it’s just how many playoff games exist, but it does mean the signal we’re after is buried in a mountain of regular season noise. Going in, our hypothesis was that wild card teams might carry hidden advantages that never show up in a season-long stat line: momentum from grinding through the wild card round while a division winner rests, and something like a chip-on-the-shoulder underdog effect.</p>
+</section>
+<section id="data-cleaning-and-feature-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="data-cleaning-and-feature-engineering">Data Cleaning and Feature Engineering</h2>
+<p>This was most of the actual work. We wanted a matchup-style dataset: one row per game, with each team’s starting pitcher FIP, starting pitcher freshness, an aggregated bullpen FIP and freshness, average OAA, average WOBA, home/away, and wild card status sitting side by side. And of course, which team <em>won</em>.</p>
+<p>Getting there from the raw pitcher logs took a few passes:</p>
+<ul>
+<li>We converted dates to actual datetimes, sorted by pitcher and date, and built a “freshness” column as days since that pitcher’s last appearance–a pitcher’s very first logged game just got assigned the dataset’s max freshness value, since there was no prior appearance to diff against.</li>
+<li>We one-hot-encoded whether a pitcher started or came out of the bullpen, since a starter’s FIP and a reliever’s FIP mean pretty different things for a team’s chances.</li>
+<li>We built a Game ID from the date and both teams playing, and dropped the rare doubleheader games where a team played twice in a day–a low-volume edge case that wasn’t worth the extra handling.</li>
+</ul>
+<p>The team-level season stats were cleaner, with one exception: WOBA was missing entirely for 2024. We filled it with the global average WOBA across all years, on the logic that a neutral filler does the least damage to a model that’s trying to learn feature importance rather than predict individual games.</p>
+<p>After merging the two datasets (formatted pitcher logs and team averages for WOBA, OOA, wildcard status) on team and year, we grouped by Game ID and by team, built a per-team stat dictionary for each game (starter FIP/freshness, bullpen FIP/freshness averaged, OAA, WOBA, home/away, wild card status), shuffled team order, and concatenated both teams’ stats into a single row with a binary result column. One row got dropped for missing data; otherwise the dataset came together quite nicely.</p>
+<p>Worth noting is that every stat in a game’s row (FIP, freshness, etc.) reflects its value as of the <em>end</em> of that game, not before it started. For a model trying to predict future outcomes that would be leakage. But since we only cared about which features mattered, not about making real predictions, we treated this as fine–we wanted to know what correlates with winning, not forecast a game in advance.</p>
+</section>
+<section id="data-visualization-and-basic-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="data-visualization-and-basic-analysis">Data Visualization and Basic Analysis</h2>
+<p>The final dataset landed at 19,781 rows (one per game) and 20 features. Skill metrics like FIP, WOBA, and OAA came out normally distributed, as expected, while pitcher freshness was heavily skewed toward zero days of rest–makes sense, as most pitchers play pretty often.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="feature_distributions.png" class="img-fluid figure-img"></p>
+<figcaption>Distributions of the six key numerical features in our dataset.</figcaption>
+</figure>
 </div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+<p>When we split each of those same six features by win/loss, the distributions barely moved.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="results_box_plots.png" class="img-fluid figure-img"></p>
+<figcaption>Each feature split by game result. Win or lose, the spread looks about the same.</figcaption>
+</figure>
+</div>
+<p>That was our first hint that baseball, at the level of any single stat, is stubbornly noisy–no individual feature cleanly separates winners from losers, which is exactly why we wanted a model that could weigh a bunch of them together instead of eyeballing correlations one at a time.</p>
+</section>
+<section id="modeling-and-results" class="level2">
+<h2 class="anchored" data-anchor-id="modeling-and-results">Modeling and Results</h2>
+<p>We trained Random Forest and XGBoost classifiers, valuing interpretability (feature importance) over raw accuracy, with separate models for the regular season and the postseason. XGBoost outperformed Random Forest, landing at 0.701 accuracy/F1 in the regular season and 0.733 in the postseason.</p>
+<p>We scored feature importance using XGBoost’s <strong>gain-based feature importance</strong>, which is the average gain across every split that used that feature, summed across all trees in the ensemble. Features that are <em>discerning</em>, or that lead to big information gains when splitting on them, get high gain scores. This metric is <em>model</em>-based, and doesn’t use test data at all. Gain-based feature importance can overstate features that offer lots of split points (like continuous features, FIP for instance), and may reward patterns that don’t generalize. Pursuing a <strong>permutation importance</strong> score would be corrective of these issues.</p>
+<p>With that said, let’s look at the results. The most interesting shift: bullpen FIP mattered most in the regular season, but starting pitcher FIP took over as the top feature in the postseason, with offense and defense metrics (WOBA, OAA) also growing more important–consistent with October being a smaller-margin, higher-stakes version of the same game. As for our original question, wild card status barely registered, sitting dead last in both charts with an importance score of about 0.037. Wild card teams, as far as our models could tell, don’t have some hidden structural edge–they just occasionally get hot.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="top15_features.png" class="img-fluid figure-img"></p>
+<figcaption>Top 15 most important features, regular season versus postseason. Wild card status (bottom of both charts) barely moves the needle either way.</figcaption>
+</figure>
+</div>
+</section>
+<section id="conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
+<p>Unfortunately, Jack’s hunch about a hidden underdog effect didn’t hold up. Postseason success looks like it comes down to who’s pitching, especially who’s starting, more than whatever bracket position got a team into October.</p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-12-15">
+<meta name="description" content="Modeling the microbiological world of bread yeast with compartmental models.">
 
-<title>Projects – Jack Pond</title>
+<title>Modeling Yeast Spread – Jack Pond</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,25 +28,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6140f5cb4c2f36f337af84d246f9696a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6140f5cb4c2f36f337af84d246f9696a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,35 +72,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description','listing-repo','listing-stack','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
-      
-      searchColumns: ["listing-project","listing-website","listing-format","listing-engines","listing-language","listing-title","listing-description","listing-repo","listing-stack","listing-date","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -141,7 +112,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Jack Pond</span>
     </a>
   </div>
@@ -152,15 +123,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./writing.html"> 
+    <a class="nav-link" href="../../writing.html"> 
 <span class="menu-text">Writing</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
@@ -174,22 +145,48 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#motivation-and-set-up" id="toc-motivation-and-set-up" class="nav-link active" data-scroll-target="#motivation-and-set-up">Motivation and Set-up</a></li>
+  <li><a href="#basic-chemistry-of-bread" id="toc-basic-chemistry-of-bread" class="nav-link" data-scroll-target="#basic-chemistry-of-bread">Basic Chemistry of Bread</a></li>
+  <li><a href="#modeling" id="toc-modeling" class="nav-link" data-scroll-target="#modeling">Modeling</a>
+  <ul class="collapse">
+  <li><a href="#simple-compartmental" id="toc-simple-compartmental" class="nav-link" data-scroll-target="#simple-compartmental">Simple Compartmental</a></li>
+  <li><a href="#compartmental-model-with-monod-equation" id="toc-compartmental-model-with-monod-equation" class="nav-link" data-scroll-target="#compartmental-model-with-monod-equation">Compartmental Model with Monod Equation</a></li>
+  <li><a href="#macarthur-consumer-resource-model" id="toc-macarthur-consumer-resource-model" class="nav-link" data-scroll-target="#macarthur-consumer-resource-model">MacArthur Consumer-Resource Model</a></li>
+  </ul></li>
+  <li><a href="#appropriateness-of-models" id="toc-appropriateness-of-models" class="nav-link" data-scroll-target="#appropriateness-of-models">Appropriateness of Models</a></li>
+  <li><a href="#impact" id="toc-impact" class="nav-link" data-scroll-target="#impact">Impact</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projects</h1>
+<h1 class="title">Modeling Yeast Spread</h1>
 </div>
 
+<div>
+  <div class="description">
+    Modeling the microbiological world of bread yeast with compartmental models.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 15, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -199,44 +196,98 @@ window.Quarto = {
 </header>
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
-<div class="project-grid">
-
-  <div class="project-card">
-    <h3 class="anchored"><a href="./projects/2026-04-15-hmm-gene-model/index.html">Temporal Structure in the Yeast Transcriptome</a></h3>
-    <p>Uncovering genetic and temporal clusters in a time-series of RNA transcriptomic data generated by a yeast metabolic cycle.</p>
-    <p><strong>Stack:</strong> Python, scikit-learn, hmmlearn, UMAP</p>
-    <p><a href="https://github.com/jackdpond/hmm_gene_model" target="_blank">View repo</a></p>
-  </div>
-
-  <div class="project-card">
-    <h3 class="anchored"><a href="./projects/2026-03-15-go-with-the-flow/index.html">Go With The Flow</a></h3>
-    <p>Optimizing the racing route for the annual M&amp;M 100 miler sailing race (42 miles)</p>
-    <p><strong>Stack:</strong> Python, Julia (JuMP/IPOPT), SciPy</p>
-    <p><a href="https://github.com/your-username/project-three" target="_blank">View repo</a></p>
-  </div>
-
-  <div class="project-card">
-    <h3 class="anchored"><a href="./projects/2025-12-15-modeling-yeast-spread/index.html">Modeling Yeast Spread</a></h3>
-    <p>Modeling the microbiological world of bread yeast with compartmental models.</p>
-    <p><strong>Stack:</strong> Python, Jupyter Notebooks</p>
-    <p><a href="https://github.com/EthanPrimes/modeling_yeast_spread" target="_blank">View repo</a></p>
-  </div>
-
-  <div class="project-card">
-    <h3 class="anchored"><a href="./projects/2025-11-15-wildcard-weighting/index.html">Wild Card Weighting</a></h3>
-    <p>Training Random Forest and XGBoost models on a decade of MLB game logs to test whether wild card teams have a real postseason edge.</p>
-    <p><strong>Stack:</strong> Python, pandas, scikit-learn, XGBoost</p>
-    <p><a href="https://github.com/your-username/wildcard-weighting" target="_blank">View repo</a></p>
-  </div>
-
+<p>Shortly after my wife Jane and I started making sourdough, my friends Connor, Ethan, and I got the idea in our heads to use the compartmental models we were learning about in class to model the way yeast spreads in bread dough. It turned out to be a bit tricky–it’s a fairly straightforward consumer-resource model, but with multiple resources that the yeast bacteria prefer differently, and with parameters that vary hugely loaf to loaf. We used a hierarchy of increasingly sophisticated models to capture more and more of these dynamics, but ultimately concluded that the simplest models appropriately captured the most improtant dynamics that ultimately explained the rise and fall of the <em>Saccharomyces cerevisiae</em> fungus. We had a lot of fun and learned a dollop of chemistry and microbiology along the way!</p>
+<p>This write-up is a slightly modified version of the write-up on our repo’s <a href="https://github.com/EthanPrimes/modeling_yeast_spread">README</a>, and you can also find a more complete and formal write-up of this project <a href="paper.pdf">here</a>. The actual Python code for fitting and predicting the yeast population can be found in this <a href="https://github.com/EthanPrimes/modeling_yeast_spread/blob/main/model_code.ipynb">Jupyter notebook</a>.</p>
+<section id="motivation-and-set-up" class="level2">
+<h2 class="anchored" data-anchor-id="motivation-and-set-up">Motivation and Set-up</h2>
+<p>It’s difficult to make bread. The fact that small changes in the either the method of preparation or the environment (temperature, pressure, etc.) lead to large changes in the outcome make bread-baking an ill-conditioned process. At the same time, nearly everybody really likes good bread, so this problem deserves careful consideration.</p>
+<p>We consider a basic bread recipe that calls for baker’s yeast, <em>Saccharomyces cerevisiae</em>, rather than sourdough, as the unpredictable cocktail of bacterial and fungal species in a sourdough starter makes any model either intractable or of no use. We attempt to construct a mathematical model that is able to predict the whims and vagaries of home-baked bread.</p>
+</section>
+<section id="basic-chemistry-of-bread" class="level2">
+<h2 class="anchored" data-anchor-id="basic-chemistry-of-bread">Basic Chemistry of Bread</h2>
+<p>There are four primary ingredients in bread dough: flour, water, salt, and yeast. Flour provides not only the gluten that gives bread its structure, but also contains sugars that the yeast consumes. Salt strengthens the bread dough, making it more elastic.</p>
+<p>Most of flour’s sugar is actually locked up as starch, not free sugar yeast can use directly. Once water hits the flour, naturally-occurring amylase enzymes wake up and start chopping that starch into maltose (and eventually glucose), which is the actual fuel yeast ferments. Hydration doesn’t just form gluten, it also starts the process that unlocks the release of yeast-digestible stugars in the flour.</p>
+<p>Yeast consumes the available sugars in two phases: aerobic when oxygen is available, and anaerobic when oxygen is depleted. The presence of oxygen allows the yeast to synthesize more energy from the sugar it consumes, and the yeast multiplies much faster during the aerobic stage. Once oxygen is depleted, the yeast switches to less-efficient anaerobic metabolism with different byproducts.</p>
+</section>
+<section id="modeling" class="level2">
+<h2 class="anchored" data-anchor-id="modeling">Modeling</h2>
+<p>We modeled the amount of yeast, sugar, <span class="math inline">\(CO_2\)</span>, and sometimes other byproducts with four different models.</p>
+<section id="simple-compartmental" class="level3">
+<h3 class="anchored" data-anchor-id="simple-compartmental">Simple Compartmental</h3>
+<p>The first simple categorical model is a slightly modified SIR model. The main difference is that while the compartments represent concentrations, they do not sum to a constant value. Rather than mass or something analagous passing from one compartment to the next, a kind of “energy” or “life-force” passes from sugar to yeast to byproducts. The system of ODEs is given by</p>
+<p><span class="math display">\[
+\begin{align*}
+    \dot{S} &amp;= -\alpha \cdot S(t) \cdot Y(t) \\
+    \dot{Y} &amp;= \beta \cdot S(t) \cdot Y(t) - \gamma \cdot Y(t) \\
+    \dot{C} &amp;= \delta \cdot S(t) \cdot Y(t)
+\end{align*}
+\]</span></p>
+<p>Note that <span class="math inline">\(\alpha\)</span> is not necessarily equal to <span class="math inline">\(\beta\)</span> because the amount of sugar consumed by yeast is related though not equal to the biomass added to the yeast, and the rate at which yeast consumes sugar is not comparable to the rate at which yeast reproduces.</p>
+<p>We fit this model to data described in the paper with surprisingly good results.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="simple_compartmental.png" class="img-fluid figure-img"></p>
+<figcaption>Simple Compartmental Fit</figcaption>
+</figure>
 </div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</section>
+<section id="compartmental-model-with-monod-equation" class="level3">
+<h3 class="anchored" data-anchor-id="compartmental-model-with-monod-equation">Compartmental Model with Monod Equation</h3>
+<p>This model is a slightly more sophisticated twist on the prior simple compartmental model in that it leverages an insight from the biologist Monod.</p>
+<p><span class="math display">\[
+\begin{align*}
+    \dot{Y} &amp;= \mu_{\text{max}} \frac{S}{K_s + S}Y \\
+    \dot{S} &amp;= -\frac{1}{Y_{X/S}} \dot{Y} \\
+    \dot{P} &amp;= Y_{P/S} (-\dot{S})
+\end{align*}
+\]</span></p>
+<p>Monod’s contribution here is that yeast growth shouldn’t just scale linearly with the amount of sugar present in the dough–at some point the yeast’s own machinery, not the sugar supply, becomes the bottleneck. Monod’s <span class="math inline">\(\frac{S}{K_s+S}\)</span> term captures exactly this: when sugar is abundant it flattens out near 1, so growth approaches a hard ceiling of <span class="math inline">\(\mu_{\text{max}}\)</span>, but as sugar gets scarce it drops off and growth slows in proportion to how little is left. We also swapped the two independent rate constants from the simple model for yield coefficients <span class="math inline">\(Y_{X/S}\)</span> and <span class="math inline">\(Y_{P/S}\)</span>, which just say that biomass and byproduct show up in fixed proportion to the sugar consumed–more careful bookkeeping, rather than a new growth mechanism.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="monod_modeling.png" class="img-fluid figure-img"></p>
+<figcaption>Monod Categorical Fit</figcaption>
+</figure>
+</div>
+</section>
+<section id="macarthur-consumer-resource-model" class="level3">
+<h3 class="anchored" data-anchor-id="macarthur-consumer-resource-model">MacArthur Consumer-Resource Model</h3>
+<p>This model is motivated by thinking of yeast as a consumer with two different resources, namely sugar and oxygen, each of which it metabolizes differently–at different rates, with different levels of efficiency, and with different byproducts. In fact, yeast metabolizes sugar differently depending on the amount of oxygen available. We consider the change in concentration of yeast, oxygen, sugar, and carbon dioxide.</p>
+<p><span class="math display">\[
+\begin{align*}
+    \dot{Y} &amp;= Y \bigg[w_O c_O O + [w_S^{ana}​+(w_S^{aer}​−w_S^{ana}​)f(O)]c_S S - m\bigg] \\
+    \dot{O} &amp;= -c_O O Y f(O) \\
+    \dot{S} &amp;= r_S S (1 - \frac{S}{P_S}) - c_S Y S \\
+    \dot{C} &amp;= Y  u_S  (1 - f(O)) \cdot .0111 \\ \\
+    f(O) &amp;= \frac{O}{k_O + O}
+\end{align*}
+\]</span></p>
+<p>There are a lot of terms and parameters in this model; check out the appendix for an index. We cite both the values we used and the sources for those values in the more <a href="paper.pdf">official write-up</a>.</p>
+<p>The real trick in this model is the switching function <span class="math inline">\(f(O)\)</span>, which acts like a dial that slides between anaerobic and aerobic metabolism depending on how much oxygen is left. When oxygen is abundant <span class="math inline">\(f(O)\)</span> sits near 1 and yeast burns sugar through the efficient aerobic pathway, weighted by <span class="math inline">\(w_S^{aer}\)</span>; as oxygen runs out <span class="math inline">\(f(O)\)</span> collapses toward 0 and that same sugar consumption switches over to the much less efficient anaerobic pathway weighted by <span class="math inline">\(w_S^{ana}\)</span>–no separate model needed, just one continuous knob. Sugar gets its own logistic growth term since flour keeps releasing more of it as it’s processed, rather than starting from one fixed pool like in the earlier models, and oxygen simply drains away as yeast metabolizes, scaled by that same <span class="math inline">\(f(O)\)</span> switch. In short, it’s two Monod-style consumer-resource pairs sharing a single dial that decides which one yeast leans on.</p>
+<p>Of course, the standard MacArthur Consumer-Model isn’t a perfect fit. My understanding is that this kind of Consumer-Resource model is used to capture the dynamic of a predator (say, a coyote) with multiple sorts of prey (rabbits and squirrels), but with different chances of encountering and eating different sorts of prey, and with different benefits from different sorts of prey. For instance, a coyote might eat more squirrels but rabbits are a bigger meal. For this model of yeast, oxygen and sugar are not different resources that the yeast consumes separately, but rather the presence of oxygen makes yeast better at consuming the primary fuel, which is sugar. We feel that this formulation more or less captures this dynamic.</p>
+<p>Unfortunately, despite digging, we were unable to find data against which to validate this model. However, qualitatively, it matches what we expect. The amount of yeast grows quickly at first, then slightly slower when oxygen is depleted (which happens quite quickly), then levels out once sugar is completely depleted. The amount of sugar in the loaf grows as the flour is processed and then decreases once the rate of yeast’s consumption overtakes the slowing rate of sugar increase. The amount of <span class="math inline">\(CO_2\)</span> slowly increases throughout, and at a higher rate during the aerobic phase.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="mcrm.png" class="img-fluid figure-img"></p>
+<figcaption>MacArthur Consumer Resource Model</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="appropriateness-of-models" class="level2">
+<h2 class="anchored" data-anchor-id="appropriateness-of-models">Appropriateness of Models</h2>
+<p>The two compartmental models captured the changing concentrations of their assumed dynamics with surprising accuracy, considering their simplicity. The fitted simple compartmental model yielded a mere 21% error for the glucose consumed to ethanol produced ratio. However, the assumed dynamics are quite a far cry from the dynamics of a rising loaf of bread dough. The most egregious simplifiying assumption was that all sugar is initially available and does not replenish. Fortunately experimental data that matched the assumptions validated these models nicely.</p>
+<p>The most complex model we attempted to use, the MacArthur Consumer- Resource model, corrected the previous simplifications by including terms to describe 1) a replenishing supply of available sugar, 2) a variable rate of sugar consumption and yield depending on the oxygen supply, and 3) metabolism of oxygen when available. Although we were unable to find or produce experimental data to validate this model, we found it satisfactory qualitatively. The phases of aerobic metabolism, anaerobic metabolism, and equilibrium are each amenable to visual inspections of the figures the model produces.</p>
+</section>
+<section id="impact" class="level2">
+<h2 class="anchored" data-anchor-id="impact">Impact</h2>
+<p>The impact of an accurate bread-rising model would be profound and far-reaching. Bread is a worldwide staple, and is much beloved by nearly all cultures. An accurate model would create tremendous accessibility to consistently higher quality bread, exactly as desired by its bakers, despite its complexity.</p>
+<p>Such a day is yet beyond us. Using the models we produced, by fiddling with initial values, a user can easily see the effects of changing the initial concentrations of yeast, sugar, and oxygen, and use these initial concentrations to create the desired effect while baking bread, though those changes are qualitative and not truly very predictive.</p>
+<p>Much work remains to be done.</p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
