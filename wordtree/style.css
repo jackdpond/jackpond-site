@@ -1,0 +1,172 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin: 10px 0 0 0;
+    color: #666;
+}
+
+.game-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.tree-svg {
+    width: 600px;
+    height: 300px;
+    display: block;
+    margin: 0 auto 20px auto;
+    background: none;
+}
+
+.node-circle {
+    fill: #000;
+    stroke: none;
+}
+
+.node-label {
+    fill: #fff;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    dominant-baseline: middle;
+    text-anchor: middle;
+    pointer-events: none;
+}
+
+.cursor-node {
+    fill: #999 !important;
+    stroke: #999;
+    stroke-width: 4;
+}
+
+.line {
+    stroke: #222;
+    stroke-width: 2;
+}
+
+.letter-bank {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.letter, .control {
+    width: 56px;
+    height: 56px;
+    margin: 5px;
+    border: none;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.letter:disabled {
+    background: #eee;
+    color: #bbb;
+    cursor: not-allowed;
+}
+
+.control {
+    background-color: #888;
+}
+
+.control#back {
+    background-color: #ff3b3b;
+}
+
+.control#next {
+    background-color: #888;
+}
+
+.grey {
+    background-color: #888;
+}
+
+.dashed {
+    border: 2px dashed #000000;
+    background-color: transparent;
+}
+
+.word-display {
+    margin-top: 30px;
+    font-size: 2rem;
+    color: #388e3c;
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.progress-container {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.3s ease-in-out;
+}
+
+.progress-text {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+.daily-info {
+    margin-bottom: 20px;
+}
+
+.daily-info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.daily-info p {
+    margin: 5px 0 0 0;
+    font-size: 1rem;
+    color: #666;
+}
