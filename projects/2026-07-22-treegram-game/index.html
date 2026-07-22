@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2026-07-22">
-<meta name="description" content="A new and not-very-fun word game with binary trees!">
+<meta name="description" content="A new and not-very-fun word game with binary trees! Also, an introductory group-theory nerd snipe.">
 
 <title>Play Treegram today! – Jack Pond</title>
 <style>
@@ -73,6 +73,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -128,6 +157,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#gameplay" id="toc-gameplay" class="nav-link" data-scroll-target="#gameplay">Gameplay</a></li>
   </ul></li>
   <li><a href="#game-history-and-development" id="toc-game-history-and-development" class="nav-link" data-scroll-target="#game-history-and-development">Game history and development</a></li>
+  <li><a href="#future-work" id="toc-future-work" class="nav-link" data-scroll-target="#future-work">Future work</a></li>
   </ul>
 </nav>
     </div>
@@ -141,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    A new and not-very-fun word game with binary trees!
+    A new and not-very-fun word game with binary trees! Also, an introductory group-theory nerd snipe.
   </div>
 </div>
 
@@ -174,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="guide-to-the-game" class="level2">
 <h2 class="anchored" data-anchor-id="guide-to-the-game">Guide to the game</h2>
-<p>This section is slightly expanded from the “How To Play” dialog on the Treegram site.</p>
+<p>This section is expanded from the “How To Play” dialog on the Treegram site.</p>
 <p>Treegram is a difficult word game that requires some knowledge of binary trees and how to traverse them. Let’s dive in.</p>
 <section id="trees" class="level3">
 <h3 class="anchored" data-anchor-id="trees">Trees:</h3>
@@ -285,6 +315,12 @@ ul.task-list li input[type="checkbox"] {
 <p>The next summer my first experimentation with Claude was to use the chat interface to make a website to play my game. I had shown to a few friends who all clamored for me to keep it to myself. Undeterred, I used Claude to set up an online game… but as I knew nothing about online development, I thought I would need a server-side backend. I recently found out that the entire game was client-side except for a python script that selected the word-of-the-day. I set up a Render account and everything.</p>
 <p>At some point I switched from the perhaps less than inspired name “WordTree” to the revelatory name “Treegram” that the game bears today.</p>
 <p>Claude is much better today, and I know slightly more about web development, enough to ask to “please make the site completely client-side so I can host it on a static site.” Here we are. I hope you enjoy.</p>
+</section>
+<section id="future-work" class="level2">
+<h2 class="anchored" data-anchor-id="future-work">Future work</h2>
+<p>The obvious question to ask is “Are there any permutations that <em>can’t</em> be achieved by the different traversals of a binary tree? Why?”</p>
+<p>A more careful phrasing of this question, is “Given that traversal A of a tree gives one ordering, which permutations of that ordering are achievable by traversal B?” I give this set of permutations the name <span class="math inline">\(R(A, B)\)</span>. If a word-pair, where one is an anagram of the other, is in <span class="math inline">\(\bigcup_{A \neq B} R(A, B)\)</span> for <span class="math inline">\(A, B \in /{\text{Breadth-First, Pre-Order, In-Order, Post-Order}}\)</span>, then there is a tree that is a solution to the Treegram game. Importantly, the majority of <span class="math inline">\(S_n\)</span> is not in <span class="math inline">\(R(A, B)\)</span>.</p>
+<p>This little problem is still leading me to delightful (and quite large) rabbit holes like Donald Knuth’s <a href="https://en.wikipedia.org/wiki/Stack-sortable_permutation">stack sorting</a>, the whole field of <a href="https://en.wikipedia.org/wiki/Permutation_pattern">permutation patterns</a>/ <a href="https://en.wikipedia.org/wiki/Enumerations_of_specific_permutation_classes">pattern-avoidance classes</a> (which has <em>annual conferences</em>), <a href="https://en.wikipedia.org/wiki/Catalan_number">Catalan</a> and <a href="https://en.wikipedia.org/wiki/Motzkin_number">Motzkin</a> numbers, and forbidden patterns. It seems I’ve stumbled across a well-trod domain of problems. There is even a <a href="https://personal.denison.edu/~kretchmar/pubs/TreeTraversals.pdf">2014 paper</a> by Feil, Hutson, and Kretchmar that explores an almost identical problem. The small twist with my version is the addition of Breadth-First search. Empirically, the cardinality of sets that include Breadth-First traversals lands on Motzkin numbers instead… and I’m working on figuring out why. Hopefully I’ll get that write-up on here as an update soon.</p>
 
 
 </section>

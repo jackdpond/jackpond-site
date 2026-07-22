@@ -25,9 +25,21 @@
         <h3>The four traversals</h3>
         <ul>
             <li><b>Breadth-first</b> &mdash; level by level, left to right</li>
-            <li><b>Pre-order</b> &mdash; node, then left subtree, then right subtree</li>
-            <li><b>In-order</b> &mdash; left subtree, then node, then right subtree</li>
-            <li><b>Post-order</b> &mdash; left subtree, then right subtree, then node</li>
+            <li><b>Pre-order</b> &mdash; recursively: node, then left subtree, then right subtree</li>
+            <li><b>In-order</b> &mdash; recursively: left subtree, then node, then right subtree</li>
+            <li><b>Post-order</b> &mdash; recursively: left subtree, then right subtree, then node</li>
+        </ul>
+
+        <pre>     1
+    / \
+   2   3
+  /   / \
+ 4   5   6</pre>
+        <ul>
+            <li><b>Breadth-first:</b> 1-2-3-4-5-6</li>
+            <li><b>Pre-order:</b> 1-2-4-3-5-6</li>
+            <li><b>In-order:</b> 4-2-1-5-3-6</li>
+            <li><b>Post-order:</b> 4-2-5-6-3</li>
         </ul>
 
         <h3>Example</h3>
