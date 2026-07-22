@@ -15,6 +15,19 @@ const resetButton = document.getElementById("reset");
 const progressFill = document.querySelector(".progress-fill");
 const progressText = document.querySelector(".progress-text");
 
+// How To Play dialog
+const howToPlayDialog = document.getElementById('how-to-play-dialog');
+document.getElementById('how-to-play-link').addEventListener('click', (e) => {
+    e.preventDefault();
+    howToPlayDialog.showModal();
+});
+document.getElementById('how-to-play-close').addEventListener('click', () => {
+    howToPlayDialog.close();
+});
+howToPlayDialog.addEventListener('click', (e) => {
+    if (e.target === howToPlayDialog) howToPlayDialog.close(); // clicked the backdrop
+});
+
 // Add a div for displaying found words
 let wordDisplay = document.createElement('div');
 wordDisplay.className = 'word-display';
@@ -69,7 +82,7 @@ async function getDailyWord() {
 }
 
 // --- Progress persistence (localStorage, namespaced per day) ---
-const PROGRESS_PREFIX = 'wordtree_progress_';
+const PROGRESS_PREFIX = 'treegram_progress_';
 
 function loadProgress(dateStr) {
     const raw = localStorage.getItem(PROGRESS_PREFIX + dateStr);
@@ -146,7 +159,7 @@ async function loadDailyWord() {
             dailyInfo.className = 'daily-info';
             dailyInfo.innerHTML = `
                 <div style="text-align: center; margin-bottom: 1rem; color: #666;">
-                    <h3>WordTree #${data.day_number}</h3>
+                    <h3>Treegram #${data.day_number}</h3>
                     <p>${new Date(data.date).toLocaleDateString('en-US', {
                         weekday: 'long',
                         year: 'numeric',

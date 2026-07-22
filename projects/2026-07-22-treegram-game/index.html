@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-04-15">
-<meta name="description" content="Play wordtree today, a not-very-fun new word game with binary trees!">
+<meta name="dcterms.date" content="2026-07-22">
+<meta name="description" content="A new and not-very-fun word game with binary trees!">
 
-<title>Temporal Structure in the Yeast Transcriptome – Jack Pond</title>
+<title>Play Treegram today! – Jack Pond</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -116,20 +116,32 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#guide-to-the-game" id="toc-guide-to-the-game" class="nav-link active" data-scroll-target="#guide-to-the-game">Guide to the game</a>
+  <ul class="collapse">
+  <li><a href="#trees" id="toc-trees" class="nav-link" data-scroll-target="#trees">Trees:</a></li>
+  <li><a href="#traversals" id="toc-traversals" class="nav-link" data-scroll-target="#traversals">Traversals</a></li>
+  <li><a href="#gameplay" id="toc-gameplay" class="nav-link" data-scroll-target="#gameplay">Gameplay</a></li>
+  </ul></li>
+  <li><a href="#game-history-and-development" id="toc-game-history-and-development" class="nav-link" data-scroll-target="#game-history-and-development">Game history and development</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Temporal Structure in the Yeast Transcriptome</h1>
+<h1 class="title">Play Treegram today!</h1>
 </div>
 
 <div>
   <div class="description">
-    Play wordtree today, a not-very-fun new word game with binary trees!
+    A new and not-very-fun word game with binary trees!
   </div>
 </div>
 
@@ -140,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 15, 2026</p>
+      <p class="date">July 22, 2026</p>
     </div>
   </div>
   
@@ -152,9 +164,130 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Play wordtree today!</p>
+<p>Given five letters, can you arrange them in a binary tree so that two different traversals (among breadth-first, in-order, pre-order, post-order) create two different valid words? Give it a try today! It may not be particularly satisfying, nor entertaining, but it’s probably harder than you think.</p>
+<p><a href="https://jackpond.com/treegram">PLAY NOW</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="word_tree_demo.gif" class="img-fluid figure-img"></p>
+<figcaption>A sample solution</figcaption>
+</figure>
+</div>
+<section id="guide-to-the-game" class="level2">
+<h2 class="anchored" data-anchor-id="guide-to-the-game">Guide to the game</h2>
+<p>This section is slightly expanded from the “How To Play” dialog on the Treegram site.</p>
+<p>Treegram is a difficult word game that requires some knowledge of binary trees and how to traverse them. Let’s dive in.</p>
+<section id="trees" class="level3">
+<h3 class="anchored" data-anchor-id="trees">Trees:</h3>
+<p>A tree is a kind of graph or diagram, with nodes and connections between the nodes. Technically, a tree is any graph where there is a path from each node to every other node, but not back to itself. We will only talk about rooted trees, with a natural hierarchy of parents and children. The one rule for a rooted tree is that each node may have however many children, but only one parent. This also means a node cannot share children with another node. The following is a tree:</p>
+<pre><code>                      1
+                     / \
+                    2   3
+                   /   / \
+                  4   5   6</code></pre>
+<p>The following is not a tree:</p>
+<pre><code>                    1   2
+                     \ /
+                      3   4
+                       \ / \
+                        5   6
+                             \
+                              7</code></pre>
+<p>This is not a tree because the 3 node and the 5 node both have two parents. Note that this means that nodes 1 and 2 share a child (3) and nodes 3 and 4 share a child (5)</p>
+<p>In this game, we will add an additional restraint. We will only consider binary trees, which have the additional rule that a node may only have up to two children. The first example above is a binary tree since each node has 2 children or less.</p>
+</section>
+<section id="traversals" class="level3">
+<h3 class="anchored" data-anchor-id="traversals">Traversals</h3>
+<p>There are four tree traversals that are key to play the game:</p>
+<section id="breadth-first" class="level4">
+<h4 class="anchored" data-anchor-id="breadth-first">Breadth First</h4>
+<p>This is the simplest traversal. Simply take the first layer of the tree, then the second, then the third, and so on, always from left to right. For this tree:</p>
+<pre><code>                     1
+                    / \
+                   2   3
+                  /   / \
+                 4   5   6</code></pre>
+<p>The breadth first traversal would be 1-2-3-4-5-6.</p>
+</section>
+<section id="pre-order" class="level4">
+<h4 class="anchored" data-anchor-id="pre-order">Pre-Order</h4>
+<p>Pre-Order is the first of the ‘depth first’ searches. It is a recursive traversal, meaning that the traverser uses the same rule in a nested fashion—or the rule contains an application of itself. The rule is: print a node, then apply the rule to the left child, then apply the rule to the right child. If a node doesn’t have a left child, move the right. If it doesn’t have a right child, then that branch of the algorithm is done and you can move on to a right child higher up or finish.</p>
+<p>It seems complicated but maybe an example will help.</p>
+<p>For this tree:</p>
+<pre><code>                     1
+                    / \
+                   2   3
+                  /   / \
+                 4   5   6</code></pre>
+<p>The pre-order traversal would be 1-2-4-3-5-6.</p>
+</section>
+<section id="in-order" class="level4">
+<h4 class="anchored" data-anchor-id="in-order">In-Order</h4>
+<p>This traversal is similar to pre-order, but in a different order. First, apply the rule to the left child of the node, then print the node, then apply the rule to the right child of the node. If a node does not have a left child, print the node then move on to the right child. If a node doesn’t have a right child, then that branch of the algorithm is done and you can move on to a right child node up the tree, or finish.</p>
+<p>For this tree:</p>
+<pre><code>                     1
+                    / \
+                   2   3
+                  /   / \
+                 4   5   6</code></pre>
+<p>The In-Order traversal is 4-2-1-5-3-6. Note that this rule ends up giving us a left-to-right, level-agnostic ordering of the whole tree.</p>
+<section id="a-note" class="level5">
+<h5 class="anchored" data-anchor-id="a-note">A note</h5>
+<p>this traversal is called ‘In Order’ because when used on a binary <em>search</em> tree—-a binary tree with an additional rule—-this traversal prints the nodes in sorted order. The additional rule is that each left child must be <em>less than</em> its parent, and each right child must be <em>greater than</em> its parent. The example tree we have been looking at is not a binary search tree.</p>
+</section>
+</section>
+<section id="post-order" class="level4">
+<h4 class="anchored" data-anchor-id="post-order">Post-Order</h4>
+<p>The last traversal is also similar to the previous two, with a predictable tweak. Apply the rule to the left child and the right child before printing the node. This gets a little surprising since all the descendants of a node get printed before it does.</p>
+<p>For this tree:</p>
+<pre><code>                     1
+                    / \
+                   2   3
+                  /   / \
+                 4   5   6</code></pre>
+<p>The Post-Order traversal is 4-2-5-6-3-1.</p>
+</section>
+</section>
+<section id="gameplay" class="level3">
+<h3 class="anchored" data-anchor-id="gameplay">Gameplay</h3>
+<p>The player is given a list of letters in alphabetical order. Their goal is to arrange the letters in a binary tree so that different traversals yield different valid words. For sets of four or five letters, it is sometimes possible (rarely) to arrange a tree so that three traversals yield three different valid words. Such a tree is worth more points than a tree that only yields two words.</p>
+<p>For example: letters: ADEELPS these may be arranged like so:</p>
+<pre><code>                     p
+                    / \
+                   l   s
+                  / \   \
+                 e   a   e
+                          \
+                           d</code></pre>
+<p>pre-order: pleased in-order: elapsed</p>
+<p>This is one tree the player could make but not the only one! The more trees made, the more points.</p>
+<section id="some-challenges-to-get-you-started" class="level4">
+<h4 class="anchored" data-anchor-id="some-challenges-to-get-you-started">Some challenges to get you started</h4>
+<ol type="1">
+<li>AEFST</li>
+<li>APRST</li>
+<li>OPSST</li>
+<li>EIMRT</li>
+<li>AEMNS</li>
+<li>AELRT</li>
+<li>CEEPTX</li>
+<li>EHORSS</li>
+<li>EORRST</li>
+<li>ACDEILM</li>
+<li>AEENRST</li>
+</ol>
+</section>
+</section>
+</section>
+<section id="game-history-and-development" class="level2">
+<h2 class="anchored" data-anchor-id="game-history-and-development">Game history and development</h2>
+<p>I first had this idea when I first learned about binary tree traversals in a university data structures class. After looking at all the different orderings of numbers on the chalkboard, I sketched out the rough idea but couldn’t find any solutions. I leaned over to my friend Ethan and whispered the idea and he tried for a few minutes but in the end we were both just left with a few half-hearted tree diagrams in our notebooks.</p>
+<p>The idea stuck with me though. The next summer, when I was spending 2-3 hours commuting between Acton and Boston, I decided to spend the train time writing a brute-force solver. I couldn’t think of a cleverer approach. The trickiest part was figuring out how to represent different trees and orders, and I am proud to be an independent discoverer of heap-ordering. The details of my solution are in the repo, but there is nothing particularly clever or nice about it.</p>
+<p>The next summer my first experimentation with Claude was to use the chat interface to make a website to play my game. I had shown to a few friends who all clamored for me to keep it to myself. Undeterred, I used Claude to set up an online game… but as I knew nothing about online development, I thought I would need a server-side backend. I recently found out that the entire game was client-side except for a python script that selected the word-of-the-day. I set up a Render account and everything.</p>
+<p>At some point I switched from the perhaps less than inspired name “WordTree” to the revelatory name “Treegram” that the game bears today.</p>
+<p>Claude is much better today, and I know slightly more about web development, enough to ask to “please make the site completely client-side so I can host it on a static site.” Here we are. I hope you enjoy.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

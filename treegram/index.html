@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treegram - Daily Puzzle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Treegram</h1>
+        <p>Daily Binary Tree Word Puzzle</p>
+        <p class="header-links">
+            <a href="/">&larr; jackpond.com</a>
+            <span class="header-links-sep">&middot;</span>
+            <a href="#" id="how-to-play-link">How To Play</a>
+        </p>
+    </div>
+
+    <dialog id="how-to-play-dialog">
+        <button id="how-to-play-close" aria-label="Close">&times;</button>
+        <h2>How To Play</h2>
+        <p>You're given a set of letters. Place them one at a time into the nodes of a binary tree. Once every letter is placed, the game reads the tree back out four different ways &mdash; find at least two that spell different valid words and you've got a solution.</p>
+
+        <h3>The four traversals</h3>
+        <ul>
+            <li><b>Breadth-first</b> &mdash; level by level, left to right</li>
+            <li><b>Pre-order</b> &mdash; node, then left subtree, then right subtree</li>
+            <li><b>In-order</b> &mdash; left subtree, then node, then right subtree</li>
+            <li><b>Post-order</b> &mdash; left subtree, then right subtree, then node</li>
+        </ul>
+
+        <h3>Example</h3>
+        <p>Letters: A D E E L P S</p>
+        <pre>     p
+    / \
+   l   s
+  / \   \
+ e   a   e
+          \
+           d</pre>
+        <p><b>Pre-order:</b> pleased<br><b>In-order:</b> elapsed</p>
+
+        <p>Trees with 3 valid words are rarer and worth more. Keep discovering different trees to fill your progress bar for the day!</p>
+    </dialog>
+
+    <div class="game-container">
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="progress-text">0/0 trees found</div>
+        </div>
+        <svg class="tree-svg"></svg>
+        <div class="letter-bank">
+            <!-- Letters will be populated by JavaScript -->
+            <button class="control" id="next">&#8594;</button>
+            <button class="control" id="back">&#8592;</button>
+            <button class="control" id="reset">&#8635;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
