@@ -1,9 +1,0 @@
----
-title: "Temporal Structure in the Yeast Transcriptome"
-description: "Play wordtree today, a not-very-fun new word game with binary trees!"
-repo: "https://jackpond.com/wordtree"
-stack: "Python, scikit-learn, hmmlearn, UMAP"
-date: 2026-04-15
----
-
-Play wordtree today!
