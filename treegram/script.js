@@ -160,12 +160,15 @@ async function loadDailyWord() {
             dailyInfo.innerHTML = `
                 <div style="text-align: center; margin-bottom: 1rem; color: #666;">
                     <h3>Treegram #${data.day_number}</h3>
-                    <p>${new Date(data.date).toLocaleDateString('en-US', {
-                        weekday: 'long',
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                    })}</p>
+                    <p>${(() => {
+                        const [y, m, d] = data.date.split('-').map(Number);
+                        return new Date(y, m - 1, d).toLocaleDateString('en-US', {
+                            weekday: 'long',
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                        });
+                    })()}</p>
                 </div>
             `;
             wordDisplay.appendChild(dailyInfo);
