@@ -1,6 +1,6 @@
 ---
 title: "Play Treegram today!"
-description: "A new and not-very-fun word game with binary trees!"
+description: "A new and not-very-fun word game with binary trees! Also, an introductory group-theory nerd snipe."
 repo: "https://jackpond.com/treegram"
 stack: "Python, HTML/CSS/JavaScript"
 date: 2026-07-22
@@ -12,7 +12,7 @@ Given five letters, can you arrange them in a binary tree so that two different 
 ![A sample solution](word_tree_demo.gif)
 
 ## Guide to the game
-This section is slightly expanded from the "How To Play" dialog on the Treegram site.
+This section is expanded from the "How To Play" dialog on the Treegram site.
 
 Treegram is a difficult word game that requires some knowledge of binary trees and how to traverse them. Let's dive in.
 
@@ -142,3 +142,10 @@ The next summer my first experimentation with Claude was to use the chat interfa
 At some point I switched from the perhaps less than inspired name "WordTree" to the revelatory name "Treegram" that the game bears today.
 
 Claude is much better today, and I know slightly more about web development, enough to ask to "please make the site completely client-side so I can host it on a static site." Here we are. I hope you enjoy.
+
+## Future work
+The obvious question to ask is "Are there any permutations that *can't* be achieved by the different traversals of a binary tree? Why?" 
+
+A more careful phrasing of this question, is "Given that traversal A of a tree gives one ordering, which permutations of that ordering are achievable by traversal B?" I give this set of permutations the name $R(A, B)$. If a word-pair, where one is an anagram of the other, is in $\bigcup_{A \neq B} R(A, B)$ for $A, B \in /{\text{Breadth-First, Pre-Order, In-Order, Post-Order}}$, then there is a tree that is a solution to the Treegram game. Importantly, the majority of $S_n$ is not in $R(A, B)$.
+
+This little problem is still leading me to delightful (and quite large) rabbit holes like Donald Knuth's [stack sorting](https://en.wikipedia.org/wiki/Stack-sortable_permutation), the whole field of [permutation patterns](https://en.wikipedia.org/wiki/Permutation_pattern)/ [pattern-avoidance classes](https://en.wikipedia.org/wiki/Enumerations_of_specific_permutation_classes) (which has *annual conferences*), [Catalan](https://en.wikipedia.org/wiki/Catalan_number) and [Motzkin](https://en.wikipedia.org/wiki/Motzkin_number) numbers, and forbidden patterns. It seems I've stumbled across a well-trod domain of problems. There is even a [2014 paper](https://personal.denison.edu/~kretchmar/pubs/TreeTraversals.pdf) by Feil, Hutson, and Kretchmar that explores an almost identical problem. The small twist with my version is the addition of Breadth-First search. Empirically, the cardinality of sets that include Breadth-First traversals lands on Motzkin numbers instead... and I'm working on figuring out why. Hopefully I'll get that write-up on here as an update soon.
