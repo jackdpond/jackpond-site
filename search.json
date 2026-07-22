@@ -347,7 +347,7 @@
     "href": "projects/2026-07-22-treegram-game/index.html",
     "title": "Play Treegram today!",
     "section": "",
-    "text": "Given five letters, can you arrange them in a binary tree so that two different traversals (among breadth-first, in-order, pre-order, post-order) create two different valid words? Give it a try today! It may not be particularly satisfying, nor entertaining, but it’s probably harder than you think.\nPLAY NOW"
+    "text": "Given five letters, can you arrange them in a binary tree so that two different traversals (among breadth-first, in-order, pre-order, post-order) create two different valid words? Give it a try today! It may not be particularly satisfying, nor entertaining, but it’s probably harder than you think."
   },
   {
     "objectID": "projects/2026-07-22-treegram-game/index.html#guide-to-the-game",
