@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6140f5cb4c2f36f337af84d246f9696a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-bb3e1c95479bf94468d2afd42f9a72f9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -196,7 +196,8 @@ window.Quarto = {
 
 <section id="some-background-on-rna-transcriptomics" class="level2">
 <h2 class="anchored" data-anchor-id="some-background-on-rna-transcriptomics">Some background on RNA transcriptomics</h2>
-<p>Your <em>genome</em> is the full library of genetic instructions in each cell in your body, stored in DNA strands. It’s essentially static (hopefully) and doesn’t change moment to moment or cell to cell. Those genes are <em>active</em> when a gene’s DNA sequence is copied to a strand of RNA, which is like an email of instructions to the cell’s ribosomes. The process of copying is called <em>trasnscription</em>. The ribosomes fabricate proteins, and the proteins determine what the cell is <em>doing</em>–building, metabolizing, fighting invaders, reproducing. The <em>transcriptome</em>, by contrast to the genome, is the complete set of RNA molecules in a cell at a given moment. It <em>does</em> change moment to moment, corresponding to which genes are active from moment to moment. <em>Transcriptomics</em> is the process of measuring that set. This is a project completed by my friends Isaac, Henry, Wyat, and me for a final project in a data-driven modeling class. A few weeks in we pivoted to something with a cleaner question attached to it: a yeast microarray time series from a 2005 <em>Science</em> paper, where a culture of budding yeast, grown under starvation conditions, falls into a spontaneous, synchronized metabolic oscillation–the whole population lurches between oxidative and reductive metabolism every few hours, like a very slow, very chemical strobe light. This is apparently my second yeast-related project on this site; I promise I don’t only think about yeast.</p>
+<p>Your <em>genome</em> is the full library of genetic instructions in each cell in your body, stored in DNA strands. It’s essentially static (hopefully) and doesn’t change moment to moment or cell to cell. Those genes are <em>active</em> when a gene’s DNA sequence is copied to a strand of RNA, which is like an email of instructions to the cell’s ribosomes. The process of copying is called <em>trasnscription</em>. The ribosomes fabricate proteins, and the proteins determine what the cell is <em>doing</em>–building, metabolizing, attacking, fighting invaders, reproducing. The <em>transcriptome</em>, by contrast to the genome, is the complete set of RNA molecules in a cell at a given moment. It <em>does</em> change moment to moment, corresponding to which genes are active from moment to moment. <em>Transcriptomics</em> is the process of measuring that set.</p>
+<p>One method, though now out-dated, for measuring a more or less instantaneous transcriptome is using a tool called a microarray. This method sounds incredible to me. The process is like this: One way of measuring that set is This is a project completed by my friends Isaac, Henry, Wyat, and me for a final project in a data-driven modeling class. A few weeks in we pivoted to something with a cleaner question attached to it: a yeast microarray time series from a 2005 <em>Science</em> paper, where a culture of budding yeast, grown under starvation conditions, falls into a spontaneous, synchronized metabolic oscillation–the whole population lurches between oxidative and reductive metabolism every few hours, like a very slow, very chemical strobe light. This is apparently my second yeast-related project on this site; I promise I don’t only think about yeast.</p>
 <p>The original paper found a ~300 minute period and three broad phases of gene activity using k-means and an autocorrelation-based period search. Our goal was to independently verify their period and phase structure using different tools–GMMs, hidden Markov models, permutation testing, topic modeling–and see whether we could push the resolution past their three clusters.</p>
 <p>You can find the <a href="paper.pdf">full paper</a> and <a href="slides.pdf">slide deck</a> for more detail; this write-up hits the highlights.</p>
 </section>
@@ -278,6 +279,7 @@ window.Quarto = {
 </section>
 
 </main> <!-- /main -->
+<script src="../../assets/js/custom.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
