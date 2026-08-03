@@ -9,6 +9,7 @@ project:
   - .nojekyll
   - CNAME
   - "treegram/**"
+  - "assets/js/**"
 
 website:
   title: "Jack Pond"
@@ -35,3 +36,4 @@ format:
     citations-hover: true
     footnotes-hover: true
     link-external-newwindow: true
+    include-after-body: assets/includes/after-body.html
