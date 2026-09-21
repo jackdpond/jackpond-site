@@ -1,0 +1,16 @@
+---
+title: "Seeing the Shape of a Model"
+date: 2026-09-21
+description: "A geometric presentation of linear regression as a linear transformation from parameter space to data space."
+categories: [math, modeling]
+---
+
+As TA for a class called Theory of Predictive Modeling at BYU, I prepare weekly recitations. Much of the course content is about the geometry of modeling problems, and the four fundamental subspaces mapped onto regression problems. I've had a great time using Grant Sanderson's incredible Manim package to create presentations for my recitations. I've linked to the .html slide decks, which need to be clicked through with the right arrow. You can also find the transcripts I wrote to accompany the slide decks. These aren't quite finished form, but they worked for the first recitation! 
+
+In order, these slides 1) review bases, coordinates, and matrix multiplication, 2) review the four fundamental subspaces, 3) visualize a linear regression problem as a linear transformation, and 4) visualize the ways the four fundamental subspaces map onto linear regression problems (identifiability in parameter space, model manifold / model mismatch in data space).
+
+1. Bases, coordinates, and matrix-vector multiplication — [presentation](manim/1-1_coordinates_and_matrix_mult.html) | [transcript](manim/1-1_coordinates_and_matrix_mult.md)
+2. The four fundamental subspaces — [presentation](manim/1-2_four_fundamental_subspaces.html) | [transcript](manim/1-2_four_fundamental_subspaces.md)
+3. Linear regression as a linear transformation — [presentation](manim/2-1_regression_as_transformation.html) | [transcript](manim/2-1_regression_as_transformation.md)
+4. The four fundamental subspaces in regression — [presentation](manim/2-3_linear_regression_subspaces.html) | [transcript](manim/2-3_linear_regression_subspaces.md)
+
