@@ -2,6 +2,15 @@
   {
     "listing": "/writing.html",
     "items": [
+      "/posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/2-1_regression_as_transformation.html",
+      "/posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/1-1_coordinates_and_matrix_mult.html",
+      "/posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/2-3_linear_regression_subspaces.html",
+      "/posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/1-2_four_fundamental_subspaces.html",
+      "/posts/2026-09-21-seeing-the-shape-of-a-model/manim/2-1_regression_as_transformation.html",
+      "/posts/2026-09-21-seeing-the-shape-of-a-model/manim/1-1_coordinates_and_matrix_mult.html",
+      "/posts/2026-09-21-seeing-the-shape-of-a-model/manim/2-3_linear_regression_subspaces.html",
+      "/posts/2026-09-21-seeing-the-shape-of-a-model/manim/1-2_four_fundamental_subspaces.html",
+      "/posts/2026-09-21-seeing-the-shape-of-a-model/index.html",
       "/posts/2026-08-03-big-short/index.html",
       "/posts/2026-06-28-imaginary-numbers-rotate/index.html",
       "/posts/2026-06-28-on-learning-math/index.html",

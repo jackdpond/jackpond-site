@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jackpond.com/posts/2026-09-21-seeing-the-shape-of-a-model/manim/1-2_four_fundamental_subspaces.html</loc>
+    <lastmod>2026-09-21T22:03:51.045Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jackpond.com/posts/2026-09-21-seeing-the-shape-of-a-model/manim/1-1_coordinates_and_matrix_mult.html</loc>
+    <lastmod>2026-09-21T22:03:51.042Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jackpond.com/posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/1-2_four_fundamental_subspaces.html</loc>
+    <lastmod>2026-09-21T21:51:31.773Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jackpond.com/posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/1-1_coordinates_and_matrix_mult.html</loc>
+    <lastmod>2026-09-21T21:51:21.394Z</lastmod>
+  </url>
+  <url>
     <loc>https://jackpond.com/writing.html</loc>
     <lastmod>2026-06-28T21:25:48.149Z</lastmod>
   </url>
   <url>
     <loc>https://jackpond.com/projects/2026-04-15-hmm-gene-model/index.html</loc>
-    <lastmod>2026-08-03T18:14:45.233Z</lastmod>
+    <lastmod>2026-09-21T22:07:18.576Z</lastmod>
   </url>
   <url>
     <loc>https://jackpond.com/projects/2025-12-15-modeling-yeast-spread/index.html</loc>
@@ -17,24 +33,28 @@
     <lastmod>2026-07-21T17:37:16.453Z</lastmod>
   </url>
   <url>
-    <loc>https://jackpond.com/posts/2026-06-28-on-learning-math/index.html</loc>
-    <lastmod>2026-06-28T23:32:33.967Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jackpond.com/posts/2026-06-28-grad-school-info/index.html</loc>
-    <lastmod>2026-06-28T22:34:39.899Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jackpond.com/index.html</loc>
-    <lastmod>2026-07-25T21:41:40.929Z</lastmod>
+    <loc>https://jackpond.com/posts/2026-08-03-big-short/index.html</loc>
+    <lastmod>2026-09-21T22:07:18.576Z</lastmod>
   </url>
   <url>
     <loc>https://jackpond.com/posts/2026-06-28-imaginary-numbers-rotate/index.html</loc>
     <lastmod>2026-06-28T22:23:41.763Z</lastmod>
   </url>
   <url>
-    <loc>https://jackpond.com/posts/2026-08-03-big-short/index.html</loc>
-    <lastmod>2026-08-04T14:42:48.997Z</lastmod>
+    <loc>https://jackpond.com/index.html</loc>
+    <lastmod>2026-07-25T21:41:40.929Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jackpond.com/posts/2026-06-28-grad-school-info/index.html</loc>
+    <lastmod>2026-06-28T22:34:39.899Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jackpond.com/posts/2026-06-28-on-learning-math/index.html</loc>
+    <lastmod>2026-06-28T23:32:33.967Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jackpond.com/posts/2026-09-21-seeing-the-shape-of-a-model/index.html</loc>
+    <lastmod>2026-09-21T22:05:41.491Z</lastmod>
   </url>
   <url>
     <loc>https://jackpond.com/projects/2025-11-15-wildcard-weighting/index.html</loc>
@@ -47,5 +67,21 @@
   <url>
     <loc>https://jackpond.com/projects/2026-07-22-treegram-game/index.html</loc>
     <lastmod>2026-07-22T22:05:31.917Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jackpond.com/posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/2-1_regression_as_transformation.html</loc>
+    <lastmod>2026-09-21T21:52:16.365Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jackpond.com/posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/2-3_linear_regression_subspaces.html</loc>
+    <lastmod>2026-09-21T21:52:24.364Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jackpond.com/posts/2026-09-21-seeing-the-shape-of-a-model/manim/2-1_regression_as_transformation.html</loc>
+    <lastmod>2026-09-21T22:03:51.049Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jackpond.com/posts/2026-09-21-seeing-the-shape-of-a-model/manim/2-3_linear_regression_subspaces.html</loc>
+    <lastmod>2026-09-21T22:03:51.052Z</lastmod>
   </url>
 </urlset>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Writing – Jack Pond</title>
+<title>coordinates_and_matrix_mult – Jack Pond</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,25 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bb3e1c95479bf94468d2afd42f9a72f9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-bb3e1c95479bf94468d2afd42f9a72f9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,35 +70,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -132,7 +101,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="alternate" type="application/rss+xml" title="Jack Pond" href="writing.xml" data-external="1"></head>
+</head>
 
 <body class="nav-fixed quarto-light">
 
@@ -141,7 +110,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Jack Pond</span>
     </a>
   </div>
@@ -152,15 +121,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./writing.html" aria-current="page"> 
+    <a class="nav-link" href="../../../writing.html"> 
 <span class="menu-text">Writing</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="../../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
@@ -175,331 +144,86 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(13)</span></div><div class="category" data-category="Ym9va3M=">books <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZWR1Y2F0aW9u">education <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWF0aA==">math <span class="quarto-category-count">(4)</span></div><div class="category" data-category="bW9kZWxpbmc=">modeling <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#bases-coordinates-and-matrix-vector-multiplication" id="toc-bases-coordinates-and-matrix-vector-multiplication" class="nav-link active" data-scroll-target="#bases-coordinates-and-matrix-vector-multiplication">Bases, Coordinates, and Matrix-Vector Multiplication</a>
+  <ul class="collapse">
+  <li><a href="#coordinate-systems" id="toc-coordinate-systems" class="nav-link" data-scroll-target="#coordinate-systems">1. Coordinate systems</a></li>
+  <li><a href="#matrix-vector-multiplication" id="toc-matrix-vector-multiplication" class="nav-link" data-scroll-target="#matrix-vector-multiplication">2. Matrix-vector multiplication</a></li>
+  <li><a href="#transformations" id="toc-transformations" class="nav-link" data-scroll-target="#transformations">3. Transformations</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Writing</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
+<section id="bases-coordinates-and-matrix-vector-multiplication" class="level1">
+<h1>Bases, Coordinates, and Matrix-Vector Multiplication</h1>
+<p><em>Companion notes for the “Bases and Matrices” slideshow. Section numbers below match the slideshow’s own sections; each subsection corresponds to one click through the presentation, so you can follow along in either direction.</em></p>
+<section id="coordinate-systems" class="level2">
+<h2 class="anchored" data-anchor-id="coordinate-systems">1. Coordinate systems</h2>
+<p><strong>Clicks 1–3.</strong> We start with a vector, <span class="math inline">\((2, 3)\)</span>, drawn in the plane. This notation is one we’re all familiar with — but it quietly assumes a particular <em>basis</em>, or coordinate system. To make that assumption visible, we draw in the standard basis vectors <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> alongside it.</p>
+<p><strong>Clicks 4–7.</strong> Concretely, <span class="math inline">\((2, 3)\)</span> means:</p>
+<p><span class="math display">\[
+\begin{bmatrix} 2 \\ 3 \end{bmatrix} = 2 \begin{bmatrix} 1 \\ 0 \end{bmatrix} + 3 \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+\]</span></p>
+<p>Each slot in the vector pairs with one basis vector — the first coordinate scales <span class="math inline">\(e_1\)</span>, the second scales <span class="math inline">\(e_2\)</span>. It’s tempting to think of the coordinates <em>as</em> the vector, but the vector is really the coordinates together with the (usually implicit) basis they’re written against.</p>
+<p><strong>Clicks 9–12.</strong> Change the basis, keep the coordinates fixed, and you get a genuinely different vector. Watching <span class="math inline">\((2, 3)\)</span> ride along as <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> morph through three different bases —</p>
+<p><span class="math display">\[
+(e_1, e_2) = ((2,1),\,(4,3)) \;\to\; ((-1,1),\,(3,-2)) \;\to\; ((0.5,1),\,(1,-0.5))
+\]</span></p>
+<p>— makes this concrete: the <em>coordinates</em> <span class="math inline">\((2,3)\)</span> never change, but the arrow they describe moves all over the plane. We’ll return to what makes one basis “nicer” to work with than another later in the course.</p>
+<p><strong>Clicks 12–14.</strong> Basis vectors don’t have to be linearly independent. If <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> are chosen to point along the same line — here <span class="math inline">\((2, 1)\)</span> and <span class="math inline">\((3, 1.5)\)</span> — their span collapses to one dimension, and <em>no</em> choice of coordinates can escape that line. Sliding the first coordinate through <span class="math inline">\(0 \to 4\)</span> and then the second through <span class="math inline">\(1 \to 5\)</span> shows the vector sweeping back and forth, but always confined to the same 1-D span.</p>
+</section>
+<section id="matrix-vector-multiplication" class="level2">
+<h2 class="anchored" data-anchor-id="matrix-vector-multiplication">2. Matrix-vector multiplication</h2>
+<p><strong>Clicks 16–17.</strong> This conversation about bases connects directly to matrix-vector multiplication. Take:</p>
+<p><span class="math display">\[
+\begin{bmatrix} 4 &amp; 1 \\ 1 &amp; 3 \end{bmatrix} \begin{bmatrix} -1 \\ 2 \end{bmatrix}
+\]</span></p>
+<p>The key idea: matrix-vector multiplication is a <em>linear combination of the matrix’s columns</em>, weighted by the vector’s entries:</p>
+<p><span class="math display">\[
+\begin{bmatrix} 4 &amp; 1 \\ 1 &amp; 3 \end{bmatrix} \begin{bmatrix} -1 \\ 2 \end{bmatrix} = -1\begin{bmatrix} 4 \\ 1 \end{bmatrix} + 2\begin{bmatrix} 1 \\ 3 \end{bmatrix}
+\]</span></p>
+<p><strong>Clicks 18–20.</strong> Here’s another way to see the same fact. On its own, the vector <span class="math inline">\((-1, 2)\)</span> is really shorthand for a combination of the <em>standard</em> basis vectors:</p>
+<p><span class="math display">\[
+\begin{bmatrix} -1 \\ 2 \end{bmatrix} = -1\begin{bmatrix} 1 \\ 0 \end{bmatrix} + 2\begin{bmatrix} 0 \\ 1 \end{bmatrix}
+\]</span></p>
+<p>Multiplying by the matrix swaps in the matrix’s <em>columns</em> in place of the standard basis vectors — column <span class="math inline">\(i\)</span> answers “where does <span class="math inline">\(e_i\)</span> go?”:</p>
+<p><span class="math display">\[
+\begin{bmatrix} 4 &amp; 1 \\ 1 &amp; 3 \end{bmatrix} \begin{bmatrix} -1 \\ 2 \end{bmatrix} = -1\begin{bmatrix} 4 \\ 1 \end{bmatrix} + 2\begin{bmatrix} 1 \\ 3 \end{bmatrix}
+\]</span></p>
+<p><strong>Clicks 21–22.</strong> Carrying out the arithmetic:</p>
+<p><span class="math display">\[
+-1\begin{bmatrix} 4 \\ 1 \end{bmatrix} + 2\begin{bmatrix} 1 \\ 3 \end{bmatrix} = \begin{bmatrix} -2 \\ 5 \end{bmatrix} = -2\begin{bmatrix} 1 \\ 0 \end{bmatrix} + 5\begin{bmatrix} 0 \\ 1 \end{bmatrix}
+\]</span></p>
+<p>Importantly, this is <em>not</em> a change of coordinates — the coordinates <span class="math inline">\((-1, 2)\)</span> stay exactly the same throughout. What changes is which vectors those coordinates are measured against.</p>
+</section>
+<section id="transformations" class="level2">
+<h2 class="anchored" data-anchor-id="transformations">3. Transformations</h2>
+<p><strong>Clicks 23–24.</strong> Multiplying every vector in the plane by the same matrix is a <em>linear transformation</em> — and it’s easiest to see by watching the whole grid move at once. Applying</p>
+<p><span class="math display">\[
+A = \begin{bmatrix} 4 &amp; 1 \\ 1 &amp; 3 \end{bmatrix}
+\]</span></p>
+<p>to the plane drags the background grid lines along with it (they visibly skew, since that’s the whole point), while <span class="math inline">\((-1, 2)\)</span> and the basis vectors ride along, landing at <span class="math inline">\((-2, 5)\)</span> — matching the arithmetic from Section 2.</p>
+<p><strong>Clicks 25–28.</strong> What happens when the matrix’s columns are linearly dependent, as in</p>
+<p><span class="math display">\[
+B = \begin{bmatrix} 1 &amp; 3 \\ \tfrac{1}{2} &amp; \tfrac{3}{2} \end{bmatrix}
+\]</span></p>
+<p>? Applying <span class="math inline">\(B\)</span> to the plane collapses every vector — regardless of its starting coordinates — onto a single line, the one-dimensional span of <span class="math inline">\(B\)</span>’s columns. A linearly dependent set of columns can’t do anything else: there’s simply no direction left to escape into.</p>
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1790027536365" data-listing-reading-time-sort="4" data-listing-word-count-sort="721">
-<div class="thumbnail"><a href="./posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/2-1_regression_as_transformation.html" class="no-external">
+</section>
+</section>
 
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/2-1_regression_as_transformation.html" class="no-external">Linear Regression as a Linear Map</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/2-1_regression_as_transformation.html" class="no-external">
-<em>Companion notes for the “Regression Manifold” slideshow. The video unfolds in three movements — fitting a line, finding the model’s range, and deriving the least-squares…</em>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/2-1_regression_as_transformation.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1790027481394" data-listing-reading-time-sort="4" data-listing-word-count-sort="632">
-<div class="thumbnail"><a href="./posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/1-1_coordinates_and_matrix_mult.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/1-1_coordinates_and_matrix_mult.html" class="no-external">Bases, Coordinates, and Matrix-Vector Multiplication</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/1-1_coordinates_and_matrix_mult.html" class="no-external">
-<em>Companion notes for the “Bases and Matrices” slideshow. Section numbers below match the slideshow’s own sections; each subsection corresponds to one click through the…</em>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/1-1_coordinates_and_matrix_mult.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1790027544364" data-listing-reading-time-sort="4" data-listing-word-count-sort="730">
-<div class="thumbnail"><a href="./posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/2-3_linear_regression_subspaces.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/2-3_linear_regression_subspaces.html" class="no-external">The Model Manifold: Four Subspaces in Regression</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/2-3_linear_regression_subspaces.html" class="no-external">
-<em>Companion notes for the “Model Manifold Subspaces” slideshow. The video unfolds in five movements, mirroring the four fundamental subspaces of a regression matrix and what…</em>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/2-3_linear_regression_subspaces.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1790027491773" data-listing-reading-time-sort="5" data-listing-word-count-sort="831">
-<div class="thumbnail"><a href="./posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/1-2_four_fundamental_subspaces.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/1-2_four_fundamental_subspaces.html" class="no-external">Range, Null Space, and Orthogonality</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/1-2_four_fundamental_subspaces.html" class="no-external">
-<em>Companion notes for the “Spaces and Transformations” slideshow. Section numbers below match the slideshow’s own three worked examples; light click markers help you follow…</em>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-09-21-seeing-the-shape-of-a-model/transcripts/1-2_four_fundamental_subspaces.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1790028231049" data-listing-reading-time-sort="4" data-listing-word-count-sort="721">
-<div class="thumbnail"><a href="./posts/2026-09-21-seeing-the-shape-of-a-model/manim/2-1_regression_as_transformation.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-09-21-seeing-the-shape-of-a-model/manim/2-1_regression_as_transformation.html" class="no-external">Linear Regression as a Linear Map</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2026-09-21-seeing-the-shape-of-a-model/manim/2-1_regression_as_transformation.html" class="no-external">
-<em>Companion notes for the “Regression Manifold” slideshow. The video unfolds in three movements — fitting a line, finding the model’s range, and deriving the least-squares…</em>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-09-21-seeing-the-shape-of-a-model/manim/2-1_regression_as_transformation.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1790028231042" data-listing-reading-time-sort="4" data-listing-word-count-sort="632">
-<div class="thumbnail"><a href="./posts/2026-09-21-seeing-the-shape-of-a-model/manim/1-1_coordinates_and_matrix_mult.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-09-21-seeing-the-shape-of-a-model/manim/1-1_coordinates_and_matrix_mult.html" class="no-external">Bases, Coordinates, and Matrix-Vector Multiplication</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2026-09-21-seeing-the-shape-of-a-model/manim/1-1_coordinates_and_matrix_mult.html" class="no-external">
-<em>Companion notes for the “Bases and Matrices” slideshow. Section numbers below match the slideshow’s own sections; each subsection corresponds to one click through the…</em>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-09-21-seeing-the-shape-of-a-model/manim/1-1_coordinates_and_matrix_mult.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1790028231052" data-listing-reading-time-sort="4" data-listing-word-count-sort="730">
-<div class="thumbnail"><a href="./posts/2026-09-21-seeing-the-shape-of-a-model/manim/2-3_linear_regression_subspaces.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-09-21-seeing-the-shape-of-a-model/manim/2-3_linear_regression_subspaces.html" class="no-external">The Model Manifold: Four Subspaces in Regression</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2026-09-21-seeing-the-shape-of-a-model/manim/2-3_linear_regression_subspaces.html" class="no-external">
-<em>Companion notes for the “Model Manifold Subspaces” slideshow. The video unfolds in five movements, mirroring the four fundamental subspaces of a regression matrix and what…</em>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-09-21-seeing-the-shape-of-a-model/manim/2-3_linear_regression_subspaces.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-listing-file-modified-sort="1790028231045" data-listing-reading-time-sort="5" data-listing-word-count-sort="831">
-<div class="thumbnail"><a href="./posts/2026-09-21-seeing-the-shape-of-a-model/manim/1-2_four_fundamental_subspaces.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-09-21-seeing-the-shape-of-a-model/manim/1-2_four_fundamental_subspaces.html" class="no-external">Range, Null Space, and Orthogonality</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2026-09-21-seeing-the-shape-of-a-model/manim/1-2_four_fundamental_subspaces.html" class="no-external">
-<em>Companion notes for the “Spaces and Transformations” slideshow. Section numbers below match the slideshow’s own three worked examples; light click markers help you follow…</em>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-09-21-seeing-the-shape-of-a-model/manim/1-2_four_fundamental_subspaces.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="bWF0aCUyQ21vZGVsaW5n" data-listing-date-sort="1789970400000" data-listing-file-modified-sort="1790028341491" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="186">
-<div class="thumbnail"><a href="./posts/2026-09-21-seeing-the-shape-of-a-model/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-09-21-seeing-the-shape-of-a-model/index.html" class="no-external">Seeing the Shape of a Model</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWF0aA=='); return false;">math</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bW9kZWxpbmc='); return false;">modeling</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/2026-09-21-seeing-the-shape-of-a-model/index.html" class="no-external">
-<p>A geometric presentation of linear regression as a linear transformation from parameter space to data space.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-09-21-seeing-the-shape-of-a-model/index.html" class="no-external">
-<div class="listing-date">
-Sep 21, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-categories="Ym9va3M=" data-listing-date-sort="1785736800000" data-listing-file-modified-sort="1790028438576" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="59" data-listing-word-count-sort="11647">
-<div class="thumbnail"><a href="./posts/2026-08-03-big-short/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-08-03-big-short/index.html" class="no-external">Book Review: The Big Short</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ym9va3M='); return false;">books</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/2026-08-03-big-short/index.html" class="no-external">
-<p>Long-winded summary and review of The Big Short by Michael Lewis</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-08-03-big-short/index.html" class="no-external">
-<div class="listing-date">
-Aug 3, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="10" data-categories="bWF0aA==" data-listing-date-sort="1782626400000" data-listing-file-modified-sort="1782685421763" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3011">
-<div class="thumbnail"><a href="./posts/2026-06-28-imaginary-numbers-rotate/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="posts/2026-06-28-imaginary-numbers-rotate/number-line.jpg" alt="Number line"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-06-28-imaginary-numbers-rotate/index.html" class="no-external">Imaginary numbers… rotate??</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWF0aA=='); return false;">math</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/2026-06-28-imaginary-numbers-rotate/index.html" class="no-external">
-<p>A brief intro to the mysteries of i</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-06-28-imaginary-numbers-rotate/index.html" class="no-external">
-<div class="listing-date">
-Jun 28, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="11" data-categories="bWF0aCUyQ2VkdWNhdGlvbg==" data-listing-date-sort="1782626400000" data-listing-file-modified-sort="1782689553967" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="20" data-listing-word-count-sort="3861">
-<div class="thumbnail"><a href="./posts/2026-06-28-on-learning-math/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-06-28-on-learning-math/index.html" class="no-external">On Learning Math</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWF0aA=='); return false;">math</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZWR1Y2F0aW9u'); return false;">education</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/2026-06-28-on-learning-math/index.html" class="no-external">
-<p>Some thoughts on good habits for learning math well.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-06-28-on-learning-math/index.html" class="no-external">
-<div class="listing-date">
-Jun 28, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="12" data-categories="bWF0aA==" data-listing-date-sort="1749967200000" data-listing-file-modified-sort="1782686079899" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="163">
-<div class="thumbnail"><a href="./posts/2026-06-28-grad-school-info/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-06-28-grad-school-info/index.html" class="no-external">Grad School Application Guide [In Progress]</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWF0aA=='); return false;">math</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/2026-06-28-grad-school-info/index.html" class="no-external">
-<p>An informative guide meant to be a good starting point.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-06-28-grad-school-info/index.html" class="no-external">
-<div class="listing-date">
-Jun 15, 2025
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
-<script src="./assets/js/custom.js"></script>
+</main> <!-- /main -->
+<script src="../../../assets/js/custom.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
