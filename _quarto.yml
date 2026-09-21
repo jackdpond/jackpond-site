@@ -5,8 +5,6 @@ project:
     - "*.qmd"
     - "posts/**"
     - "projects/**"
-    - "!posts/**/manim/**"
-    - "!posts/**/transcripts/**"
   resources:
   - .nojekyll
   - CNAME

@@ -9,8 +9,8 @@ As TA for a class called Theory of Predictive Modeling at BYU, I prepare weekly 
 
 In order, these slides 1) review bases, coordinates, and matrix multiplication, 2) review the four fundamental subspaces, 3) visualize a linear regression problem as a linear transformation, and 4) visualize the ways the four fundamental subspaces map onto linear regression problems (identifiability in parameter space, model manifold / model mismatch in data space).
 
-1. Bases, coordinates, and matrix-vector multiplication — [presentation](manim/1-1_coordinates_and_matrix_mult.html) | [transcript](manim/1-1_coordinates_and_matrix_mult.md)
-2. The four fundamental subspaces — [presentation](manim/1-2_four_fundamental_subspaces.html) | [transcript](manim/1-2_four_fundamental_subspaces.md)
-3. Linear regression as a linear transformation — [presentation](manim/2-1_regression_as_transformation.html) | [transcript](manim/2-1_regression_as_transformation.md)
-4. The four fundamental subspaces in regression — [presentation](manim/2-3_linear_regression_subspaces.html) | [transcript](manim/2-3_linear_regression_subspaces.md)
+1. Bases, coordinates, and matrix-vector multiplication — [presentation](manim/1-1_coordinates_and_matrix_mult.html) | [transcript](manim/1-1_coordinates_and_matrix_mult.pdf)
+2. The four fundamental subspaces — [presentation](manim/1-2_four_fundamental_subspaces.html) | [transcript](manim/1-2_four_fundamental_subspaces.pdf)
+3. Linear regression as a linear transformation — [presentation](manim/2-1_regression_as_transformation.html) | [transcript](manim/2-1_regression_as_transformation.pdf)
+4. The four fundamental subspaces in regression — [presentation](manim/2-3_linear_regression_subspaces.html) | [transcript](manim/2-3_linear_regression_subspaces.pdf)
 
