@@ -31,3 +31,239 @@
 .listing-wordcount {
   cursor: default;
 }
+
+/* Sticky scroll feature: text column left, persistent image panel right */
+.sticky-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.sticky-feature-text {
+  min-width: 0;
+}
+
+.sticky-feature-media {
+  min-width: 0;
+  position: sticky;
+  top: 1.5rem;
+  align-self: start;
+}
+
+.sticky-media-inner {
+  position: relative;
+  height: 78vh;
+  min-height: 420px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.sticky-image-track {
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+  will-change: transform;
+}
+
+.sticky-image {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.sticky-image-frame {
+  min-width: 0;
+  flex: 1 1 0%;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  background-color: #fafaf8;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.sticky-image-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  cursor: zoom-in;
+  display: block;
+}
+
+.zoomable-image {
+  cursor: zoom-in;
+}
+
+.sticky-image-frame.hover-zoom {
+  position: relative;
+}
+
+.zoom-lens {
+  position: absolute;
+  pointer-events: none;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  z-index: 5;
+}
+
+.zoom-lens.visible {
+  opacity: 1;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .zoom-lens {
+    display: none;
+  }
+}
+
+/* IEEE-style numbered references */
+.cite-ref {
+  font-size: 0.78em;
+  text-decoration: none;
+  color: #0b6cb3;
+}
+
+.ieee-references {
+  list-style: none;
+  counter-reset: ieee-ref;
+  padding-left: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.ieee-references li {
+  counter-increment: ieee-ref;
+  padding-left: 2.4em;
+  text-indent: -2.4em;
+  margin-bottom: 0.6rem;
+}
+
+.ieee-references li::before {
+  content: "[" counter(ieee-ref) "]";
+  padding-right: 0.5em;
+}
+
+.sticky-caption {
+  flex: 0 0 auto;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: #666;
+  padding-top: 0.6rem;
+}
+
+.sticky-caption p {
+  margin: 0 0 0.35rem;
+}
+
+.sticky-caption .zoom-hint {
+  font-style: italic;
+  color: #898781;
+}
+
+/* Mobile layout: sticky panel replaced by static inline figures */
+.mobile-figures {
+  display: none;
+}
+
+.mobile-figure {
+  margin: 1.5rem 0;
+}
+
+.mobile-figure .sticky-image-frame {
+  height: auto;
+  background: #fafaf8;
+}
+
+.mobile-figure img {
+  width: 100%;
+  height: auto;
+  cursor: zoom-in;
+}
+
+.mobile-figure figcaption {
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.mobile-figure figcaption .zoom-hint {
+  font-style: italic;
+  color: #898781;
+}
+
+@media (max-width: 900px) {
+  .sticky-feature {
+    display: block;
+  }
+
+  .sticky-feature-media {
+    display: none;
+  }
+
+  .mobile-figures {
+    display: block;
+  }
+}
+
+/* Click-to-zoom / pan lightbox */
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(10, 10, 10, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-lightbox[hidden] {
+  display: none;
+}
+
+.lightbox-viewport {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+}
+
+.lightbox-viewport.grabbing {
+  cursor: grabbing;
+}
+
+.lightbox-viewport img {
+  max-width: 90vw;
+  max-height: 90vh;
+  transform-origin: center center;
+  transition: transform 0.08s linear;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.25rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
